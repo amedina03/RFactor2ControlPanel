@@ -17,42 +17,42 @@ namespace Server_Admin
 
         }
 
-        private async void btnStartStation1_Click(object sender, EventArgs e)
+        private async void btnSaveStation1_Click(object sender, EventArgs e)
         {
             await sendRequest(txtIPStation1.Text, txtNameStation1.Text, txtServerStation1.Text);
         }
 
-        private async void btnStartStation2_Click(object sender, EventArgs e)
+        private async void btnSaveStation2_Click(object sender, EventArgs e)
         {
             await sendRequest(txtIPStation2.Text, txtNameStation2.Text, txtServerStation2.Text);
         }
 
-        private async void btnStartStation3_Click(object sender, EventArgs e)
+        private async void btnSaveStation3_Click(object sender, EventArgs e)
         {
             await sendRequest(txtIPStation3.Text, txtNameStation3.Text, txtServerStation3.Text);
         }
 
-        private async void btnStartStation4_Click(object sender, EventArgs e)
+        private async void btnSaveStation4_Click(object sender, EventArgs e)
         {
             await sendRequest(txtIPStation4.Text, txtNameStation4.Text, txtServerStation4.Text);
         }
 
-        private async void btnStartStation5_Click(object sender, EventArgs e)
+        private async void btnSaveStation5_Click(object sender, EventArgs e)
         {
             await sendRequest(txtIPStation5.Text, txtNameStation5.Text, txtServerStation5.Text);
         }
 
-        private async void btnStartStation6_Click(object sender, EventArgs e)
+        private async void btnSaveStation6_Click(object sender, EventArgs e)
         {
             await sendRequest(txtIPStation6.Text, txtNameStation6.Text, txtServerStation6.Text);
         }
 
-        private async void btnStartStation7_Click(object sender, EventArgs e)
+        private async void btnSaveStation7_Click(object sender, EventArgs e)
         {
             await sendRequest(txtIPStation7.Text, txtNameStation7.Text, txtServerStation7.Text);
         }
 
-        private async void btnStartStation8_Click(object sender, EventArgs e)
+        private async void btnSaveStation8_Click(object sender, EventArgs e)
         {
             await sendRequest(txtIPStation8.Text, txtNameStation8.Text, txtServerStation8.Text);
         }
@@ -131,6 +131,16 @@ namespace Server_Admin
             {
                 Console.WriteLine($"Exception: {ex.Message}");
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOptionsStation2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

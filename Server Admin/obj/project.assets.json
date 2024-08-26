@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alexm\\source\\repos\\Server Admin\\Server Admin\\Server Admin.csproj",
+      "projectUniqueName": "C:\\Users\\alexm\\source\\repos\\RFactor2ControlPanel\\Server Admin\\Server Admin.csproj",
       "projectName": "Server Admin",
-      "projectPath": "C:\\Users\\alexm\\source\\repos\\Server Admin\\Server Admin\\Server Admin.csproj",
+      "projectPath": "C:\\Users\\alexm\\source\\repos\\RFactor2ControlPanel\\Server Admin\\Server Admin.csproj",
       "packagesPath": "C:\\Users\\alexm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alexm\\source\\repos\\Server Admin\\Server Admin\\obj\\",
+      "outputPath": "C:\\Users\\alexm\\source\\repos\\RFactor2ControlPanel\\Server Admin\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\alexm\\AppData\\Roaming\\NuGet\\NuGet.Config",

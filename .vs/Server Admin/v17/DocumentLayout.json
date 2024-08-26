@@ -1,18 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\alexm\\source\\repos\\Server Admin\\",
+  "WorkspaceRootPath": "C:\\Users\\alexm\\source\\repos\\RFactor2ControlPanel\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0C661214-C226-40F9-ACFE-D375BA832356}|Server Admin\\Server Admin.csproj|c:\\users\\alexm\\source\\repos\\server admin\\server admin\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0C661214-C226-40F9-ACFE-D375BA832356}|Server Admin\\Server Admin.csproj|c:\\users\\alexm\\source\\repos\\rfactor2controlpanel\\server admin\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0C661214-C226-40F9-ACFE-D375BA832356}|Server Admin\\Server Admin.csproj|solutionrelative:server admin\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C661214-C226-40F9-ACFE-D375BA832356}|Server Admin\\Server Admin.csproj|C:\\Users\\alexm\\source\\repos\\RFactor2ControlPanel\\server admin\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0C661214-C226-40F9-ACFE-D375BA832356}|Server Admin\\Server Admin.csproj|solutionrelative:server admin\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C661214-C226-40F9-ACFE-D375BA832356}|Server Admin\\Server Admin.csproj|c:\\users\\alexm\\source\\repos\\rfactor2controlpanel\\server admin\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C661214-C226-40F9-ACFE-D375BA832356}|Server Admin\\Server Admin.csproj|solutionrelative:server admin\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C661214-C226-40F9-ACFE-D375BA832356}|Server Admin\\Server Admin.csproj|c:\\users\\alexm\\source\\repos\\server admin\\server admin\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0C661214-C226-40F9-ACFE-D375BA832356}|Server Admin\\Server Admin.csproj|c:\\users\\alexm\\source\\repos\\rfactor2controlpanel\\server admin\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C661214-C226-40F9-ACFE-D375BA832356}|Server Admin\\Server Admin.csproj|solutionrelative:server admin\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C661214-C226-40F9-ACFE-D375BA832356}|Server Admin\\Server Admin.csproj|C:\\Users\\alexm\\source\\repos\\Server Admin\\server admin\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0C661214-C226-40F9-ACFE-D375BA832356}|Server Admin\\Server Admin.csproj|solutionrelative:server admin\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,41 +26,54 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\alexm\\source\\repos\\Server Admin\\Server Admin\\Form1.cs",
-              "RelativeDocumentMoniker": "Server Admin\\Form1.cs",
-              "ToolTip": "C:\\Users\\alexm\\source\\repos\\Server Admin\\Server Admin\\Form1.cs [Design]",
-              "RelativeToolTip": "Server Admin\\Form1.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "Form2.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\alexm\\source\\repos\\RFactor2ControlPanel\\Server Admin\\Form2.cs",
+              "RelativeDocumentMoniker": "Server Admin\\Form2.cs",
+              "ToolTip": "C:\\Users\\alexm\\source\\repos\\RFactor2ControlPanel\\Server Admin\\Form2.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Server Admin\\Form2.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T15:12:13.093Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-08-26T10:41:52.772Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\alexm\\source\\repos\\Server Admin\\Server Admin\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "Server Admin\\Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\alexm\\source\\repos\\Server Admin\\Server Admin\\Form1.Designer.cs",
-              "RelativeToolTip": "Server Admin\\Form1.Designer.cs",
-              "ViewState": "AQIAADwDAAAAAAAAAAAIwEsDAAAlAAAA",
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\alexm\\source\\repos\\RFactor2ControlPanel\\Server Admin\\Form1.cs",
+              "RelativeDocumentMoniker": "Server Admin\\Form1.cs",
+              "ToolTip": "C:\\Users\\alexm\\source\\repos\\RFactor2ControlPanel\\Server Admin\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Server Admin\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T14:50:23.354Z"
+              "WhenOpened": "2024-07-31T15:12:13.093Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\alexm\\source\\repos\\RFactor2ControlPanel\\Server Admin\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "Server Admin\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\alexm\\source\\repos\\RFactor2ControlPanel\\Server Admin\\Form1.Designer.cs",
+              "RelativeToolTip": "Server Admin\\Form1.Designer.cs",
+              "ViewState": "AQIAAMADAAAAAAAAAAAmwM4DAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T14:50:23.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\alexm\\source\\repos\\Server Admin\\Server Admin\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\alexm\\source\\repos\\RFactor2ControlPanel\\Server Admin\\Form1.cs",
               "RelativeDocumentMoniker": "Server Admin\\Form1.cs",
-              "ToolTip": "C:\\Users\\alexm\\source\\repos\\Server Admin\\Server Admin\\Form1.cs",
+              "ToolTip": "C:\\Users\\alexm\\source\\repos\\RFactor2ControlPanel\\Server Admin\\Form1.cs",
               "RelativeToolTip": "Server Admin\\Form1.cs",
-              "ViewState": "AQIAADUAAAAAAAAAAAAswDsAAAAeAAAA",
+              "ViewState": "AQIAADEAAAAAAAAAAAAAADQAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-31T14:33:14.855Z",
               "EditorCaption": ""

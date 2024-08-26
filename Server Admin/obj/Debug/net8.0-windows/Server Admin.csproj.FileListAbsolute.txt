@@ -14,3 +14,21 @@ C:\Users\alexm\source\repos\Server Admin\Server Admin\obj\Debug\net8.0-windows\r
 C:\Users\alexm\source\repos\Server Admin\Server Admin\obj\Debug\net8.0-windows\Server Admin.pdb
 C:\Users\alexm\source\repos\Server Admin\Server Admin\obj\Debug\net8.0-windows\Server Admin.genruntimeconfig.cache
 C:\Users\alexm\source\repos\Server Admin\Server Admin\obj\Debug\net8.0-windows\ref\Server Admin.dll
+C:\Users\alexm\source\repos\RFactor2ControlPanel\Server Admin\bin\Debug\net8.0-windows\Server Admin.exe
+C:\Users\alexm\source\repos\RFactor2ControlPanel\Server Admin\bin\Debug\net8.0-windows\Server Admin.deps.json
+C:\Users\alexm\source\repos\RFactor2ControlPanel\Server Admin\bin\Debug\net8.0-windows\Server Admin.runtimeconfig.json
+C:\Users\alexm\source\repos\RFactor2ControlPanel\Server Admin\bin\Debug\net8.0-windows\Server Admin.dll
+C:\Users\alexm\source\repos\RFactor2ControlPanel\Server Admin\bin\Debug\net8.0-windows\Server Admin.pdb
+C:\Users\alexm\source\repos\RFactor2ControlPanel\Server Admin\obj\Debug\net8.0-windows\Server_Admin.Form1.resources
+C:\Users\alexm\source\repos\RFactor2ControlPanel\Server Admin\obj\Debug\net8.0-windows\Server_Admin.Properties.Resources.resources
+C:\Users\alexm\source\repos\RFactor2ControlPanel\Server Admin\obj\Debug\net8.0-windows\Server Admin.csproj.GenerateResource.cache
+C:\Users\alexm\source\repos\RFactor2ControlPanel\Server Admin\obj\Debug\net8.0-windows\Server Admin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alexm\source\repos\RFactor2ControlPanel\Server Admin\obj\Debug\net8.0-windows\Server Admin.AssemblyInfoInputs.cache
+C:\Users\alexm\source\repos\RFactor2ControlPanel\Server Admin\obj\Debug\net8.0-windows\Server Admin.AssemblyInfo.cs
+C:\Users\alexm\source\repos\RFactor2ControlPanel\Server Admin\obj\Debug\net8.0-windows\Server Admin.csproj.CoreCompileInputs.cache
+C:\Users\alexm\source\repos\RFactor2ControlPanel\Server Admin\obj\Debug\net8.0-windows\Server Admin.sourcelink.json
+C:\Users\alexm\source\repos\RFactor2ControlPanel\Server Admin\obj\Debug\net8.0-windows\Server Admin.dll
+C:\Users\alexm\source\repos\RFactor2ControlPanel\Server Admin\obj\Debug\net8.0-windows\refint\Server Admin.dll
+C:\Users\alexm\source\repos\RFactor2ControlPanel\Server Admin\obj\Debug\net8.0-windows\Server Admin.pdb
+C:\Users\alexm\source\repos\RFactor2ControlPanel\Server Admin\obj\Debug\net8.0-windows\Server Admin.genruntimeconfig.cache
+C:\Users\alexm\source\repos\RFactor2ControlPanel\Server Admin\obj\Debug\net8.0-windows\ref\Server Admin.dll

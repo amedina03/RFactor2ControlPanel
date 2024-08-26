@@ -28,56 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             lblStation1 = new Label();
             txtIPStation1 = new TextBox();
             label2 = new Label();
             label3 = new Label();
             txtNameStation1 = new TextBox();
-            btnStartStation1 = new Button();
+            btnSaveStation1 = new Button();
             gbStation1 = new GroupBox();
+            btnToggleState1 = new Button();
             label4 = new Label();
             txtServerStation1 = new TextBox();
             gbStation2 = new GroupBox();
+            btnToggleState2 = new Button();
             label5 = new Label();
             txtServerStation2 = new TextBox();
-            btnStartStation2 = new Button();
+            btnSaveStation2 = new Button();
             label6 = new Label();
             txtNameStation2 = new TextBox();
             label7 = new Label();
             txtIPStation2 = new TextBox();
             lblStation2 = new Label();
             gbStation3 = new GroupBox();
+            btnToggleState3 = new Button();
             label9 = new Label();
             txtServerStation3 = new TextBox();
-            btnStartStation3 = new Button();
+            btnSaveStation3 = new Button();
             label10 = new Label();
             txtNameStation3 = new TextBox();
             label11 = new Label();
             txtIPStation3 = new TextBox();
             lblStation3 = new Label();
             gbStation4 = new GroupBox();
+            btnToggleState4 = new Button();
             label13 = new Label();
             txtServerStation4 = new TextBox();
-            btnStartStation4 = new Button();
+            btnSaveStation4 = new Button();
             label14 = new Label();
             txtNameStation4 = new TextBox();
             label15 = new Label();
             txtIPStation4 = new TextBox();
             lblStation4 = new Label();
             gbStation8 = new GroupBox();
+            btnToggleState8 = new Button();
             label17 = new Label();
             txtServerStation8 = new TextBox();
-            btnStartStation8 = new Button();
+            btnSaveStation8 = new Button();
             label18 = new Label();
             txtNameStation8 = new TextBox();
             label19 = new Label();
             txtIPStation8 = new TextBox();
             lblStation8 = new Label();
             gbStation7 = new GroupBox();
+            btnToggleState7 = new Button();
             label35 = new Label();
             label21 = new Label();
             txtServerStation7 = new TextBox();
-            btnStartStation7 = new Button();
+            btnSaveStation7 = new Button();
             label34 = new Label();
             label22 = new Label();
             txtNameStation7 = new TextBox();
@@ -86,24 +93,34 @@
             txtIPStation7 = new TextBox();
             lblStation7 = new Label();
             gbStation6 = new GroupBox();
+            btnToggleState6 = new Button();
             label25 = new Label();
             txtServerStation6 = new TextBox();
-            btnStartStation6 = new Button();
+            btnSaveStation6 = new Button();
             label26 = new Label();
             txtNameStation6 = new TextBox();
             label27 = new Label();
             txtIPStation6 = new TextBox();
             lblStation6 = new Label();
             gbStation5 = new GroupBox();
+            btnToggleState5 = new Button();
             label29 = new Label();
             txtServerStation5 = new TextBox();
-            btnStartStation5 = new Button();
+            btnSaveStation5 = new Button();
             label30 = new Label();
             txtNameStation5 = new TextBox();
             label31 = new Label();
             txtIPStation5 = new TextBox();
             lblStation5 = new Label();
             lblTitle = new Label();
+            btnOptionsStation1 = new Button();
+            btnOptionsStation5 = new Button();
+            btnOptionsStation6 = new Button();
+            btnOptionsStation2 = new Button();
+            btnOptionsStation8 = new Button();
+            btnOptionsStation4 = new Button();
+            btnOptionsStation3 = new Button();
+            btnOptionsStation7 = new Button();
             gbStation1.SuspendLayout();
             gbStation2.SuspendLayout();
             gbStation3.SuspendLayout();
@@ -163,22 +180,24 @@
             txtNameStation1.Size = new Size(150, 23);
             txtNameStation1.TabIndex = 12;
             // 
-            // btnStartStation1
+            // btnSaveStation1
             // 
-            btnStartStation1.Font = new Font("Segoe UI", 10F);
-            btnStartStation1.Location = new Point(88, 168);
-            btnStartStation1.Name = "btnStartStation1";
-            btnStartStation1.Size = new Size(75, 30);
-            btnStartStation1.TabIndex = 14;
-            btnStartStation1.Text = "INICIAR";
-            btnStartStation1.UseVisualStyleBackColor = true;
-            btnStartStation1.Click += btnStartStation1_Click;
+            btnSaveStation1.Font = new Font("Segoe UI", 10F);
+            btnSaveStation1.Location = new Point(21, 170);
+            btnSaveStation1.Name = "btnSaveStation1";
+            btnSaveStation1.Size = new Size(83, 30);
+            btnSaveStation1.TabIndex = 14;
+            btnSaveStation1.Text = "GUARDAR";
+            btnSaveStation1.UseVisualStyleBackColor = true;
+            btnSaveStation1.Click += btnSaveStation1_Click;
             // 
             // gbStation1
             // 
+            gbStation1.Controls.Add(btnOptionsStation1);
+            gbStation1.Controls.Add(btnToggleState1);
             gbStation1.Controls.Add(label4);
             gbStation1.Controls.Add(txtServerStation1);
-            gbStation1.Controls.Add(btnStartStation1);
+            gbStation1.Controls.Add(btnSaveStation1);
             gbStation1.Controls.Add(label3);
             gbStation1.Controls.Add(txtNameStation1);
             gbStation1.Controls.Add(label2);
@@ -189,6 +208,16 @@
             gbStation1.Size = new Size(258, 224);
             gbStation1.TabIndex = 15;
             gbStation1.TabStop = false;
+            // 
+            // btnToggleState1
+            // 
+            btnToggleState1.BackColor = Color.FromArgb(255, 192, 192);
+            btnToggleState1.Image = (Image)resources.GetObject("btnToggleState1.Image");
+            btnToggleState1.Location = new Point(222, 19);
+            btnToggleState1.Name = "btnToggleState1";
+            btnToggleState1.Size = new Size(30, 30);
+            btnToggleState1.TabIndex = 17;
+            btnToggleState1.UseVisualStyleBackColor = false;
             // 
             // label4
             // 
@@ -211,9 +240,11 @@
             // 
             // gbStation2
             // 
+            gbStation2.Controls.Add(btnOptionsStation2);
+            gbStation2.Controls.Add(btnToggleState2);
             gbStation2.Controls.Add(label5);
             gbStation2.Controls.Add(txtServerStation2);
-            gbStation2.Controls.Add(btnStartStation2);
+            gbStation2.Controls.Add(btnSaveStation2);
             gbStation2.Controls.Add(label6);
             gbStation2.Controls.Add(txtNameStation2);
             gbStation2.Controls.Add(label7);
@@ -224,6 +255,16 @@
             gbStation2.Size = new Size(258, 224);
             gbStation2.TabIndex = 17;
             gbStation2.TabStop = false;
+            // 
+            // btnToggleState2
+            // 
+            btnToggleState2.BackColor = Color.FromArgb(255, 192, 192);
+            btnToggleState2.Image = (Image)resources.GetObject("btnToggleState2.Image");
+            btnToggleState2.Location = new Point(222, 19);
+            btnToggleState2.Name = "btnToggleState2";
+            btnToggleState2.Size = new Size(30, 30);
+            btnToggleState2.TabIndex = 18;
+            btnToggleState2.UseVisualStyleBackColor = false;
             // 
             // label5
             // 
@@ -244,16 +285,16 @@
             txtServerStation2.Size = new Size(150, 23);
             txtServerStation2.TabIndex = 15;
             // 
-            // btnStartStation2
+            // btnSaveStation2
             // 
-            btnStartStation2.Font = new Font("Segoe UI", 10F);
-            btnStartStation2.Location = new Point(88, 168);
-            btnStartStation2.Name = "btnStartStation2";
-            btnStartStation2.Size = new Size(75, 30);
-            btnStartStation2.TabIndex = 14;
-            btnStartStation2.Text = "INICIAR";
-            btnStartStation2.UseVisualStyleBackColor = true;
-            btnStartStation2.Click += btnStartStation2_Click;
+            btnSaveStation2.Font = new Font("Segoe UI", 10F);
+            btnSaveStation2.Location = new Point(21, 170);
+            btnSaveStation2.Name = "btnSaveStation2";
+            btnSaveStation2.Size = new Size(83, 30);
+            btnSaveStation2.TabIndex = 14;
+            btnSaveStation2.Text = "GUARDAR";
+            btnSaveStation2.UseVisualStyleBackColor = true;
+            btnSaveStation2.Click += btnSaveStation2_Click;
             // 
             // label6
             // 
@@ -307,9 +348,11 @@
             // 
             // gbStation3
             // 
+            gbStation3.Controls.Add(btnOptionsStation3);
+            gbStation3.Controls.Add(btnToggleState3);
             gbStation3.Controls.Add(label9);
             gbStation3.Controls.Add(txtServerStation3);
-            gbStation3.Controls.Add(btnStartStation3);
+            gbStation3.Controls.Add(btnSaveStation3);
             gbStation3.Controls.Add(label10);
             gbStation3.Controls.Add(txtNameStation3);
             gbStation3.Controls.Add(label11);
@@ -320,6 +363,16 @@
             gbStation3.Size = new Size(258, 224);
             gbStation3.TabIndex = 18;
             gbStation3.TabStop = false;
+            // 
+            // btnToggleState3
+            // 
+            btnToggleState3.BackColor = Color.FromArgb(255, 192, 192);
+            btnToggleState3.Image = (Image)resources.GetObject("btnToggleState3.Image");
+            btnToggleState3.Location = new Point(222, 19);
+            btnToggleState3.Name = "btnToggleState3";
+            btnToggleState3.Size = new Size(30, 30);
+            btnToggleState3.TabIndex = 19;
+            btnToggleState3.UseVisualStyleBackColor = false;
             // 
             // label9
             // 
@@ -340,16 +393,16 @@
             txtServerStation3.Size = new Size(150, 23);
             txtServerStation3.TabIndex = 15;
             // 
-            // btnStartStation3
+            // btnSaveStation3
             // 
-            btnStartStation3.Font = new Font("Segoe UI", 10F);
-            btnStartStation3.Location = new Point(88, 168);
-            btnStartStation3.Name = "btnStartStation3";
-            btnStartStation3.Size = new Size(75, 30);
-            btnStartStation3.TabIndex = 14;
-            btnStartStation3.Text = "INICIAR";
-            btnStartStation3.UseVisualStyleBackColor = true;
-            btnStartStation3.Click += btnStartStation3_Click;
+            btnSaveStation3.Font = new Font("Segoe UI", 10F);
+            btnSaveStation3.Location = new Point(20, 170);
+            btnSaveStation3.Name = "btnSaveStation3";
+            btnSaveStation3.Size = new Size(83, 30);
+            btnSaveStation3.TabIndex = 14;
+            btnSaveStation3.Text = "GUARDAR";
+            btnSaveStation3.UseVisualStyleBackColor = true;
+            btnSaveStation3.Click += btnSaveStation3_Click;
             // 
             // label10
             // 
@@ -402,9 +455,11 @@
             // 
             // gbStation4
             // 
+            gbStation4.Controls.Add(btnOptionsStation4);
+            gbStation4.Controls.Add(btnToggleState4);
             gbStation4.Controls.Add(label13);
             gbStation4.Controls.Add(txtServerStation4);
-            gbStation4.Controls.Add(btnStartStation4);
+            gbStation4.Controls.Add(btnSaveStation4);
             gbStation4.Controls.Add(label14);
             gbStation4.Controls.Add(txtNameStation4);
             gbStation4.Controls.Add(label15);
@@ -415,6 +470,16 @@
             gbStation4.Size = new Size(258, 224);
             gbStation4.TabIndex = 18;
             gbStation4.TabStop = false;
+            // 
+            // btnToggleState4
+            // 
+            btnToggleState4.BackColor = Color.FromArgb(255, 192, 192);
+            btnToggleState4.Image = (Image)resources.GetObject("btnToggleState4.Image");
+            btnToggleState4.Location = new Point(222, 19);
+            btnToggleState4.Name = "btnToggleState4";
+            btnToggleState4.Size = new Size(30, 30);
+            btnToggleState4.TabIndex = 20;
+            btnToggleState4.UseVisualStyleBackColor = false;
             // 
             // label13
             // 
@@ -435,16 +500,16 @@
             txtServerStation4.Size = new Size(150, 23);
             txtServerStation4.TabIndex = 15;
             // 
-            // btnStartStation4
+            // btnSaveStation4
             // 
-            btnStartStation4.Font = new Font("Segoe UI", 10F);
-            btnStartStation4.Location = new Point(88, 168);
-            btnStartStation4.Name = "btnStartStation4";
-            btnStartStation4.Size = new Size(75, 30);
-            btnStartStation4.TabIndex = 14;
-            btnStartStation4.Text = "INICIAR";
-            btnStartStation4.UseVisualStyleBackColor = true;
-            btnStartStation4.Click += btnStartStation4_Click;
+            btnSaveStation4.Font = new Font("Segoe UI", 10F);
+            btnSaveStation4.Location = new Point(21, 170);
+            btnSaveStation4.Name = "btnSaveStation4";
+            btnSaveStation4.Size = new Size(83, 30);
+            btnSaveStation4.TabIndex = 14;
+            btnSaveStation4.Text = "GUARDAR";
+            btnSaveStation4.UseVisualStyleBackColor = true;
+            btnSaveStation4.Click += btnSaveStation4_Click;
             // 
             // label14
             // 
@@ -497,9 +562,11 @@
             // 
             // gbStation8
             // 
+            gbStation8.Controls.Add(btnOptionsStation8);
+            gbStation8.Controls.Add(btnToggleState8);
             gbStation8.Controls.Add(label17);
             gbStation8.Controls.Add(txtServerStation8);
-            gbStation8.Controls.Add(btnStartStation8);
+            gbStation8.Controls.Add(btnSaveStation8);
             gbStation8.Controls.Add(label18);
             gbStation8.Controls.Add(txtNameStation8);
             gbStation8.Controls.Add(label19);
@@ -510,6 +577,16 @@
             gbStation8.Size = new Size(258, 224);
             gbStation8.TabIndex = 21;
             gbStation8.TabStop = false;
+            // 
+            // btnToggleState8
+            // 
+            btnToggleState8.BackColor = Color.FromArgb(255, 192, 192);
+            btnToggleState8.Image = (Image)resources.GetObject("btnToggleState8.Image");
+            btnToggleState8.Location = new Point(222, 19);
+            btnToggleState8.Name = "btnToggleState8";
+            btnToggleState8.Size = new Size(30, 30);
+            btnToggleState8.TabIndex = 24;
+            btnToggleState8.UseVisualStyleBackColor = false;
             // 
             // label17
             // 
@@ -530,16 +607,16 @@
             txtServerStation8.Size = new Size(150, 23);
             txtServerStation8.TabIndex = 15;
             // 
-            // btnStartStation8
+            // btnSaveStation8
             // 
-            btnStartStation8.Font = new Font("Segoe UI", 10F);
-            btnStartStation8.Location = new Point(88, 168);
-            btnStartStation8.Name = "btnStartStation8";
-            btnStartStation8.Size = new Size(75, 30);
-            btnStartStation8.TabIndex = 14;
-            btnStartStation8.Text = "INICIAR";
-            btnStartStation8.UseVisualStyleBackColor = true;
-            btnStartStation8.Click += btnStartStation8_Click;
+            btnSaveStation8.Font = new Font("Segoe UI", 10F);
+            btnSaveStation8.Location = new Point(21, 170);
+            btnSaveStation8.Name = "btnSaveStation8";
+            btnSaveStation8.Size = new Size(83, 30);
+            btnSaveStation8.TabIndex = 14;
+            btnSaveStation8.Text = "GUARDAR";
+            btnSaveStation8.UseVisualStyleBackColor = true;
+            btnSaveStation8.Click += btnSaveStation8_Click;
             // 
             // label18
             // 
@@ -592,10 +669,12 @@
             // 
             // gbStation7
             // 
+            gbStation7.Controls.Add(btnOptionsStation7);
+            gbStation7.Controls.Add(btnToggleState7);
             gbStation7.Controls.Add(label35);
             gbStation7.Controls.Add(label21);
             gbStation7.Controls.Add(txtServerStation7);
-            gbStation7.Controls.Add(btnStartStation7);
+            gbStation7.Controls.Add(btnSaveStation7);
             gbStation7.Controls.Add(label34);
             gbStation7.Controls.Add(label22);
             gbStation7.Controls.Add(txtNameStation7);
@@ -608,6 +687,16 @@
             gbStation7.Size = new Size(258, 224);
             gbStation7.TabIndex = 22;
             gbStation7.TabStop = false;
+            // 
+            // btnToggleState7
+            // 
+            btnToggleState7.BackColor = Color.FromArgb(255, 192, 192);
+            btnToggleState7.Image = (Image)resources.GetObject("btnToggleState7.Image");
+            btnToggleState7.Location = new Point(222, 19);
+            btnToggleState7.Name = "btnToggleState7";
+            btnToggleState7.Size = new Size(30, 30);
+            btnToggleState7.TabIndex = 23;
+            btnToggleState7.UseVisualStyleBackColor = false;
             // 
             // label35
             // 
@@ -639,16 +728,16 @@
             txtServerStation7.Size = new Size(150, 23);
             txtServerStation7.TabIndex = 15;
             // 
-            // btnStartStation7
+            // btnSaveStation7
             // 
-            btnStartStation7.Font = new Font("Segoe UI", 10F);
-            btnStartStation7.Location = new Point(88, 168);
-            btnStartStation7.Name = "btnStartStation7";
-            btnStartStation7.Size = new Size(75, 30);
-            btnStartStation7.TabIndex = 14;
-            btnStartStation7.Text = "INICIAR";
-            btnStartStation7.UseVisualStyleBackColor = true;
-            btnStartStation7.Click += btnStartStation7_Click;
+            btnSaveStation7.Font = new Font("Segoe UI", 10F);
+            btnSaveStation7.Location = new Point(20, 170);
+            btnSaveStation7.Name = "btnSaveStation7";
+            btnSaveStation7.Size = new Size(83, 30);
+            btnSaveStation7.TabIndex = 14;
+            btnSaveStation7.Text = "GUARDAR";
+            btnSaveStation7.UseVisualStyleBackColor = true;
+            btnSaveStation7.Click += btnSaveStation7_Click;
             // 
             // label34
             // 
@@ -723,9 +812,11 @@
             // 
             // gbStation6
             // 
+            gbStation6.Controls.Add(btnOptionsStation6);
+            gbStation6.Controls.Add(btnToggleState6);
             gbStation6.Controls.Add(label25);
             gbStation6.Controls.Add(txtServerStation6);
-            gbStation6.Controls.Add(btnStartStation6);
+            gbStation6.Controls.Add(btnSaveStation6);
             gbStation6.Controls.Add(label26);
             gbStation6.Controls.Add(txtNameStation6);
             gbStation6.Controls.Add(label27);
@@ -736,6 +827,16 @@
             gbStation6.Size = new Size(258, 224);
             gbStation6.TabIndex = 20;
             gbStation6.TabStop = false;
+            // 
+            // btnToggleState6
+            // 
+            btnToggleState6.BackColor = Color.FromArgb(255, 192, 192);
+            btnToggleState6.Image = (Image)resources.GetObject("btnToggleState6.Image");
+            btnToggleState6.Location = new Point(222, 19);
+            btnToggleState6.Name = "btnToggleState6";
+            btnToggleState6.Size = new Size(30, 30);
+            btnToggleState6.TabIndex = 22;
+            btnToggleState6.UseVisualStyleBackColor = false;
             // 
             // label25
             // 
@@ -756,16 +857,16 @@
             txtServerStation6.Size = new Size(150, 23);
             txtServerStation6.TabIndex = 15;
             // 
-            // btnStartStation6
+            // btnSaveStation6
             // 
-            btnStartStation6.Font = new Font("Segoe UI", 10F);
-            btnStartStation6.Location = new Point(88, 168);
-            btnStartStation6.Name = "btnStartStation6";
-            btnStartStation6.Size = new Size(75, 30);
-            btnStartStation6.TabIndex = 14;
-            btnStartStation6.Text = "INICIAR";
-            btnStartStation6.UseVisualStyleBackColor = true;
-            btnStartStation6.Click += btnStartStation6_Click;
+            btnSaveStation6.Font = new Font("Segoe UI", 10F);
+            btnSaveStation6.Location = new Point(21, 170);
+            btnSaveStation6.Name = "btnSaveStation6";
+            btnSaveStation6.Size = new Size(83, 30);
+            btnSaveStation6.TabIndex = 14;
+            btnSaveStation6.Text = "GUARDAR";
+            btnSaveStation6.UseVisualStyleBackColor = true;
+            btnSaveStation6.Click += btnSaveStation6_Click;
             // 
             // label26
             // 
@@ -818,9 +919,11 @@
             // 
             // gbStation5
             // 
+            gbStation5.Controls.Add(btnOptionsStation5);
+            gbStation5.Controls.Add(btnToggleState5);
             gbStation5.Controls.Add(label29);
             gbStation5.Controls.Add(txtServerStation5);
-            gbStation5.Controls.Add(btnStartStation5);
+            gbStation5.Controls.Add(btnSaveStation5);
             gbStation5.Controls.Add(label30);
             gbStation5.Controls.Add(txtNameStation5);
             gbStation5.Controls.Add(label31);
@@ -831,6 +934,16 @@
             gbStation5.Size = new Size(258, 224);
             gbStation5.TabIndex = 19;
             gbStation5.TabStop = false;
+            // 
+            // btnToggleState5
+            // 
+            btnToggleState5.BackColor = Color.FromArgb(255, 192, 192);
+            btnToggleState5.Image = (Image)resources.GetObject("btnToggleState5.Image");
+            btnToggleState5.Location = new Point(222, 19);
+            btnToggleState5.Name = "btnToggleState5";
+            btnToggleState5.Size = new Size(30, 30);
+            btnToggleState5.TabIndex = 21;
+            btnToggleState5.UseVisualStyleBackColor = false;
             // 
             // label29
             // 
@@ -851,16 +964,16 @@
             txtServerStation5.Size = new Size(150, 23);
             txtServerStation5.TabIndex = 15;
             // 
-            // btnStartStation5
+            // btnSaveStation5
             // 
-            btnStartStation5.Font = new Font("Segoe UI", 10F);
-            btnStartStation5.Location = new Point(88, 168);
-            btnStartStation5.Name = "btnStartStation5";
-            btnStartStation5.Size = new Size(75, 30);
-            btnStartStation5.TabIndex = 14;
-            btnStartStation5.Text = "INICIAR";
-            btnStartStation5.UseVisualStyleBackColor = true;
-            btnStartStation5.Click += btnStartStation5_Click;
+            btnSaveStation5.Font = new Font("Segoe UI", 10F);
+            btnSaveStation5.Location = new Point(21, 170);
+            btnSaveStation5.Name = "btnSaveStation5";
+            btnSaveStation5.Size = new Size(83, 30);
+            btnSaveStation5.TabIndex = 14;
+            btnSaveStation5.Text = "GUARDAR";
+            btnSaveStation5.UseVisualStyleBackColor = true;
+            btnSaveStation5.Click += btnSaveStation5_Click;
             // 
             // label30
             // 
@@ -923,6 +1036,87 @@
             lblTitle.TextAlign = ContentAlignment.MiddleCenter;
             lblTitle.UseWaitCursor = true;
             // 
+            // btnOptionsStation1
+            // 
+            btnOptionsStation1.Font = new Font("Segoe UI", 10F);
+            btnOptionsStation1.Location = new Point(152, 170);
+            btnOptionsStation1.Name = "btnOptionsStation1";
+            btnOptionsStation1.Size = new Size(89, 30);
+            btnOptionsStation1.TabIndex = 18;
+            btnOptionsStation1.Text = "OPCIONES";
+            btnOptionsStation1.UseVisualStyleBackColor = true;
+            // 
+            // btnOptionsStation5
+            // 
+            btnOptionsStation5.Font = new Font("Segoe UI", 10F);
+            btnOptionsStation5.Location = new Point(152, 170);
+            btnOptionsStation5.Name = "btnOptionsStation5";
+            btnOptionsStation5.Size = new Size(89, 30);
+            btnOptionsStation5.TabIndex = 19;
+            btnOptionsStation5.Text = "OPCIONES";
+            btnOptionsStation5.UseVisualStyleBackColor = true;
+            // 
+            // btnOptionsStation6
+            // 
+            btnOptionsStation6.Font = new Font("Segoe UI", 10F);
+            btnOptionsStation6.Location = new Point(152, 170);
+            btnOptionsStation6.Name = "btnOptionsStation6";
+            btnOptionsStation6.Size = new Size(89, 30);
+            btnOptionsStation6.TabIndex = 22;
+            btnOptionsStation6.Text = "OPCIONES";
+            btnOptionsStation6.UseVisualStyleBackColor = true;
+            // 
+            // btnOptionsStation2
+            // 
+            btnOptionsStation2.Font = new Font("Segoe UI", 10F);
+            btnOptionsStation2.Location = new Point(152, 170);
+            btnOptionsStation2.Name = "btnOptionsStation2";
+            btnOptionsStation2.Size = new Size(89, 30);
+            btnOptionsStation2.TabIndex = 23;
+            btnOptionsStation2.Text = "OPCIONES";
+            btnOptionsStation2.UseVisualStyleBackColor = true;
+            btnOptionsStation2.Click += btnOptionsStation2_Click;
+            // 
+            // btnOptionsStation8
+            // 
+            btnOptionsStation8.Font = new Font("Segoe UI", 10F);
+            btnOptionsStation8.Location = new Point(151, 170);
+            btnOptionsStation8.Name = "btnOptionsStation8";
+            btnOptionsStation8.Size = new Size(89, 30);
+            btnOptionsStation8.TabIndex = 25;
+            btnOptionsStation8.Text = "OPCIONES";
+            btnOptionsStation8.UseVisualStyleBackColor = true;
+            // 
+            // btnOptionsStation4
+            // 
+            btnOptionsStation4.Font = new Font("Segoe UI", 10F);
+            btnOptionsStation4.Location = new Point(151, 170);
+            btnOptionsStation4.Name = "btnOptionsStation4";
+            btnOptionsStation4.Size = new Size(89, 30);
+            btnOptionsStation4.TabIndex = 26;
+            btnOptionsStation4.Text = "OPCIONES";
+            btnOptionsStation4.UseVisualStyleBackColor = true;
+            // 
+            // btnOptionsStation3
+            // 
+            btnOptionsStation3.Font = new Font("Segoe UI", 10F);
+            btnOptionsStation3.Location = new Point(151, 170);
+            btnOptionsStation3.Name = "btnOptionsStation3";
+            btnOptionsStation3.Size = new Size(89, 30);
+            btnOptionsStation3.TabIndex = 27;
+            btnOptionsStation3.Text = "OPCIONES";
+            btnOptionsStation3.UseVisualStyleBackColor = true;
+            // 
+            // btnOptionsStation7
+            // 
+            btnOptionsStation7.Font = new Font("Segoe UI", 10F);
+            btnOptionsStation7.Location = new Point(151, 170);
+            btnOptionsStation7.Name = "btnOptionsStation7";
+            btnOptionsStation7.Size = new Size(89, 30);
+            btnOptionsStation7.TabIndex = 28;
+            btnOptionsStation7.Text = "OPCIONES";
+            btnOptionsStation7.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -967,14 +1161,14 @@
         private Label label2;
         private Label label3;
         private TextBox txtNameStation1;
-        private Button btnStartStation1;
+        private Button btnSaveStation1;
         private GroupBox gbStation1;
         private Label label4;
         private TextBox txtServerStation1;
         private GroupBox gbStation2;
         private Label label5;
         private TextBox txtServerStation2;
-        private Button btnStartStation2;
+        private Button btnSaveStation2;
         private Label label6;
         private TextBox txtNameStation2;
         private Label label7;
@@ -983,7 +1177,7 @@
         private GroupBox gbStation3;
         private Label label9;
         private TextBox txtServerStation3;
-        private Button btnStartStation3;
+        private Button btnSaveStation3;
         private Label label10;
         private TextBox txtNameStation3;
         private Label label11;
@@ -992,7 +1186,7 @@
         private GroupBox gbStation4;
         private Label label13;
         private TextBox txtServerStation4;
-        private Button btnStartStation4;
+        private Button btnSaveStation4;
         private Label label14;
         private TextBox txtNameStation4;
         private Label label15;
@@ -1001,7 +1195,7 @@
         private GroupBox gbStation5;
         private Label label17;
         private TextBox txtServerStation5;
-        private Button btnStartStation8;
+        private Button btnSaveStation8;
         private Label label18;
         private TextBox txtNameStation8;
         private Label label19;
@@ -1010,7 +1204,7 @@
         private GroupBox gbStation6;
         private Label label21;
         private TextBox txtServerStation6;
-        private Button btnStartStation7;
+        private Button btnSaveStation7;
         private Label label22;
         private TextBox txtNameStation7;
         private Label label23;
@@ -1019,7 +1213,7 @@
         private GroupBox gbStation7;
         private Label label25;
         private TextBox txtServerStation7;
-        private Button btnStartStation6;
+        private Button btnSaveStation6;
         private Label label26;
         private TextBox txtNameStation6;
         private Label label27;
@@ -1028,7 +1222,7 @@
         private GroupBox gbStation8;
         private Label label29;
         private TextBox txtServerStation8;
-        private Button btnStartStation5;
+        private Button btnSaveStation5;
         private Label label30;
         private TextBox txtNameStation5;
         private Label label31;
@@ -1045,5 +1239,21 @@
         private Label lblStation6;
         private Label lblStation7;
         private Label lblStation8;
+        private Button btnToggleState1;
+        private Button btnToggleState2;
+        private Button btnToggleState3;
+        private Button btnToggleState8;
+        private Button btnToggleState7;
+        private Button btnToggleState6;
+        private Button btnToggleState5;
+        private Button btnToggleState4;
+        private Button btnOptionsStation1;
+        private Button btnOptionsStation2;
+        private Button btnOptionsStation3;
+        private Button btnOptionsStation4;
+        private Button btnOptionsStation8;
+        private Button btnOptionsStation7;
+        private Button btnOptionsStation6;
+        private Button btnOptionsStation5;
     }
 }
