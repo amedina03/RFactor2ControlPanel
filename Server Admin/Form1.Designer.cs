@@ -36,10 +36,12 @@
             txtNameStation1 = new TextBox();
             btnSaveStation1 = new Button();
             gbStation1 = new GroupBox();
+            btnOptionsStation1 = new Button();
             btnToggleState1 = new Button();
             label4 = new Label();
             txtServerStation1 = new TextBox();
             gbStation2 = new GroupBox();
+            btnOptionsStation2 = new Button();
             btnToggleState2 = new Button();
             label5 = new Label();
             txtServerStation2 = new TextBox();
@@ -50,6 +52,7 @@
             txtIPStation2 = new TextBox();
             lblStation2 = new Label();
             gbStation3 = new GroupBox();
+            btnOptionsStation3 = new Button();
             btnToggleState3 = new Button();
             label9 = new Label();
             txtServerStation3 = new TextBox();
@@ -60,6 +63,7 @@
             txtIPStation3 = new TextBox();
             lblStation3 = new Label();
             gbStation4 = new GroupBox();
+            btnOptionsStation4 = new Button();
             btnToggleState4 = new Button();
             label13 = new Label();
             txtServerStation4 = new TextBox();
@@ -70,6 +74,7 @@
             txtIPStation4 = new TextBox();
             lblStation4 = new Label();
             gbStation8 = new GroupBox();
+            btnOptionsStation8 = new Button();
             btnToggleState8 = new Button();
             label17 = new Label();
             txtServerStation8 = new TextBox();
@@ -80,6 +85,7 @@
             txtIPStation8 = new TextBox();
             lblStation8 = new Label();
             gbStation7 = new GroupBox();
+            btnOptionsStation7 = new Button();
             btnToggleState7 = new Button();
             label35 = new Label();
             label21 = new Label();
@@ -93,6 +99,7 @@
             txtIPStation7 = new TextBox();
             lblStation7 = new Label();
             gbStation6 = new GroupBox();
+            btnOptionsStation6 = new Button();
             btnToggleState6 = new Button();
             label25 = new Label();
             txtServerStation6 = new TextBox();
@@ -103,6 +110,7 @@
             txtIPStation6 = new TextBox();
             lblStation6 = new Label();
             gbStation5 = new GroupBox();
+            btnOptionsStation5 = new Button();
             btnToggleState5 = new Button();
             label29 = new Label();
             txtServerStation5 = new TextBox();
@@ -113,14 +121,6 @@
             txtIPStation5 = new TextBox();
             lblStation5 = new Label();
             lblTitle = new Label();
-            btnOptionsStation1 = new Button();
-            btnOptionsStation5 = new Button();
-            btnOptionsStation6 = new Button();
-            btnOptionsStation2 = new Button();
-            btnOptionsStation8 = new Button();
-            btnOptionsStation4 = new Button();
-            btnOptionsStation3 = new Button();
-            btnOptionsStation7 = new Button();
             gbStation1.SuspendLayout();
             gbStation2.SuspendLayout();
             gbStation3.SuspendLayout();
@@ -209,6 +209,17 @@
             gbStation1.TabIndex = 15;
             gbStation1.TabStop = false;
             // 
+            // btnOptionsStation1
+            // 
+            btnOptionsStation1.Font = new Font("Segoe UI", 10F);
+            btnOptionsStation1.Location = new Point(152, 170);
+            btnOptionsStation1.Name = "btnOptionsStation1";
+            btnOptionsStation1.Size = new Size(89, 30);
+            btnOptionsStation1.TabIndex = 18;
+            btnOptionsStation1.Text = "OPCIONES";
+            btnOptionsStation1.UseVisualStyleBackColor = true;
+            btnOptionsStation1.Click += btnOptionsStation1_Click;
+            // 
             // btnToggleState1
             // 
             btnToggleState1.BackColor = Color.FromArgb(255, 192, 192);
@@ -218,6 +229,7 @@
             btnToggleState1.Size = new Size(30, 30);
             btnToggleState1.TabIndex = 17;
             btnToggleState1.UseVisualStyleBackColor = false;
+            btnToggleState1.Click += btnToggleState1_Click;
             // 
             // label4
             // 
@@ -256,6 +268,17 @@
             gbStation2.TabIndex = 17;
             gbStation2.TabStop = false;
             // 
+            // btnOptionsStation2
+            // 
+            btnOptionsStation2.Font = new Font("Segoe UI", 10F);
+            btnOptionsStation2.Location = new Point(152, 170);
+            btnOptionsStation2.Name = "btnOptionsStation2";
+            btnOptionsStation2.Size = new Size(89, 30);
+            btnOptionsStation2.TabIndex = 23;
+            btnOptionsStation2.Text = "OPCIONES";
+            btnOptionsStation2.UseVisualStyleBackColor = true;
+            btnOptionsStation2.Click += btnOptionsStation2_Click;
+            // 
             // btnToggleState2
             // 
             btnToggleState2.BackColor = Color.FromArgb(255, 192, 192);
@@ -265,6 +288,7 @@
             btnToggleState2.Size = new Size(30, 30);
             btnToggleState2.TabIndex = 18;
             btnToggleState2.UseVisualStyleBackColor = false;
+            btnToggleState2.Click += btnToggleState2_Click;
             // 
             // label5
             // 
@@ -364,6 +388,17 @@
             gbStation3.TabIndex = 18;
             gbStation3.TabStop = false;
             // 
+            // btnOptionsStation3
+            // 
+            btnOptionsStation3.Font = new Font("Segoe UI", 10F);
+            btnOptionsStation3.Location = new Point(151, 170);
+            btnOptionsStation3.Name = "btnOptionsStation3";
+            btnOptionsStation3.Size = new Size(89, 30);
+            btnOptionsStation3.TabIndex = 27;
+            btnOptionsStation3.Text = "OPCIONES";
+            btnOptionsStation3.UseVisualStyleBackColor = true;
+            btnOptionsStation3.Click += btnOptionsStation3_Click;
+            // 
             // btnToggleState3
             // 
             btnToggleState3.BackColor = Color.FromArgb(255, 192, 192);
@@ -373,6 +408,7 @@
             btnToggleState3.Size = new Size(30, 30);
             btnToggleState3.TabIndex = 19;
             btnToggleState3.UseVisualStyleBackColor = false;
+            btnToggleState3.Click += btnToggleState3_Click;
             // 
             // label9
             // 
@@ -471,6 +507,17 @@
             gbStation4.TabIndex = 18;
             gbStation4.TabStop = false;
             // 
+            // btnOptionsStation4
+            // 
+            btnOptionsStation4.Font = new Font("Segoe UI", 10F);
+            btnOptionsStation4.Location = new Point(151, 170);
+            btnOptionsStation4.Name = "btnOptionsStation4";
+            btnOptionsStation4.Size = new Size(89, 30);
+            btnOptionsStation4.TabIndex = 26;
+            btnOptionsStation4.Text = "OPCIONES";
+            btnOptionsStation4.UseVisualStyleBackColor = true;
+            btnOptionsStation4.Click += btnOptionsStation4_Click;
+            // 
             // btnToggleState4
             // 
             btnToggleState4.BackColor = Color.FromArgb(255, 192, 192);
@@ -480,6 +527,7 @@
             btnToggleState4.Size = new Size(30, 30);
             btnToggleState4.TabIndex = 20;
             btnToggleState4.UseVisualStyleBackColor = false;
+            btnToggleState4.Click += btnToggleState4_Click;
             // 
             // label13
             // 
@@ -578,6 +626,17 @@
             gbStation8.TabIndex = 21;
             gbStation8.TabStop = false;
             // 
+            // btnOptionsStation8
+            // 
+            btnOptionsStation8.Font = new Font("Segoe UI", 10F);
+            btnOptionsStation8.Location = new Point(151, 170);
+            btnOptionsStation8.Name = "btnOptionsStation8";
+            btnOptionsStation8.Size = new Size(89, 30);
+            btnOptionsStation8.TabIndex = 25;
+            btnOptionsStation8.Text = "OPCIONES";
+            btnOptionsStation8.UseVisualStyleBackColor = true;
+            btnOptionsStation8.Click += btnOptionsStation8_Click;
+            // 
             // btnToggleState8
             // 
             btnToggleState8.BackColor = Color.FromArgb(255, 192, 192);
@@ -587,6 +646,7 @@
             btnToggleState8.Size = new Size(30, 30);
             btnToggleState8.TabIndex = 24;
             btnToggleState8.UseVisualStyleBackColor = false;
+            btnToggleState8.Click += btnToggleState8_Click;
             // 
             // label17
             // 
@@ -688,6 +748,17 @@
             gbStation7.TabIndex = 22;
             gbStation7.TabStop = false;
             // 
+            // btnOptionsStation7
+            // 
+            btnOptionsStation7.Font = new Font("Segoe UI", 10F);
+            btnOptionsStation7.Location = new Point(151, 170);
+            btnOptionsStation7.Name = "btnOptionsStation7";
+            btnOptionsStation7.Size = new Size(89, 30);
+            btnOptionsStation7.TabIndex = 28;
+            btnOptionsStation7.Text = "OPCIONES";
+            btnOptionsStation7.UseVisualStyleBackColor = true;
+            btnOptionsStation7.Click += btnOptionsStation7_Click;
+            // 
             // btnToggleState7
             // 
             btnToggleState7.BackColor = Color.FromArgb(255, 192, 192);
@@ -697,6 +768,7 @@
             btnToggleState7.Size = new Size(30, 30);
             btnToggleState7.TabIndex = 23;
             btnToggleState7.UseVisualStyleBackColor = false;
+            btnToggleState7.Click += btnToggleState7_Click;
             // 
             // label35
             // 
@@ -828,6 +900,17 @@
             gbStation6.TabIndex = 20;
             gbStation6.TabStop = false;
             // 
+            // btnOptionsStation6
+            // 
+            btnOptionsStation6.Font = new Font("Segoe UI", 10F);
+            btnOptionsStation6.Location = new Point(152, 170);
+            btnOptionsStation6.Name = "btnOptionsStation6";
+            btnOptionsStation6.Size = new Size(89, 30);
+            btnOptionsStation6.TabIndex = 22;
+            btnOptionsStation6.Text = "OPCIONES";
+            btnOptionsStation6.UseVisualStyleBackColor = true;
+            btnOptionsStation6.Click += btnOptionsStation6_Click;
+            // 
             // btnToggleState6
             // 
             btnToggleState6.BackColor = Color.FromArgb(255, 192, 192);
@@ -837,6 +920,7 @@
             btnToggleState6.Size = new Size(30, 30);
             btnToggleState6.TabIndex = 22;
             btnToggleState6.UseVisualStyleBackColor = false;
+            btnToggleState6.Click += btnToggleState6_Click;
             // 
             // label25
             // 
@@ -935,6 +1019,17 @@
             gbStation5.TabIndex = 19;
             gbStation5.TabStop = false;
             // 
+            // btnOptionsStation5
+            // 
+            btnOptionsStation5.Font = new Font("Segoe UI", 10F);
+            btnOptionsStation5.Location = new Point(152, 170);
+            btnOptionsStation5.Name = "btnOptionsStation5";
+            btnOptionsStation5.Size = new Size(89, 30);
+            btnOptionsStation5.TabIndex = 19;
+            btnOptionsStation5.Text = "OPCIONES";
+            btnOptionsStation5.UseVisualStyleBackColor = true;
+            btnOptionsStation5.Click += btnOptionsStation5_Click;
+            // 
             // btnToggleState5
             // 
             btnToggleState5.BackColor = Color.FromArgb(255, 192, 192);
@@ -944,6 +1039,7 @@
             btnToggleState5.Size = new Size(30, 30);
             btnToggleState5.TabIndex = 21;
             btnToggleState5.UseVisualStyleBackColor = false;
+            btnToggleState5.Click += btnToggleState5_Click;
             // 
             // label29
             // 
@@ -1035,87 +1131,6 @@
             lblTitle.Text = "PANEL DE CONTROL";
             lblTitle.TextAlign = ContentAlignment.MiddleCenter;
             lblTitle.UseWaitCursor = true;
-            // 
-            // btnOptionsStation1
-            // 
-            btnOptionsStation1.Font = new Font("Segoe UI", 10F);
-            btnOptionsStation1.Location = new Point(152, 170);
-            btnOptionsStation1.Name = "btnOptionsStation1";
-            btnOptionsStation1.Size = new Size(89, 30);
-            btnOptionsStation1.TabIndex = 18;
-            btnOptionsStation1.Text = "OPCIONES";
-            btnOptionsStation1.UseVisualStyleBackColor = true;
-            // 
-            // btnOptionsStation5
-            // 
-            btnOptionsStation5.Font = new Font("Segoe UI", 10F);
-            btnOptionsStation5.Location = new Point(152, 170);
-            btnOptionsStation5.Name = "btnOptionsStation5";
-            btnOptionsStation5.Size = new Size(89, 30);
-            btnOptionsStation5.TabIndex = 19;
-            btnOptionsStation5.Text = "OPCIONES";
-            btnOptionsStation5.UseVisualStyleBackColor = true;
-            // 
-            // btnOptionsStation6
-            // 
-            btnOptionsStation6.Font = new Font("Segoe UI", 10F);
-            btnOptionsStation6.Location = new Point(152, 170);
-            btnOptionsStation6.Name = "btnOptionsStation6";
-            btnOptionsStation6.Size = new Size(89, 30);
-            btnOptionsStation6.TabIndex = 22;
-            btnOptionsStation6.Text = "OPCIONES";
-            btnOptionsStation6.UseVisualStyleBackColor = true;
-            // 
-            // btnOptionsStation2
-            // 
-            btnOptionsStation2.Font = new Font("Segoe UI", 10F);
-            btnOptionsStation2.Location = new Point(152, 170);
-            btnOptionsStation2.Name = "btnOptionsStation2";
-            btnOptionsStation2.Size = new Size(89, 30);
-            btnOptionsStation2.TabIndex = 23;
-            btnOptionsStation2.Text = "OPCIONES";
-            btnOptionsStation2.UseVisualStyleBackColor = true;
-            btnOptionsStation2.Click += btnOptionsStation2_Click;
-            // 
-            // btnOptionsStation8
-            // 
-            btnOptionsStation8.Font = new Font("Segoe UI", 10F);
-            btnOptionsStation8.Location = new Point(151, 170);
-            btnOptionsStation8.Name = "btnOptionsStation8";
-            btnOptionsStation8.Size = new Size(89, 30);
-            btnOptionsStation8.TabIndex = 25;
-            btnOptionsStation8.Text = "OPCIONES";
-            btnOptionsStation8.UseVisualStyleBackColor = true;
-            // 
-            // btnOptionsStation4
-            // 
-            btnOptionsStation4.Font = new Font("Segoe UI", 10F);
-            btnOptionsStation4.Location = new Point(151, 170);
-            btnOptionsStation4.Name = "btnOptionsStation4";
-            btnOptionsStation4.Size = new Size(89, 30);
-            btnOptionsStation4.TabIndex = 26;
-            btnOptionsStation4.Text = "OPCIONES";
-            btnOptionsStation4.UseVisualStyleBackColor = true;
-            // 
-            // btnOptionsStation3
-            // 
-            btnOptionsStation3.Font = new Font("Segoe UI", 10F);
-            btnOptionsStation3.Location = new Point(151, 170);
-            btnOptionsStation3.Name = "btnOptionsStation3";
-            btnOptionsStation3.Size = new Size(89, 30);
-            btnOptionsStation3.TabIndex = 27;
-            btnOptionsStation3.Text = "OPCIONES";
-            btnOptionsStation3.UseVisualStyleBackColor = true;
-            // 
-            // btnOptionsStation7
-            // 
-            btnOptionsStation7.Font = new Font("Segoe UI", 10F);
-            btnOptionsStation7.Location = new Point(151, 170);
-            btnOptionsStation7.Name = "btnOptionsStation7";
-            btnOptionsStation7.Size = new Size(89, 30);
-            btnOptionsStation7.TabIndex = 28;
-            btnOptionsStation7.Text = "OPCIONES";
-            btnOptionsStation7.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 

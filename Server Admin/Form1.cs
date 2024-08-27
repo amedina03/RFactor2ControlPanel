@@ -7,6 +7,25 @@ namespace Server_Admin
 {
     public partial class Form1 : Form
     {
+        // Holds station values
+        private Station station1;
+        private Station station2;
+        private Station station3;
+        private Station station4;
+        private Station station5;
+        private Station station6;
+        private Station station7;
+        private Station station8;
+
+        private Dictionary<string, int> station1Options = new Dictionary<string, int>
+        {
+            { "steering help", 0 },
+            { "braking help", 0 },
+            { "stability control", 0 },
+            { "auto shifting", 0 },
+            { "traction control", 0 },
+            { "anti lock brakes", 0 }
+        };
         public Form1()
         {
             InitializeComponent();
@@ -138,7 +157,82 @@ namespace Server_Admin
 
         }
 
+        private void btnOptionsStation1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnOptionsStation2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOptionsStation3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOptionsStation4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOptionsStation5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOptionsStation6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOptionsStation7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOptionsStation8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnToggleState1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnToggleState2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnToggleState3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnToggleState4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnToggleState5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnToggleState6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnToggleState7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnToggleState8_Click(object sender, EventArgs e)
         {
 
         }

@@ -16,5 +16,10 @@ namespace Server_Admin
         {
             InitializeComponent();
         }
+
+        private void btnSaveConfig_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
