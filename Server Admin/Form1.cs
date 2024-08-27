@@ -17,18 +17,10 @@ namespace Server_Admin
         private Station station7;
         private Station station8;
 
-        private Dictionary<string, int> station1Options = new Dictionary<string, int>
-        {
-            { "steering help", 0 },
-            { "braking help", 0 },
-            { "stability control", 0 },
-            { "auto shifting", 0 },
-            { "traction control", 0 },
-            { "anti lock brakes", 0 }
-        };
         public Form1()
         {
             InitializeComponent();
+            MessageBox.Show("HOLA");
         }
 
         private void Form1_Load(object sender, EventArgs e)
