@@ -42,12 +42,14 @@
             cbAntiLockBrakes = new ComboBox();
             label5 = new Label();
             lblStationName = new Label();
+            cbDrivingLine = new ComboBox();
+            label7 = new Label();
             SuspendLayout();
             // 
             // btnSaveConfig
             // 
             btnSaveConfig.Font = new Font("Segoe UI", 10F);
-            btnSaveConfig.Location = new Point(194, 319);
+            btnSaveConfig.Location = new Point(194, 356);
             btnSaveConfig.Name = "btnSaveConfig";
             btnSaveConfig.Size = new Size(83, 30);
             btnSaveConfig.TabIndex = 15;
@@ -60,7 +62,7 @@
             label6.Anchor = AnchorStyles.Top;
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 10F);
-            label6.Location = new Point(45, 54);
+            label6.Location = new Point(45, 68);
             label6.Name = "label6";
             label6.Size = new Size(105, 19);
             label6.TabIndex = 17;
@@ -69,7 +71,7 @@
             // cbSteeringHelp
             // 
             cbSteeringHelp.FormattingEnabled = true;
-            cbSteeringHelp.Location = new Point(310, 50);
+            cbSteeringHelp.Location = new Point(310, 64);
             cbSteeringHelp.Name = "cbSteeringHelp";
             cbSteeringHelp.Size = new Size(121, 23);
             cbSteeringHelp.TabIndex = 18;
@@ -77,7 +79,7 @@
             // cbBrakingHelp
             // 
             cbBrakingHelp.FormattingEnabled = true;
-            cbBrakingHelp.Location = new Point(310, 91);
+            cbBrakingHelp.Location = new Point(310, 105);
             cbBrakingHelp.Name = "cbBrakingHelp";
             cbBrakingHelp.Size = new Size(121, 23);
             cbBrakingHelp.TabIndex = 20;
@@ -87,7 +89,7 @@
             label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 10F);
-            label1.Location = new Point(45, 95);
+            label1.Location = new Point(45, 109);
             label1.Name = "label1";
             label1.RightToLeft = RightToLeft.No;
             label1.Size = new Size(85, 19);
@@ -97,7 +99,7 @@
             // cbTractionControl
             // 
             cbTractionControl.FormattingEnabled = true;
-            cbTractionControl.Location = new Point(310, 222);
+            cbTractionControl.Location = new Point(310, 236);
             cbTractionControl.Name = "cbTractionControl";
             cbTractionControl.Size = new Size(121, 23);
             cbTractionControl.TabIndex = 22;
@@ -107,7 +109,7 @@
             label2.Anchor = AnchorStyles.Top;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 10F);
-            label2.Location = new Point(45, 226);
+            label2.Location = new Point(45, 240);
             label2.Name = "label2";
             label2.Size = new Size(141, 19);
             label2.TabIndex = 21;
@@ -118,7 +120,7 @@
             label3.Anchor = AnchorStyles.Top;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 10F);
-            label3.Location = new Point(45, 137);
+            label3.Location = new Point(45, 151);
             label3.Name = "label3";
             label3.Size = new Size(136, 19);
             label3.TabIndex = 21;
@@ -127,7 +129,7 @@
             // cbStabilityControl
             // 
             cbStabilityControl.FormattingEnabled = true;
-            cbStabilityControl.Location = new Point(310, 133);
+            cbStabilityControl.Location = new Point(310, 147);
             cbStabilityControl.Name = "cbStabilityControl";
             cbStabilityControl.Size = new Size(121, 23);
             cbStabilityControl.TabIndex = 22;
@@ -135,7 +137,7 @@
             // cbAutoShifting
             // 
             cbAutoShifting.FormattingEnabled = true;
-            cbAutoShifting.Location = new Point(310, 178);
+            cbAutoShifting.Location = new Point(310, 192);
             cbAutoShifting.Name = "cbAutoShifting";
             cbAutoShifting.Size = new Size(121, 23);
             cbAutoShifting.TabIndex = 24;
@@ -145,7 +147,7 @@
             label4.Anchor = AnchorStyles.Top;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 10F);
-            label4.Location = new Point(45, 182);
+            label4.Location = new Point(45, 196);
             label4.Name = "label4";
             label4.Size = new Size(108, 19);
             label4.TabIndex = 23;
@@ -154,7 +156,7 @@
             // cbAntiLockBrakes
             // 
             cbAntiLockBrakes.FormattingEnabled = true;
-            cbAntiLockBrakes.Location = new Point(310, 266);
+            cbAntiLockBrakes.Location = new Point(310, 280);
             cbAntiLockBrakes.Name = "cbAntiLockBrakes";
             cbAntiLockBrakes.Size = new Size(121, 23);
             cbAntiLockBrakes.TabIndex = 26;
@@ -164,7 +166,7 @@
             label5.Anchor = AnchorStyles.Top;
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 10F);
-            label5.Location = new Point(45, 270);
+            label5.Location = new Point(45, 284);
             label5.Name = "label5";
             label5.RightToLeft = RightToLeft.No;
             label5.Size = new Size(131, 19);
@@ -175,18 +177,40 @@
             // 
             lblStationName.Anchor = AnchorStyles.Top;
             lblStationName.AutoSize = true;
-            lblStationName.Font = new Font("Segoe UI", 14F);
-            lblStationName.Location = new Point(190, 9);
+            lblStationName.Font = new Font("Segoe UI", 20F);
+            lblStationName.Location = new Point(172, 9);
             lblStationName.Name = "lblStationName";
-            lblStationName.Size = new Size(94, 25);
+            lblStationName.Size = new Size(134, 37);
             lblStationName.TabIndex = 27;
             lblStationName.Text = "PUESTO 1";
+            // 
+            // cbDrivingLine
+            // 
+            cbDrivingLine.FormattingEnabled = true;
+            cbDrivingLine.Location = new Point(310, 321);
+            cbDrivingLine.Name = "cbDrivingLine";
+            cbDrivingLine.Size = new Size(121, 23);
+            cbDrivingLine.TabIndex = 29;
+            // 
+            // label7
+            // 
+            label7.Anchor = AnchorStyles.Top;
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 10F);
+            label7.Location = new Point(45, 325);
+            label7.Name = "label7";
+            label7.RightToLeft = RightToLeft.No;
+            label7.Size = new Size(96, 19);
+            label7.TabIndex = 28;
+            label7.Text = "DRIVING LINE";
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(484, 361);
+            ClientSize = new Size(484, 411);
+            Controls.Add(cbDrivingLine);
+            Controls.Add(label7);
             Controls.Add(lblStationName);
             Controls.Add(cbAntiLockBrakes);
             Controls.Add(label5);
@@ -223,5 +247,7 @@
         private ComboBox cbAntiLockBrakes;
         private Label label5;
         private Label lblStationName;
+        private ComboBox cbDrivingLine;
+        private Label label7;
     }
 }

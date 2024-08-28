@@ -36,18 +36,20 @@
             txtNameStation1 = new TextBox();
             btnSaveStation1 = new Button();
             gbStation1 = new GroupBox();
-            btnPasteStation1 = new Button();
-            btnCopyStation1 = new Button();
             btnOptionsStation1 = new Button();
+            btnHardStation1 = new Button();
             btnToggleState1 = new Button();
+            btnMediumStation1 = new Button();
             label4 = new Label();
+            btnEasyStation1 = new Button();
             txtServerStation1 = new TextBox();
             gbStation2 = new GroupBox();
-            btnPasteStation2 = new Button();
             btnOptionsStation2 = new Button();
-            btnCopyStation2 = new Button();
+            btnHardStation2 = new Button();
             btnToggleState2 = new Button();
+            btnMediumStation2 = new Button();
             label5 = new Label();
+            btnEasyStation2 = new Button();
             txtServerStation2 = new TextBox();
             btnSaveStation2 = new Button();
             label6 = new Label();
@@ -56,11 +58,12 @@
             txtIPStation2 = new TextBox();
             lblStation2 = new Label();
             gbStation3 = new GroupBox();
-            btnPasteStation3 = new Button();
             btnOptionsStation3 = new Button();
-            btnCopyStation3 = new Button();
+            btnHardStation3 = new Button();
             btnToggleState3 = new Button();
+            btnMediumStation3 = new Button();
             label9 = new Label();
+            btnEasyStation3 = new Button();
             txtServerStation3 = new TextBox();
             btnSaveStation3 = new Button();
             label10 = new Label();
@@ -69,11 +72,12 @@
             txtIPStation3 = new TextBox();
             lblStation3 = new Label();
             gbStation4 = new GroupBox();
-            btnPasteStation4 = new Button();
             btnOptionsStation4 = new Button();
-            btnCopyStation4 = new Button();
+            btnHardStation4 = new Button();
             btnToggleState4 = new Button();
+            btnMediumStation4 = new Button();
             label13 = new Label();
+            btnEasyStation4 = new Button();
             txtServerStation4 = new TextBox();
             btnSaveStation4 = new Button();
             label14 = new Label();
@@ -82,11 +86,12 @@
             txtIPStation4 = new TextBox();
             lblStation4 = new Label();
             gbStation8 = new GroupBox();
-            btnPasteStation8 = new Button();
             btnOptionsStation8 = new Button();
-            btnCopyStation8 = new Button();
+            btnHardStation8 = new Button();
             btnToggleState8 = new Button();
+            btnMediumStation8 = new Button();
             label17 = new Label();
+            btnEasyStation8 = new Button();
             txtServerStation8 = new TextBox();
             btnSaveStation8 = new Button();
             label18 = new Label();
@@ -95,11 +100,12 @@
             txtIPStation8 = new TextBox();
             lblStation8 = new Label();
             gbStation7 = new GroupBox();
-            btnPasteStation7 = new Button();
             btnOptionsStation7 = new Button();
-            btnCopyStation7 = new Button();
+            btnHardStation7 = new Button();
             btnToggleState7 = new Button();
+            btnMediumStation7 = new Button();
             label35 = new Label();
+            btnEasyStation7 = new Button();
             label21 = new Label();
             txtServerStation7 = new TextBox();
             btnSaveStation7 = new Button();
@@ -111,11 +117,12 @@
             txtIPStation7 = new TextBox();
             lblStation7 = new Label();
             gbStation6 = new GroupBox();
-            btnPasteStation6 = new Button();
             btnOptionsStation6 = new Button();
-            btnCopyStation6 = new Button();
+            btnHardStation6 = new Button();
             btnToggleState6 = new Button();
+            btnMediumStation6 = new Button();
             label25 = new Label();
+            btnEasyStation6 = new Button();
             txtServerStation6 = new TextBox();
             btnSaveStation6 = new Button();
             label26 = new Label();
@@ -124,9 +131,10 @@
             txtIPStation6 = new TextBox();
             lblStation6 = new Label();
             gbStation5 = new GroupBox();
-            btnPasteStation5 = new Button();
+            btnHardStation5 = new Button();
+            btnMediumStation5 = new Button();
+            btnEasyStation5 = new Button();
             btnOptionsStation5 = new Button();
-            btnCopyStation5 = new Button();
             btnToggleState5 = new Button();
             label29 = new Label();
             txtServerStation5 = new TextBox();
@@ -137,6 +145,14 @@
             txtIPStation5 = new TextBox();
             lblStation5 = new Label();
             lblTitle = new Label();
+            btnManualStation1 = new Button();
+            btnManualStation5 = new Button();
+            btnManualStation6 = new Button();
+            btnManualStation2 = new Button();
+            btnManualStation7 = new Button();
+            btnManualStation3 = new Button();
+            btnManualStation4 = new Button();
+            btnManualStation8 = new Button();
             gbStation1.SuspendLayout();
             gbStation2.SuspendLayout();
             gbStation3.SuspendLayout();
@@ -151,10 +167,10 @@
             // 
             lblStation1.Anchor = AnchorStyles.Top;
             lblStation1.AutoSize = true;
-            lblStation1.Font = new Font("Segoe UI", 10F);
-            lblStation1.Location = new Point(100, 30);
+            lblStation1.Font = new Font("Segoe UI", 12F);
+            lblStation1.Location = new Point(4, 20);
             lblStation1.Name = "lblStation1";
-            lblStation1.Size = new Size(63, 19);
+            lblStation1.Size = new Size(70, 21);
             lblStation1.TabIndex = 0;
             lblStation1.Text = "Puesto 1";
             // 
@@ -209,11 +225,13 @@
             // 
             // gbStation1
             // 
-            gbStation1.Controls.Add(btnPasteStation1);
-            gbStation1.Controls.Add(btnCopyStation1);
+            gbStation1.Controls.Add(btnManualStation1);
             gbStation1.Controls.Add(btnOptionsStation1);
+            gbStation1.Controls.Add(btnHardStation1);
             gbStation1.Controls.Add(btnToggleState1);
+            gbStation1.Controls.Add(btnMediumStation1);
             gbStation1.Controls.Add(label4);
+            gbStation1.Controls.Add(btnEasyStation1);
             gbStation1.Controls.Add(txtServerStation1);
             gbStation1.Controls.Add(btnSaveStation1);
             gbStation1.Controls.Add(label3);
@@ -227,26 +245,6 @@
             gbStation1.TabIndex = 15;
             gbStation1.TabStop = false;
             // 
-            // btnPasteStation1
-            // 
-            btnPasteStation1.BackColor = Color.White;
-            btnPasteStation1.Image = (Image)resources.GetObject("btnPasteStation1.Image");
-            btnPasteStation1.Location = new Point(49, 19);
-            btnPasteStation1.Name = "btnPasteStation1";
-            btnPasteStation1.Size = new Size(30, 30);
-            btnPasteStation1.TabIndex = 20;
-            btnPasteStation1.UseVisualStyleBackColor = false;
-            // 
-            // btnCopyStation1
-            // 
-            btnCopyStation1.BackColor = Color.White;
-            btnCopyStation1.Image = (Image)resources.GetObject("btnCopyStation1.Image");
-            btnCopyStation1.Location = new Point(13, 19);
-            btnCopyStation1.Name = "btnCopyStation1";
-            btnCopyStation1.Size = new Size(30, 30);
-            btnCopyStation1.TabIndex = 19;
-            btnCopyStation1.UseVisualStyleBackColor = false;
-            // 
             // btnOptionsStation1
             // 
             btnOptionsStation1.Font = new Font("Segoe UI", 10F);
@@ -258,16 +256,34 @@
             btnOptionsStation1.UseVisualStyleBackColor = true;
             btnOptionsStation1.Click += btnOptionsStation1_Click;
             // 
+            // btnHardStation1
+            // 
+            btnHardStation1.BackColor = Color.FromArgb(255, 224, 192);
+            btnHardStation1.Location = new Point(149, 15);
+            btnHardStation1.Name = "btnHardStation1";
+            btnHardStation1.Size = new Size(30, 30);
+            btnHardStation1.TabIndex = 38;
+            btnHardStation1.UseVisualStyleBackColor = false;
+            // 
             // btnToggleState1
             // 
-            btnToggleState1.BackColor = Color.FromArgb(255, 192, 192);
+            btnToggleState1.BackColor = Color.FromArgb(255, 128, 128);
             btnToggleState1.Image = (Image)resources.GetObject("btnToggleState1.Image");
-            btnToggleState1.Location = new Point(222, 19);
+            btnToggleState1.Location = new Point(222, 15);
             btnToggleState1.Name = "btnToggleState1";
             btnToggleState1.Size = new Size(30, 30);
             btnToggleState1.TabIndex = 17;
             btnToggleState1.UseVisualStyleBackColor = false;
             btnToggleState1.Click += btnToggleState1_Click;
+            // 
+            // btnMediumStation1
+            // 
+            btnMediumStation1.BackColor = Color.FromArgb(255, 255, 192);
+            btnMediumStation1.Location = new Point(113, 15);
+            btnMediumStation1.Name = "btnMediumStation1";
+            btnMediumStation1.Size = new Size(30, 30);
+            btnMediumStation1.TabIndex = 37;
+            btnMediumStation1.UseVisualStyleBackColor = false;
             // 
             // label4
             // 
@@ -280,6 +296,15 @@
             label4.TabIndex = 16;
             label4.Text = "SERVER:";
             // 
+            // btnEasyStation1
+            // 
+            btnEasyStation1.BackColor = Color.FromArgb(192, 255, 192);
+            btnEasyStation1.Location = new Point(77, 15);
+            btnEasyStation1.Name = "btnEasyStation1";
+            btnEasyStation1.Size = new Size(30, 30);
+            btnEasyStation1.TabIndex = 36;
+            btnEasyStation1.UseVisualStyleBackColor = false;
+            // 
             // txtServerStation1
             // 
             txtServerStation1.BorderStyle = BorderStyle.FixedSingle;
@@ -290,11 +315,13 @@
             // 
             // gbStation2
             // 
-            gbStation2.Controls.Add(btnPasteStation2);
+            gbStation2.Controls.Add(btnManualStation2);
             gbStation2.Controls.Add(btnOptionsStation2);
-            gbStation2.Controls.Add(btnCopyStation2);
+            gbStation2.Controls.Add(btnHardStation2);
             gbStation2.Controls.Add(btnToggleState2);
+            gbStation2.Controls.Add(btnMediumStation2);
             gbStation2.Controls.Add(label5);
+            gbStation2.Controls.Add(btnEasyStation2);
             gbStation2.Controls.Add(txtServerStation2);
             gbStation2.Controls.Add(btnSaveStation2);
             gbStation2.Controls.Add(label6);
@@ -308,16 +335,6 @@
             gbStation2.TabIndex = 17;
             gbStation2.TabStop = false;
             // 
-            // btnPasteStation2
-            // 
-            btnPasteStation2.BackColor = Color.White;
-            btnPasteStation2.Image = (Image)resources.GetObject("btnPasteStation2.Image");
-            btnPasteStation2.Location = new Point(46, 19);
-            btnPasteStation2.Name = "btnPasteStation2";
-            btnPasteStation2.Size = new Size(30, 30);
-            btnPasteStation2.TabIndex = 22;
-            btnPasteStation2.UseVisualStyleBackColor = false;
-            // 
             // btnOptionsStation2
             // 
             btnOptionsStation2.Font = new Font("Segoe UI", 10F);
@@ -329,26 +346,34 @@
             btnOptionsStation2.UseVisualStyleBackColor = true;
             btnOptionsStation2.Click += btnOptionsStation2_Click;
             // 
-            // btnCopyStation2
+            // btnHardStation2
             // 
-            btnCopyStation2.BackColor = Color.White;
-            btnCopyStation2.Image = (Image)resources.GetObject("btnCopyStation2.Image");
-            btnCopyStation2.Location = new Point(10, 19);
-            btnCopyStation2.Name = "btnCopyStation2";
-            btnCopyStation2.Size = new Size(30, 30);
-            btnCopyStation2.TabIndex = 21;
-            btnCopyStation2.UseVisualStyleBackColor = false;
+            btnHardStation2.BackColor = Color.FromArgb(255, 224, 192);
+            btnHardStation2.Location = new Point(148, 15);
+            btnHardStation2.Name = "btnHardStation2";
+            btnHardStation2.Size = new Size(30, 30);
+            btnHardStation2.TabIndex = 42;
+            btnHardStation2.UseVisualStyleBackColor = false;
             // 
             // btnToggleState2
             // 
-            btnToggleState2.BackColor = Color.FromArgb(255, 192, 192);
+            btnToggleState2.BackColor = Color.FromArgb(255, 128, 128);
             btnToggleState2.Image = (Image)resources.GetObject("btnToggleState2.Image");
-            btnToggleState2.Location = new Point(222, 19);
+            btnToggleState2.Location = new Point(222, 15);
             btnToggleState2.Name = "btnToggleState2";
             btnToggleState2.Size = new Size(30, 30);
             btnToggleState2.TabIndex = 18;
             btnToggleState2.UseVisualStyleBackColor = false;
             btnToggleState2.Click += btnToggleState2_Click;
+            // 
+            // btnMediumStation2
+            // 
+            btnMediumStation2.BackColor = Color.FromArgb(255, 255, 192);
+            btnMediumStation2.Location = new Point(112, 15);
+            btnMediumStation2.Name = "btnMediumStation2";
+            btnMediumStation2.Size = new Size(30, 30);
+            btnMediumStation2.TabIndex = 41;
+            btnMediumStation2.UseVisualStyleBackColor = false;
             // 
             // label5
             // 
@@ -360,6 +385,15 @@
             label5.Size = new Size(58, 19);
             label5.TabIndex = 16;
             label5.Text = "SERVER:";
+            // 
+            // btnEasyStation2
+            // 
+            btnEasyStation2.BackColor = Color.FromArgb(192, 255, 192);
+            btnEasyStation2.Location = new Point(76, 15);
+            btnEasyStation2.Name = "btnEasyStation2";
+            btnEasyStation2.Size = new Size(30, 30);
+            btnEasyStation2.TabIndex = 40;
+            btnEasyStation2.UseVisualStyleBackColor = false;
             // 
             // txtServerStation2
             // 
@@ -422,21 +456,23 @@
             // 
             lblStation2.Anchor = AnchorStyles.Top;
             lblStation2.AutoSize = true;
-            lblStation2.Font = new Font("Segoe UI", 10F);
-            lblStation2.Location = new Point(100, 30);
+            lblStation2.Font = new Font("Segoe UI", 12F);
+            lblStation2.Location = new Point(4, 20);
             lblStation2.Name = "lblStation2";
-            lblStation2.Size = new Size(63, 19);
+            lblStation2.Size = new Size(70, 21);
             lblStation2.TabIndex = 0;
             lblStation2.Text = "Puesto 2";
             lblStation2.TextAlign = ContentAlignment.TopCenter;
             // 
             // gbStation3
             // 
-            gbStation3.Controls.Add(btnPasteStation3);
+            gbStation3.Controls.Add(btnManualStation3);
             gbStation3.Controls.Add(btnOptionsStation3);
-            gbStation3.Controls.Add(btnCopyStation3);
+            gbStation3.Controls.Add(btnHardStation3);
             gbStation3.Controls.Add(btnToggleState3);
+            gbStation3.Controls.Add(btnMediumStation3);
             gbStation3.Controls.Add(label9);
+            gbStation3.Controls.Add(btnEasyStation3);
             gbStation3.Controls.Add(txtServerStation3);
             gbStation3.Controls.Add(btnSaveStation3);
             gbStation3.Controls.Add(label10);
@@ -450,16 +486,6 @@
             gbStation3.TabIndex = 18;
             gbStation3.TabStop = false;
             // 
-            // btnPasteStation3
-            // 
-            btnPasteStation3.BackColor = Color.White;
-            btnPasteStation3.Image = (Image)resources.GetObject("btnPasteStation3.Image");
-            btnPasteStation3.Location = new Point(45, 19);
-            btnPasteStation3.Name = "btnPasteStation3";
-            btnPasteStation3.Size = new Size(30, 30);
-            btnPasteStation3.TabIndex = 25;
-            btnPasteStation3.UseVisualStyleBackColor = false;
-            // 
             // btnOptionsStation3
             // 
             btnOptionsStation3.Font = new Font("Segoe UI", 10F);
@@ -471,26 +497,34 @@
             btnOptionsStation3.UseVisualStyleBackColor = true;
             btnOptionsStation3.Click += btnOptionsStation3_Click;
             // 
-            // btnCopyStation3
+            // btnHardStation3
             // 
-            btnCopyStation3.BackColor = Color.White;
-            btnCopyStation3.Image = (Image)resources.GetObject("btnCopyStation3.Image");
-            btnCopyStation3.Location = new Point(9, 19);
-            btnCopyStation3.Name = "btnCopyStation3";
-            btnCopyStation3.Size = new Size(30, 30);
-            btnCopyStation3.TabIndex = 24;
-            btnCopyStation3.UseVisualStyleBackColor = false;
+            btnHardStation3.BackColor = Color.FromArgb(255, 224, 192);
+            btnHardStation3.Location = new Point(148, 14);
+            btnHardStation3.Name = "btnHardStation3";
+            btnHardStation3.Size = new Size(30, 30);
+            btnHardStation3.TabIndex = 46;
+            btnHardStation3.UseVisualStyleBackColor = false;
             // 
             // btnToggleState3
             // 
-            btnToggleState3.BackColor = Color.FromArgb(255, 192, 192);
+            btnToggleState3.BackColor = Color.FromArgb(255, 128, 128);
             btnToggleState3.Image = (Image)resources.GetObject("btnToggleState3.Image");
-            btnToggleState3.Location = new Point(222, 19);
+            btnToggleState3.Location = new Point(222, 15);
             btnToggleState3.Name = "btnToggleState3";
             btnToggleState3.Size = new Size(30, 30);
             btnToggleState3.TabIndex = 19;
             btnToggleState3.UseVisualStyleBackColor = false;
             btnToggleState3.Click += btnToggleState3_Click;
+            // 
+            // btnMediumStation3
+            // 
+            btnMediumStation3.BackColor = Color.FromArgb(255, 255, 192);
+            btnMediumStation3.Location = new Point(112, 14);
+            btnMediumStation3.Name = "btnMediumStation3";
+            btnMediumStation3.Size = new Size(30, 30);
+            btnMediumStation3.TabIndex = 45;
+            btnMediumStation3.UseVisualStyleBackColor = false;
             // 
             // label9
             // 
@@ -502,6 +536,15 @@
             label9.Size = new Size(58, 19);
             label9.TabIndex = 16;
             label9.Text = "SERVER:";
+            // 
+            // btnEasyStation3
+            // 
+            btnEasyStation3.BackColor = Color.FromArgb(192, 255, 192);
+            btnEasyStation3.Location = new Point(76, 14);
+            btnEasyStation3.Name = "btnEasyStation3";
+            btnEasyStation3.Size = new Size(30, 30);
+            btnEasyStation3.TabIndex = 44;
+            btnEasyStation3.UseVisualStyleBackColor = false;
             // 
             // txtServerStation3
             // 
@@ -564,20 +607,22 @@
             // 
             lblStation3.Anchor = AnchorStyles.Top;
             lblStation3.AutoSize = true;
-            lblStation3.Font = new Font("Segoe UI", 10F);
-            lblStation3.Location = new Point(100, 30);
+            lblStation3.Font = new Font("Segoe UI", 12F);
+            lblStation3.Location = new Point(4, 20);
             lblStation3.Name = "lblStation3";
-            lblStation3.Size = new Size(63, 19);
+            lblStation3.Size = new Size(70, 21);
             lblStation3.TabIndex = 0;
             lblStation3.Text = "Puesto 3";
             // 
             // gbStation4
             // 
-            gbStation4.Controls.Add(btnPasteStation4);
+            gbStation4.Controls.Add(btnManualStation4);
             gbStation4.Controls.Add(btnOptionsStation4);
-            gbStation4.Controls.Add(btnCopyStation4);
+            gbStation4.Controls.Add(btnHardStation4);
             gbStation4.Controls.Add(btnToggleState4);
+            gbStation4.Controls.Add(btnMediumStation4);
             gbStation4.Controls.Add(label13);
+            gbStation4.Controls.Add(btnEasyStation4);
             gbStation4.Controls.Add(txtServerStation4);
             gbStation4.Controls.Add(btnSaveStation4);
             gbStation4.Controls.Add(label14);
@@ -591,16 +636,6 @@
             gbStation4.TabIndex = 18;
             gbStation4.TabStop = false;
             // 
-            // btnPasteStation4
-            // 
-            btnPasteStation4.BackColor = Color.White;
-            btnPasteStation4.Image = (Image)resources.GetObject("btnPasteStation4.Image");
-            btnPasteStation4.Location = new Point(46, 19);
-            btnPasteStation4.Name = "btnPasteStation4";
-            btnPasteStation4.Size = new Size(30, 30);
-            btnPasteStation4.TabIndex = 29;
-            btnPasteStation4.UseVisualStyleBackColor = false;
-            // 
             // btnOptionsStation4
             // 
             btnOptionsStation4.Font = new Font("Segoe UI", 10F);
@@ -612,26 +647,34 @@
             btnOptionsStation4.UseVisualStyleBackColor = true;
             btnOptionsStation4.Click += btnOptionsStation4_Click;
             // 
-            // btnCopyStation4
+            // btnHardStation4
             // 
-            btnCopyStation4.BackColor = Color.White;
-            btnCopyStation4.Image = (Image)resources.GetObject("btnCopyStation4.Image");
-            btnCopyStation4.Location = new Point(10, 19);
-            btnCopyStation4.Name = "btnCopyStation4";
-            btnCopyStation4.Size = new Size(30, 30);
-            btnCopyStation4.TabIndex = 28;
-            btnCopyStation4.UseVisualStyleBackColor = false;
+            btnHardStation4.BackColor = Color.FromArgb(255, 224, 192);
+            btnHardStation4.Location = new Point(149, 15);
+            btnHardStation4.Name = "btnHardStation4";
+            btnHardStation4.Size = new Size(30, 30);
+            btnHardStation4.TabIndex = 50;
+            btnHardStation4.UseVisualStyleBackColor = false;
             // 
             // btnToggleState4
             // 
-            btnToggleState4.BackColor = Color.FromArgb(255, 192, 192);
+            btnToggleState4.BackColor = Color.FromArgb(255, 128, 128);
             btnToggleState4.Image = (Image)resources.GetObject("btnToggleState4.Image");
-            btnToggleState4.Location = new Point(222, 19);
+            btnToggleState4.Location = new Point(222, 15);
             btnToggleState4.Name = "btnToggleState4";
             btnToggleState4.Size = new Size(30, 30);
             btnToggleState4.TabIndex = 20;
             btnToggleState4.UseVisualStyleBackColor = false;
             btnToggleState4.Click += btnToggleState4_Click;
+            // 
+            // btnMediumStation4
+            // 
+            btnMediumStation4.BackColor = Color.FromArgb(255, 255, 192);
+            btnMediumStation4.Location = new Point(113, 15);
+            btnMediumStation4.Name = "btnMediumStation4";
+            btnMediumStation4.Size = new Size(30, 30);
+            btnMediumStation4.TabIndex = 49;
+            btnMediumStation4.UseVisualStyleBackColor = false;
             // 
             // label13
             // 
@@ -643,6 +686,15 @@
             label13.Size = new Size(58, 19);
             label13.TabIndex = 16;
             label13.Text = "SERVER:";
+            // 
+            // btnEasyStation4
+            // 
+            btnEasyStation4.BackColor = Color.FromArgb(192, 255, 192);
+            btnEasyStation4.Location = new Point(77, 15);
+            btnEasyStation4.Name = "btnEasyStation4";
+            btnEasyStation4.Size = new Size(30, 30);
+            btnEasyStation4.TabIndex = 48;
+            btnEasyStation4.UseVisualStyleBackColor = false;
             // 
             // txtServerStation4
             // 
@@ -705,20 +757,22 @@
             // 
             lblStation4.Anchor = AnchorStyles.Top;
             lblStation4.AutoSize = true;
-            lblStation4.Font = new Font("Segoe UI", 10F);
-            lblStation4.Location = new Point(100, 30);
+            lblStation4.Font = new Font("Segoe UI", 12F);
+            lblStation4.Location = new Point(4, 20);
             lblStation4.Name = "lblStation4";
-            lblStation4.Size = new Size(63, 19);
+            lblStation4.Size = new Size(70, 21);
             lblStation4.TabIndex = 0;
             lblStation4.Text = "Puesto 4";
             // 
             // gbStation8
             // 
-            gbStation8.Controls.Add(btnPasteStation8);
+            gbStation8.Controls.Add(btnManualStation8);
             gbStation8.Controls.Add(btnOptionsStation8);
-            gbStation8.Controls.Add(btnCopyStation8);
+            gbStation8.Controls.Add(btnHardStation8);
             gbStation8.Controls.Add(btnToggleState8);
+            gbStation8.Controls.Add(btnMediumStation8);
             gbStation8.Controls.Add(label17);
+            gbStation8.Controls.Add(btnEasyStation8);
             gbStation8.Controls.Add(txtServerStation8);
             gbStation8.Controls.Add(btnSaveStation8);
             gbStation8.Controls.Add(label18);
@@ -732,16 +786,6 @@
             gbStation8.TabIndex = 21;
             gbStation8.TabStop = false;
             // 
-            // btnPasteStation8
-            // 
-            btnPasteStation8.BackColor = Color.White;
-            btnPasteStation8.Image = (Image)resources.GetObject("btnPasteStation8.Image");
-            btnPasteStation8.Location = new Point(46, 19);
-            btnPasteStation8.Name = "btnPasteStation8";
-            btnPasteStation8.Size = new Size(30, 30);
-            btnPasteStation8.TabIndex = 37;
-            btnPasteStation8.UseVisualStyleBackColor = false;
-            // 
             // btnOptionsStation8
             // 
             btnOptionsStation8.Font = new Font("Segoe UI", 10F);
@@ -753,26 +797,34 @@
             btnOptionsStation8.UseVisualStyleBackColor = true;
             btnOptionsStation8.Click += btnOptionsStation8_Click;
             // 
-            // btnCopyStation8
+            // btnHardStation8
             // 
-            btnCopyStation8.BackColor = Color.White;
-            btnCopyStation8.Image = (Image)resources.GetObject("btnCopyStation8.Image");
-            btnCopyStation8.Location = new Point(10, 19);
-            btnCopyStation8.Name = "btnCopyStation8";
-            btnCopyStation8.Size = new Size(30, 30);
-            btnCopyStation8.TabIndex = 36;
-            btnCopyStation8.UseVisualStyleBackColor = false;
+            btnHardStation8.BackColor = Color.FromArgb(255, 224, 192);
+            btnHardStation8.Location = new Point(149, 15);
+            btnHardStation8.Name = "btnHardStation8";
+            btnHardStation8.Size = new Size(30, 30);
+            btnHardStation8.TabIndex = 54;
+            btnHardStation8.UseVisualStyleBackColor = false;
             // 
             // btnToggleState8
             // 
-            btnToggleState8.BackColor = Color.FromArgb(255, 192, 192);
+            btnToggleState8.BackColor = Color.FromArgb(255, 128, 128);
             btnToggleState8.Image = (Image)resources.GetObject("btnToggleState8.Image");
-            btnToggleState8.Location = new Point(222, 19);
+            btnToggleState8.Location = new Point(222, 15);
             btnToggleState8.Name = "btnToggleState8";
             btnToggleState8.Size = new Size(30, 30);
             btnToggleState8.TabIndex = 24;
             btnToggleState8.UseVisualStyleBackColor = false;
             btnToggleState8.Click += btnToggleState8_Click;
+            // 
+            // btnMediumStation8
+            // 
+            btnMediumStation8.BackColor = Color.FromArgb(255, 255, 192);
+            btnMediumStation8.Location = new Point(113, 15);
+            btnMediumStation8.Name = "btnMediumStation8";
+            btnMediumStation8.Size = new Size(30, 30);
+            btnMediumStation8.TabIndex = 53;
+            btnMediumStation8.UseVisualStyleBackColor = false;
             // 
             // label17
             // 
@@ -784,6 +836,15 @@
             label17.Size = new Size(58, 19);
             label17.TabIndex = 16;
             label17.Text = "SERVER:";
+            // 
+            // btnEasyStation8
+            // 
+            btnEasyStation8.BackColor = Color.FromArgb(192, 255, 192);
+            btnEasyStation8.Location = new Point(77, 15);
+            btnEasyStation8.Name = "btnEasyStation8";
+            btnEasyStation8.Size = new Size(30, 30);
+            btnEasyStation8.TabIndex = 52;
+            btnEasyStation8.UseVisualStyleBackColor = false;
             // 
             // txtServerStation8
             // 
@@ -846,20 +907,22 @@
             // 
             lblStation8.Anchor = AnchorStyles.Top;
             lblStation8.AutoSize = true;
-            lblStation8.Font = new Font("Segoe UI", 10F);
-            lblStation8.Location = new Point(100, 30);
+            lblStation8.Font = new Font("Segoe UI", 12F);
+            lblStation8.Location = new Point(4, 20);
             lblStation8.Name = "lblStation8";
-            lblStation8.Size = new Size(63, 19);
+            lblStation8.Size = new Size(70, 21);
             lblStation8.TabIndex = 0;
             lblStation8.Text = "Puesto 8";
             // 
             // gbStation7
             // 
-            gbStation7.Controls.Add(btnPasteStation7);
+            gbStation7.Controls.Add(btnManualStation7);
             gbStation7.Controls.Add(btnOptionsStation7);
-            gbStation7.Controls.Add(btnCopyStation7);
+            gbStation7.Controls.Add(btnHardStation7);
             gbStation7.Controls.Add(btnToggleState7);
+            gbStation7.Controls.Add(btnMediumStation7);
             gbStation7.Controls.Add(label35);
+            gbStation7.Controls.Add(btnEasyStation7);
             gbStation7.Controls.Add(label21);
             gbStation7.Controls.Add(txtServerStation7);
             gbStation7.Controls.Add(btnSaveStation7);
@@ -876,16 +939,6 @@
             gbStation7.TabIndex = 22;
             gbStation7.TabStop = false;
             // 
-            // btnPasteStation7
-            // 
-            btnPasteStation7.BackColor = Color.White;
-            btnPasteStation7.Image = (Image)resources.GetObject("btnPasteStation7.Image");
-            btnPasteStation7.Location = new Point(45, 19);
-            btnPasteStation7.Name = "btnPasteStation7";
-            btnPasteStation7.Size = new Size(30, 30);
-            btnPasteStation7.TabIndex = 35;
-            btnPasteStation7.UseVisualStyleBackColor = false;
-            // 
             // btnOptionsStation7
             // 
             btnOptionsStation7.Font = new Font("Segoe UI", 10F);
@@ -897,26 +950,34 @@
             btnOptionsStation7.UseVisualStyleBackColor = true;
             btnOptionsStation7.Click += btnOptionsStation7_Click;
             // 
-            // btnCopyStation7
+            // btnHardStation7
             // 
-            btnCopyStation7.BackColor = Color.White;
-            btnCopyStation7.Image = (Image)resources.GetObject("btnCopyStation7.Image");
-            btnCopyStation7.Location = new Point(9, 19);
-            btnCopyStation7.Name = "btnCopyStation7";
-            btnCopyStation7.Size = new Size(30, 30);
-            btnCopyStation7.TabIndex = 34;
-            btnCopyStation7.UseVisualStyleBackColor = false;
+            btnHardStation7.BackColor = Color.FromArgb(255, 224, 192);
+            btnHardStation7.Location = new Point(149, 15);
+            btnHardStation7.Name = "btnHardStation7";
+            btnHardStation7.Size = new Size(30, 30);
+            btnHardStation7.TabIndex = 58;
+            btnHardStation7.UseVisualStyleBackColor = false;
             // 
             // btnToggleState7
             // 
-            btnToggleState7.BackColor = Color.FromArgb(255, 192, 192);
+            btnToggleState7.BackColor = Color.FromArgb(255, 128, 128);
             btnToggleState7.Image = (Image)resources.GetObject("btnToggleState7.Image");
-            btnToggleState7.Location = new Point(222, 19);
+            btnToggleState7.Location = new Point(222, 15);
             btnToggleState7.Name = "btnToggleState7";
             btnToggleState7.Size = new Size(30, 30);
             btnToggleState7.TabIndex = 23;
             btnToggleState7.UseVisualStyleBackColor = false;
             btnToggleState7.Click += btnToggleState7_Click;
+            // 
+            // btnMediumStation7
+            // 
+            btnMediumStation7.BackColor = Color.FromArgb(255, 255, 192);
+            btnMediumStation7.Location = new Point(113, 15);
+            btnMediumStation7.Name = "btnMediumStation7";
+            btnMediumStation7.Size = new Size(30, 30);
+            btnMediumStation7.TabIndex = 57;
+            btnMediumStation7.UseVisualStyleBackColor = false;
             // 
             // label35
             // 
@@ -928,6 +989,15 @@
             label35.Size = new Size(47, 19);
             label35.TabIndex = 16;
             label35.Text = "HOST:";
+            // 
+            // btnEasyStation7
+            // 
+            btnEasyStation7.BackColor = Color.FromArgb(192, 255, 192);
+            btnEasyStation7.Location = new Point(77, 15);
+            btnEasyStation7.Name = "btnEasyStation7";
+            btnEasyStation7.Size = new Size(30, 30);
+            btnEasyStation7.TabIndex = 56;
+            btnEasyStation7.UseVisualStyleBackColor = false;
             // 
             // label21
             // 
@@ -1023,20 +1093,22 @@
             // 
             lblStation7.Anchor = AnchorStyles.Top;
             lblStation7.AutoSize = true;
-            lblStation7.Font = new Font("Segoe UI", 10F);
-            lblStation7.Location = new Point(100, 30);
+            lblStation7.Font = new Font("Segoe UI", 12F);
+            lblStation7.Location = new Point(4, 20);
             lblStation7.Name = "lblStation7";
-            lblStation7.Size = new Size(63, 19);
+            lblStation7.Size = new Size(70, 21);
             lblStation7.TabIndex = 0;
             lblStation7.Text = "Puesto 7";
             // 
             // gbStation6
             // 
-            gbStation6.Controls.Add(btnPasteStation6);
+            gbStation6.Controls.Add(btnManualStation6);
             gbStation6.Controls.Add(btnOptionsStation6);
-            gbStation6.Controls.Add(btnCopyStation6);
+            gbStation6.Controls.Add(btnHardStation6);
             gbStation6.Controls.Add(btnToggleState6);
+            gbStation6.Controls.Add(btnMediumStation6);
             gbStation6.Controls.Add(label25);
+            gbStation6.Controls.Add(btnEasyStation6);
             gbStation6.Controls.Add(txtServerStation6);
             gbStation6.Controls.Add(btnSaveStation6);
             gbStation6.Controls.Add(label26);
@@ -1050,16 +1122,6 @@
             gbStation6.TabIndex = 20;
             gbStation6.TabStop = false;
             // 
-            // btnPasteStation6
-            // 
-            btnPasteStation6.BackColor = Color.White;
-            btnPasteStation6.Image = (Image)resources.GetObject("btnPasteStation6.Image");
-            btnPasteStation6.Location = new Point(46, 19);
-            btnPasteStation6.Name = "btnPasteStation6";
-            btnPasteStation6.Size = new Size(30, 30);
-            btnPasteStation6.TabIndex = 33;
-            btnPasteStation6.UseVisualStyleBackColor = false;
-            // 
             // btnOptionsStation6
             // 
             btnOptionsStation6.Font = new Font("Segoe UI", 10F);
@@ -1071,26 +1133,34 @@
             btnOptionsStation6.UseVisualStyleBackColor = true;
             btnOptionsStation6.Click += btnOptionsStation6_Click;
             // 
-            // btnCopyStation6
+            // btnHardStation6
             // 
-            btnCopyStation6.BackColor = Color.White;
-            btnCopyStation6.Image = (Image)resources.GetObject("btnCopyStation6.Image");
-            btnCopyStation6.Location = new Point(10, 19);
-            btnCopyStation6.Name = "btnCopyStation6";
-            btnCopyStation6.Size = new Size(30, 30);
-            btnCopyStation6.TabIndex = 32;
-            btnCopyStation6.UseVisualStyleBackColor = false;
+            btnHardStation6.BackColor = Color.FromArgb(255, 224, 192);
+            btnHardStation6.Location = new Point(148, 15);
+            btnHardStation6.Name = "btnHardStation6";
+            btnHardStation6.Size = new Size(30, 30);
+            btnHardStation6.TabIndex = 42;
+            btnHardStation6.UseVisualStyleBackColor = false;
             // 
             // btnToggleState6
             // 
-            btnToggleState6.BackColor = Color.FromArgb(255, 192, 192);
+            btnToggleState6.BackColor = Color.FromArgb(255, 128, 128);
             btnToggleState6.Image = (Image)resources.GetObject("btnToggleState6.Image");
-            btnToggleState6.Location = new Point(222, 19);
+            btnToggleState6.Location = new Point(222, 15);
             btnToggleState6.Name = "btnToggleState6";
             btnToggleState6.Size = new Size(30, 30);
             btnToggleState6.TabIndex = 22;
             btnToggleState6.UseVisualStyleBackColor = false;
             btnToggleState6.Click += btnToggleState6_Click;
+            // 
+            // btnMediumStation6
+            // 
+            btnMediumStation6.BackColor = Color.FromArgb(255, 255, 192);
+            btnMediumStation6.Location = new Point(112, 15);
+            btnMediumStation6.Name = "btnMediumStation6";
+            btnMediumStation6.Size = new Size(30, 30);
+            btnMediumStation6.TabIndex = 41;
+            btnMediumStation6.UseVisualStyleBackColor = false;
             // 
             // label25
             // 
@@ -1102,6 +1172,15 @@
             label25.Size = new Size(58, 19);
             label25.TabIndex = 16;
             label25.Text = "SERVER:";
+            // 
+            // btnEasyStation6
+            // 
+            btnEasyStation6.BackColor = Color.FromArgb(192, 255, 192);
+            btnEasyStation6.Location = new Point(76, 15);
+            btnEasyStation6.Name = "btnEasyStation6";
+            btnEasyStation6.Size = new Size(30, 30);
+            btnEasyStation6.TabIndex = 40;
+            btnEasyStation6.UseVisualStyleBackColor = false;
             // 
             // txtServerStation6
             // 
@@ -1164,18 +1243,20 @@
             // 
             lblStation6.Anchor = AnchorStyles.Top;
             lblStation6.AutoSize = true;
-            lblStation6.Font = new Font("Segoe UI", 10F);
-            lblStation6.Location = new Point(100, 30);
+            lblStation6.Font = new Font("Segoe UI", 12F);
+            lblStation6.Location = new Point(4, 20);
             lblStation6.Name = "lblStation6";
-            lblStation6.Size = new Size(63, 19);
+            lblStation6.Size = new Size(70, 21);
             lblStation6.TabIndex = 0;
             lblStation6.Text = "Puesto 6";
             // 
             // gbStation5
             // 
-            gbStation5.Controls.Add(btnPasteStation5);
+            gbStation5.Controls.Add(btnManualStation5);
+            gbStation5.Controls.Add(btnHardStation5);
+            gbStation5.Controls.Add(btnMediumStation5);
+            gbStation5.Controls.Add(btnEasyStation5);
             gbStation5.Controls.Add(btnOptionsStation5);
-            gbStation5.Controls.Add(btnCopyStation5);
             gbStation5.Controls.Add(btnToggleState5);
             gbStation5.Controls.Add(label29);
             gbStation5.Controls.Add(txtServerStation5);
@@ -1191,15 +1272,32 @@
             gbStation5.TabIndex = 19;
             gbStation5.TabStop = false;
             // 
-            // btnPasteStation5
+            // btnHardStation5
             // 
-            btnPasteStation5.BackColor = Color.White;
-            btnPasteStation5.Image = (Image)resources.GetObject("btnPasteStation5.Image");
-            btnPasteStation5.Location = new Point(49, 19);
-            btnPasteStation5.Name = "btnPasteStation5";
-            btnPasteStation5.Size = new Size(30, 30);
-            btnPasteStation5.TabIndex = 31;
-            btnPasteStation5.UseVisualStyleBackColor = false;
+            btnHardStation5.BackColor = Color.FromArgb(255, 224, 192);
+            btnHardStation5.Location = new Point(148, 15);
+            btnHardStation5.Name = "btnHardStation5";
+            btnHardStation5.Size = new Size(30, 30);
+            btnHardStation5.TabIndex = 34;
+            btnHardStation5.UseVisualStyleBackColor = false;
+            // 
+            // btnMediumStation5
+            // 
+            btnMediumStation5.BackColor = Color.FromArgb(255, 255, 192);
+            btnMediumStation5.Location = new Point(112, 15);
+            btnMediumStation5.Name = "btnMediumStation5";
+            btnMediumStation5.Size = new Size(30, 30);
+            btnMediumStation5.TabIndex = 33;
+            btnMediumStation5.UseVisualStyleBackColor = false;
+            // 
+            // btnEasyStation5
+            // 
+            btnEasyStation5.BackColor = Color.FromArgb(192, 255, 192);
+            btnEasyStation5.Location = new Point(76, 15);
+            btnEasyStation5.Name = "btnEasyStation5";
+            btnEasyStation5.Size = new Size(30, 30);
+            btnEasyStation5.TabIndex = 32;
+            btnEasyStation5.UseVisualStyleBackColor = false;
             // 
             // btnOptionsStation5
             // 
@@ -1212,21 +1310,11 @@
             btnOptionsStation5.UseVisualStyleBackColor = true;
             btnOptionsStation5.Click += btnOptionsStation5_Click;
             // 
-            // btnCopyStation5
-            // 
-            btnCopyStation5.BackColor = Color.White;
-            btnCopyStation5.Image = (Image)resources.GetObject("btnCopyStation5.Image");
-            btnCopyStation5.Location = new Point(13, 19);
-            btnCopyStation5.Name = "btnCopyStation5";
-            btnCopyStation5.Size = new Size(30, 30);
-            btnCopyStation5.TabIndex = 30;
-            btnCopyStation5.UseVisualStyleBackColor = false;
-            // 
             // btnToggleState5
             // 
-            btnToggleState5.BackColor = Color.FromArgb(255, 192, 192);
+            btnToggleState5.BackColor = Color.FromArgb(255, 128, 128);
             btnToggleState5.Image = (Image)resources.GetObject("btnToggleState5.Image");
-            btnToggleState5.Location = new Point(222, 19);
+            btnToggleState5.Location = new Point(222, 15);
             btnToggleState5.Name = "btnToggleState5";
             btnToggleState5.Size = new Size(30, 30);
             btnToggleState5.TabIndex = 21;
@@ -1305,10 +1393,10 @@
             // 
             lblStation5.Anchor = AnchorStyles.Top;
             lblStation5.AutoSize = true;
-            lblStation5.Font = new Font("Segoe UI", 10F);
-            lblStation5.Location = new Point(100, 30);
+            lblStation5.Font = new Font("Segoe UI", 12F);
+            lblStation5.Location = new Point(4, 20);
             lblStation5.Name = "lblStation5";
-            lblStation5.Size = new Size(63, 19);
+            lblStation5.Size = new Size(70, 21);
             lblStation5.TabIndex = 0;
             lblStation5.Text = "Puesto 5";
             // 
@@ -1323,6 +1411,78 @@
             lblTitle.Text = "PANEL DE CONTROL";
             lblTitle.TextAlign = ContentAlignment.MiddleCenter;
             lblTitle.UseWaitCursor = true;
+            // 
+            // btnManualStation1
+            // 
+            btnManualStation1.BackColor = Color.FromArgb(255, 192, 192);
+            btnManualStation1.Location = new Point(184, 16);
+            btnManualStation1.Name = "btnManualStation1";
+            btnManualStation1.Size = new Size(30, 30);
+            btnManualStation1.TabIndex = 39;
+            btnManualStation1.UseVisualStyleBackColor = false;
+            // 
+            // btnManualStation5
+            // 
+            btnManualStation5.BackColor = Color.FromArgb(255, 192, 192);
+            btnManualStation5.Location = new Point(185, 15);
+            btnManualStation5.Name = "btnManualStation5";
+            btnManualStation5.Size = new Size(30, 30);
+            btnManualStation5.TabIndex = 40;
+            btnManualStation5.UseVisualStyleBackColor = false;
+            // 
+            // btnManualStation6
+            // 
+            btnManualStation6.BackColor = Color.FromArgb(255, 192, 192);
+            btnManualStation6.Location = new Point(184, 15);
+            btnManualStation6.Name = "btnManualStation6";
+            btnManualStation6.Size = new Size(30, 30);
+            btnManualStation6.TabIndex = 41;
+            btnManualStation6.UseVisualStyleBackColor = false;
+            // 
+            // btnManualStation2
+            // 
+            btnManualStation2.BackColor = Color.FromArgb(255, 192, 192);
+            btnManualStation2.Location = new Point(184, 14);
+            btnManualStation2.Name = "btnManualStation2";
+            btnManualStation2.Size = new Size(30, 30);
+            btnManualStation2.TabIndex = 43;
+            btnManualStation2.UseVisualStyleBackColor = false;
+            // 
+            // btnManualStation7
+            // 
+            btnManualStation7.BackColor = Color.FromArgb(255, 192, 192);
+            btnManualStation7.Location = new Point(184, 15);
+            btnManualStation7.Name = "btnManualStation7";
+            btnManualStation7.Size = new Size(30, 30);
+            btnManualStation7.TabIndex = 43;
+            btnManualStation7.UseVisualStyleBackColor = false;
+            // 
+            // btnManualStation3
+            // 
+            btnManualStation3.BackColor = Color.FromArgb(255, 192, 192);
+            btnManualStation3.Location = new Point(184, 14);
+            btnManualStation3.Name = "btnManualStation3";
+            btnManualStation3.Size = new Size(30, 30);
+            btnManualStation3.TabIndex = 59;
+            btnManualStation3.UseVisualStyleBackColor = false;
+            // 
+            // btnManualStation4
+            // 
+            btnManualStation4.BackColor = Color.FromArgb(255, 192, 192);
+            btnManualStation4.Location = new Point(185, 15);
+            btnManualStation4.Name = "btnManualStation4";
+            btnManualStation4.Size = new Size(30, 30);
+            btnManualStation4.TabIndex = 59;
+            btnManualStation4.UseVisualStyleBackColor = false;
+            // 
+            // btnManualStation8
+            // 
+            btnManualStation8.BackColor = Color.FromArgb(255, 192, 192);
+            btnManualStation8.Location = new Point(185, 15);
+            btnManualStation8.Name = "btnManualStation8";
+            btnManualStation8.Size = new Size(30, 30);
+            btnManualStation8.TabIndex = 60;
+            btnManualStation8.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
@@ -1462,21 +1622,45 @@
         private Button btnOptionsStation7;
         private Button btnOptionsStation6;
         private Button btnOptionsStation5;
-        private Button btnPasteStation1;
-        private Button btnCopyStation1;
-        private Button btnPasteStation2;
-        private Button btnCopyStation2;
-        private Button btnPasteStation3;
-        private Button btnCopyStation3;
-        private Button btnPasteStation4;
-        private Button btnCopyStation4;
-        private Button btnPasteStation8;
-        private Button btnCopyStation8;
-        private Button btnPasteStation7;
-        private Button btnCopyStation7;
-        private Button btnPasteStation6;
-        private Button btnCopyStation6;
-        private Button btnPasteStation5;
-        private Button btnCopyStation5;
+        private Button button3;
+        private Button btnHardStation5;
+        private Button btnMediumStation5;
+        private Button btnEasyStation5;
+        private Button button1;
+        private Button btnHardStation1;
+        private Button btnMediumStation1;
+        private Button btnEasyStation1;
+        private Button button13;
+        private Button btnHardStation2;
+        private Button btnMediumStation2;
+        private Button btnEasyStation2;
+        private Button button14;
+        private Button btnHardStation3;
+        private Button btnMediumStation3;
+        private Button btnEasyStation3;
+        private Button button18;
+        private Button btnHardStation4;
+        private Button btnMediumStation4;
+        private Button btnEasyStation4;
+        private Button button22;
+        private Button btnHardStation8;
+        private Button btnMediumStation8;
+        private Button btnEasyStation8;
+        private Button button26;
+        private Button btnHardStation7;
+        private Button btnMediumStation7;
+        private Button btnEasyStation7;
+        private Button button6;
+        private Button btnHardStation6;
+        private Button btnMediumStation6;
+        private Button btnEasyStation6;
+        private Button btnManualStation1;
+        private Button btnManualStation2;
+        private Button btnManualStation3;
+        private Button btnManualStation4;
+        private Button btnManualStation8;
+        private Button btnManualStation7;
+        private Button btnManualStation6;
+        private Button btnManualStation5;
     }
 }

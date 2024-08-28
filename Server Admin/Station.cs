@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Server_Admin
 {
@@ -15,8 +16,11 @@ namespace Server_Admin
         public int AutoShifting { get; set; }
         public int TractionControl { get; set; }
         public int AntiLockBrakes { get; set; }
+        public int DrivingLine { get; set; }
+        public string Name { get; set; }
+        public string Nick { get; set; }
 
-        public Station(bool isAlive, int steeringHelp, int brakingHelp, int stabilityControl, int autoShifting, int tractionControl, int antiLockBrakes)
+        public Station(bool isAlive, int steeringHelp, int brakingHelp, int stabilityControl, int autoShifting, int tractionControl, int antiLockBrakes, int drivingLine, string name, string nick)
         {
             IsAlive = isAlive;
             SteeringHelp = steeringHelp;
@@ -25,6 +29,9 @@ namespace Server_Admin
             AutoShifting = autoShifting;
             TractionControl = tractionControl;
             AntiLockBrakes = antiLockBrakes;
+            DrivingLine = drivingLine;
+            Name = name;
+            Nick = nick;
         }
 
         public Station()
@@ -36,6 +43,9 @@ namespace Server_Admin
             AutoShifting = 0;
             TractionControl = 0;
             AntiLockBrakes = 0;
+            DrivingLine = 0;
+            Name = "Jugador";
+            Nick = "Jugador";
         }
     }
 }
