@@ -16,13 +16,13 @@ namespace Server_Admin
         public int BrakingHelp { get; set; }
         public int StabilityControl { get; set; }
         public int AutoShifting { get; set; }
-        public int TractionControl { get; set; }
+        public int ThrottleControl { get; set; }
         public int AntiLockBrakes { get; set; }
         public int DrivingLine { get; set; }
         public string Name { get; set; }
         public string Nick { get; set; }
 
-        public Station(bool isAlive, string server, string ip, int steeringHelp, int brakingHelp, int stabilityControl, int autoShifting, int tractionControl, int antiLockBrakes, int drivingLine, string name, string nick)
+        public Station(bool isAlive, string server, string ip, int steeringHelp, int brakingHelp, int stabilityControl, int autoShifting, int throttleControl, int antiLockBrakes, int drivingLine, string name, string nick)
         {
             IsAlive = isAlive;
             Server = server; 
@@ -31,14 +31,14 @@ namespace Server_Admin
             BrakingHelp = brakingHelp;
             StabilityControl = stabilityControl;
             AutoShifting = autoShifting;
-            TractionControl = tractionControl;
+            ThrottleControl = throttleControl;
             AntiLockBrakes = antiLockBrakes;
             DrivingLine = drivingLine;
             Name = name;
             Nick = nick;
         }
 
-        public Station(int steeringHelp, int brakingHelp, int stabilityControl, int autoShifting, int tractionControl, int antiLockBrakes, int drivingLine)
+        public Station(int steeringHelp, int brakingHelp, int stabilityControl, int autoShifting, int throttleControl, int antiLockBrakes, int drivingLine)
         {
             IsAlive = false;
             Server = "";
@@ -47,7 +47,7 @@ namespace Server_Admin
             BrakingHelp = brakingHelp;
             StabilityControl = stabilityControl;
             AutoShifting = autoShifting;
-            TractionControl = tractionControl;
+            ThrottleControl = throttleControl;
             AntiLockBrakes = antiLockBrakes;
             DrivingLine = drivingLine;
             Name = "Jugador";
@@ -63,7 +63,7 @@ namespace Server_Admin
             BrakingHelp = 0;
             StabilityControl = 0;
             AutoShifting = 0;
-            TractionControl = 0;
+            ThrottleControl = 0;
             AntiLockBrakes = 0;
             DrivingLine = 0;
             Name = "Jugador";

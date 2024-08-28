@@ -7,9 +7,9 @@ namespace Server_Admin
 {
     public partial class Form1 : Form
     {
-        private Station easyStation = new Station(1, 1, 2, 1, 2, 2, 1);
-        private Station mediumStation = new Station(0, 0, 2, 1, 2, 2, 1);
-        private Station hardStation = new Station(0, 0, 1, 0, 1, 1, 1);
+        private Station easyStation = new Station(1, 1, 2, 3, 3, 2, 3);
+        private Station mediumStation = new Station(0, 0, 2, 3, 3, 2, 3);
+        private Station hardStation = new Station(0, 0, 1, 0, 1, 1, 3);
         private Station manualStation = new Station(0, 0, 0, 0, 0, 0, 0);
         // Holds station values
         private Station station1;
