@@ -90,9 +90,9 @@
             label1.Location = new Point(45, 95);
             label1.Name = "label1";
             label1.RightToLeft = RightToLeft.No;
-            label1.Size = new Size(102, 19);
+            label1.Size = new Size(85, 19);
             label1.TabIndex = 19;
-            label1.Text = "BRAKING HELP";
+            label1.Text = "BRAKE HELP";
             // 
             // cbTractionControl
             // 

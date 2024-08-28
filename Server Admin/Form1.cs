@@ -20,7 +20,12 @@ namespace Server_Admin
         public Form1()
         {
             InitializeComponent();
-            MessageBox.Show("HOLA");
+
+            // El texto vendrá de la api en formato json
+            //string jsonString = File.ReadAllText("C:/Users/alexm/source/repos/RFactor2ControlPanel/Server Admin/Assets/player.json");
+            //var optionsDictionary = JsonSerializer.Deserialize<Dictionary<string, object>>(jsonString);
+            //var drivingAids = JsonSerializer.Deserialize<Dictionary<string, object>>(optionsDictionary?["DRIVING AIDS"]?.ToString() ?? "");
+            //jsonString = JsonSerializer.Serialize(optionsDictionary, new JsonSerializerOptions { WriteIndented = true });
         }
 
         private void Form1_Load(object sender, EventArgs e)
