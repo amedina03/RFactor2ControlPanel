@@ -7,6 +7,10 @@ namespace Server_Admin
 {
     public partial class Form1 : Form
     {
+        private Station easyStation = new Station(1, 1, 2, 1, 2, 2, 1);
+        private Station mediumStation = new Station(0, 0, 2, 1, 2, 2, 1);
+        private Station hardStation = new Station(0, 0, 1, 0, 1, 1, 1);
+        private Station manualStation = new Station(0, 0, 0, 0, 0, 0, 0);
         // Holds station values
         private Station station1;
         private Station station2;
@@ -20,7 +24,6 @@ namespace Server_Admin
         public Form1()
         {
             InitializeComponent();
-
             // El texto vendrá de la api en formato json
             //string jsonString = File.ReadAllText("C:/Users/alexm/source/repos/RFactor2ControlPanel/Server Admin/Assets/player.json");
             //var optionsDictionary = JsonSerializer.Deserialize<Dictionary<string, object>>(jsonString);
@@ -149,11 +152,6 @@ namespace Server_Admin
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnOptionsStation1_Click(object sender, EventArgs e)
         {
 
@@ -232,6 +230,166 @@ namespace Server_Admin
         private void btnToggleState8_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnEasyStation1_Click(object sender, EventArgs e)
+        {
+            station1 = easyStation;
+        }
+
+        private void btnMediumStation1_Click(object sender, EventArgs e)
+        {
+            station1 = mediumStation;
+        }
+
+        private void btnHardStation1_Click(object sender, EventArgs e)
+        {
+            station1 = hardStation;
+        }
+
+        private void btnManualStation1_Click(object sender, EventArgs e)
+        {
+            station1 = manualStation;
+        }
+
+        private void btnEasyStation2_Click(object sender, EventArgs e)
+        {
+            station2 = easyStation;
+        }
+
+        private void btnMediumStation2_Click(object sender, EventArgs e)
+        {
+            station2 = mediumStation;
+        }
+
+        private void btnHardStation2_Click(object sender, EventArgs e)
+        {
+            station2 = hardStation;
+        }
+
+        private void btnManualStation2_Click(object sender, EventArgs e)
+        {
+            station2 = manualStation;
+        }
+
+        private void btnEasyStation3_Click(object sender, EventArgs e)
+        {
+            station3 = easyStation;
+        }
+
+        private void btnMediumStation3_Click(object sender, EventArgs e)
+        {
+            station3 = mediumStation;
+        }
+
+        private void btnHardStation3_Click(object sender, EventArgs e)
+        {
+            station3 = hardStation;
+        }
+
+        private void btnManualStation3_Click(object sender, EventArgs e)
+        {
+            station3 = manualStation;
+        }
+
+        private void btnEasyStation4_Click(object sender, EventArgs e)
+        {
+            station4 = easyStation;
+        }
+
+        private void btnMediumStation4_Click(object sender, EventArgs e)
+        {
+            station4 = mediumStation;
+        }
+
+        private void btnHardStation4_Click(object sender, EventArgs e)
+        {
+            station4 = hardStation;
+        }
+
+        private void btnManualStation4_Click(object sender, EventArgs e)
+        {
+            station4 = manualStation;
+        }
+
+        private void btnEasyStation5_Click(object sender, EventArgs e)
+        {
+            station5 = easyStation;
+        }
+
+        private void btnMediumStation5_Click(object sender, EventArgs e)
+        {
+            station5 = mediumStation;
+        }
+
+        private void btnHardStation5_Click(object sender, EventArgs e)
+        {
+            station5 = hardStation;
+        }
+
+        private void btnManualStation5_Click(object sender, EventArgs e)
+        {
+            station5 = manualStation;
+        }
+
+        private void btnEasyStation6_Click(object sender, EventArgs e)
+        {
+            station6 = easyStation;
+        }
+
+        private void btnMediumStation6_Click(object sender, EventArgs e)
+        {
+            station6 = mediumStation;
+        }
+
+        private void btnHardStation6_Click(object sender, EventArgs e)
+        {
+            station6 = hardStation;
+        }
+
+        private void btnManualStation6_Click(object sender, EventArgs e)
+        {
+            station6 = manualStation;
+        }
+
+        private void btnEasyStation7_Click(object sender, EventArgs e)
+        {
+            station7 = easyStation;
+        }
+
+        private void btnMediumStation7_Click(object sender, EventArgs e)
+        {
+            station7 = mediumStation;
+        }
+
+        private void btnHardStation7_Click(object sender, EventArgs e)
+        {
+            station7 = hardStation;
+        }
+
+        private void btnManualStation7_Click(object sender, EventArgs e)
+        {
+            station7 = manualStation;
+        }
+
+        private void btnEasyStation8_Click(object sender, EventArgs e)
+        {
+            station8 = easyStation;
+        }
+
+        private void btnMediumStation8_Click(object sender, EventArgs e)
+        {
+            station8 = mediumStation;
+        }
+
+        private void btnHardStation8_Click(object sender, EventArgs e)
+        {
+            station8 = hardStation;
+        }
+
+        private void btnManualStation8_Click(object sender, EventArgs e)
+        {
+            station8 = manualStation;
         }
     }
 }
