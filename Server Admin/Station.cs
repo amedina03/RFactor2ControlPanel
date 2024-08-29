@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
@@ -25,7 +26,7 @@ namespace Server_Admin
         public Station(bool isAlive, string server, string ip, int steeringHelp, int brakingHelp, int stabilityControl, int autoShifting, int throttleControl, int antiLockBrakes, int drivingLine, string name, string nick)
         {
             IsAlive = isAlive;
-            Server = server; 
+            Server = server;
             IP = ip;
             SteeringHelp = steeringHelp;
             BrakingHelp = brakingHelp;
@@ -70,11 +71,11 @@ namespace Server_Admin
             Nick = "Jugador";
         }
 
-        private async Task sendRequest(string ip, string name, string serverAndPort)
+        public async Task SendToggleRequest()
         {
             try
             {
-                string[] serverData = serverAndPort.Split(':');
+                string[] serverData = IP.Split(':');
                 string server = serverData[0];
                 string port = serverData[1];
                 string url = $"{server}:{port}/";
@@ -82,34 +83,25 @@ namespace Server_Admin
                 // Para post
                 using (var client = new HttpClient())
                 {
-                    var content = new FormUrlEncodedContent(new[]
+                    if (IsAlive)
                     {
-                        new KeyValuePair<string, string>("name", name)
-                    });
-                    HttpResponseMessage response = await client.PostAsync(url, content);
-                    if (response.IsSuccessStatusCode)
-                    {
-                        string responseBody = await response.Content.ReadAsStringAsync();
-                        Console.WriteLine($"Response: {responseBody}");
+                        url += "close_game";
                     }
                     else
                     {
-                        Console.WriteLine($"Error: {response.StatusCode} - {response.ReasonPhrase}");
+                        url += "open_game";
                     }
-                }
 
-                // Para get
-                using (var client = new HttpClient())
-                {
-                    HttpResponseMessage response = await client.GetAsync(url);
+                    HttpResponseMessage response = await client.PostAsync(url, null);
+
                     if (response.IsSuccessStatusCode)
                     {
                         string responseBody = await response.Content.ReadAsStringAsync();
-                        Console.WriteLine($"Response: {responseBody}");
+                        MessageBox.Show($"{responseBody}");
                     }
                     else
                     {
-                        Console.WriteLine($"Error: {response.StatusCode} - {response.ReasonPhrase}");
+                        MessageBox.Show($"Error: {response.StatusCode} - {response.ReasonPhrase}");
                     }
                 }
             }
@@ -118,5 +110,95 @@ namespace Server_Admin
                 Console.WriteLine($"Exception: {ex.Message}");
             }
         }
+
+        public async Task SendSaveRequest()
+        {
+            if (IsAlive)
+            {
+                MessageBox.Show("Apague la máquina antes");
+                return;
+            }
+            else if (Name == "Jugador" && Nick == "Jugador")
+            {
+                MessageBox.Show("Introduzca datos para la máquina");
+                return;
+            }
+            try
+            {
+                string[] serverData = IP.Split(':');
+                string server = serverData[0];
+                string port = serverData[1];
+                string url = $"{server}:{port}/modify_file";
+                string url2 = $"{server}:{port}/";
+
+                Dictionary<string, object> options = new Dictionary<string, object>(new[] {
+                    new KeyValuePair<string, object>("Steering Help", SteeringHelp),
+                    new KeyValuePair<string, object>("Brake Help", BrakingHelp),
+                    new KeyValuePair<string, object>("Stability Control", StabilityControl),
+                    new KeyValuePair<string, object>("Shift Mode", AutoShifting),
+                    new KeyValuePair<string, object>("Traction Control", ThrottleControl),
+                    new KeyValuePair<string, object>("Antilock Brakes", AntiLockBrakes),
+                    new KeyValuePair<string, object>("Driving Line", DrivingLine),
+                    new KeyValuePair<string, object>("Player Name", Name)
+                });
+                string json = JsonSerializer.Serialize(options);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                using (var client = new HttpClient())
+                {
+                    HttpResponseMessage response = await client.PostAsync(url, content);
+
+                    // Ver como te conectas con la api
+                    HttpResponseMessage response2 = await client.GetAsync(url2);
+                    if (response.IsSuccessStatusCode && response2.IsSuccessStatusCode)
+                    {
+                        string responseBody = await response.Content.ReadAsStringAsync();
+                        MessageBox.Show($"{responseBody}");
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Error: {response.StatusCode} - {response.ReasonPhrase}");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
+            }
+        }
+
+        public async Task SendGetRequest()
+        {
+            try
+            {
+                string[] serverData = IP.Split(':');
+                string server = serverData[0];
+                string port = serverData[1];
+                string url = $"{server}:{port}/get_file";
+
+                using (var client = new HttpClient())
+                {
+                    HttpResponseMessage response = await client.GetAsync(url);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        string responseBody = await response.Content.ReadAsStringAsync();
+                        var options = new JsonSerializerOptions
+                        {
+                            PropertyNameCaseInsensitive = true
+                        };
+                        Dictionary<string, object> dictionary = JsonSerializer.Deserialize<Dictionary<string, object>>(responseBody, options);
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Error: {response.StatusCode} - {response.ReasonPhrase}");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
+            }
+        }
+
     }
 }

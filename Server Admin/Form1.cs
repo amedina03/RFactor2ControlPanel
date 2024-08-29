@@ -12,14 +12,14 @@ namespace Server_Admin
         private Station hardStation = new Station(0, 0, 1, 0, 1, 1, 3);
         private Station manualStation = new Station(0, 0, 0, 0, 0, 0, 0);
         // Holds station values
-        private Station station1;
-        private Station station2;
-        private Station station3;
-        private Station station4;
-        private Station station5;
-        private Station station6;
-        private Station station7;
-        private Station station8;
+        private Station station1 = new Station();
+        private Station station2 = new Station();
+        private Station station3 = new Station();
+        private Station station4 = new Station();
+        private Station station5 = new Station();
+        private Station station6 = new Station();
+        private Station station7 = new Station();
+        private Station station8 = new Station();
 
         public Form1()
         {
@@ -38,118 +38,74 @@ namespace Server_Admin
 
         private async void btnSaveStation1_Click(object sender, EventArgs e)
         {
-            await sendRequest(txtIPStation1.Text, txtNameStation1.Text, txtServerStation1.Text);
+            station1.IP = txtIPStation1.Text;
+            station1.Server = txtServerStation1.Text;
+            station1.Name = txtNameStation1.Text;
+            station1.Nick = txtNameStation1.Text;
+            await station1.SendSaveRequest();
         }
 
         private async void btnSaveStation2_Click(object sender, EventArgs e)
         {
-            await sendRequest(txtIPStation2.Text, txtNameStation2.Text, txtServerStation2.Text);
+            station2.IP = txtIPStation2.Text;
+            station2.Server = txtServerStation2.Text;
+            station2.Name = txtNameStation2.Text;
+            station2.Nick = txtNameStation2.Text;
+            await station2.SendSaveRequest();
         }
 
         private async void btnSaveStation3_Click(object sender, EventArgs e)
         {
-            await sendRequest(txtIPStation3.Text, txtNameStation3.Text, txtServerStation3.Text);
+            station3.IP = txtIPStation3.Text;
+            station3.Server = txtServerStation3.Text;
+            station3.Name = txtNameStation3.Text;
+            station3.Nick = txtNameStation3.Text;
+            await station3.SendSaveRequest();
         }
 
         private async void btnSaveStation4_Click(object sender, EventArgs e)
         {
-            await sendRequest(txtIPStation4.Text, txtNameStation4.Text, txtServerStation4.Text);
+            station4.IP = txtIPStation4.Text;
+            station4.Server = txtServerStation4.Text;
+            station4.Name = txtNameStation4.Text;
+            station4.Nick = txtNameStation4.Text;
+            await station4.SendSaveRequest();
         }
 
         private async void btnSaveStation5_Click(object sender, EventArgs e)
         {
-            await sendRequest(txtIPStation5.Text, txtNameStation5.Text, txtServerStation5.Text);
+            station5.IP = txtIPStation5.Text;
+            station5.Server = txtServerStation5.Text;
+            station5.Name = txtNameStation5.Text;
+            station5.Nick = txtNameStation5.Text;
+            await station5.SendSaveRequest();
         }
 
         private async void btnSaveStation6_Click(object sender, EventArgs e)
         {
-            await sendRequest(txtIPStation6.Text, txtNameStation6.Text, txtServerStation6.Text);
+            station6.IP = txtIPStation6.Text;
+            station6.Server = txtServerStation6.Text;
+            station6.Name = txtNameStation6.Text;
+            station6.Nick = txtNameStation6.Text;
+            await station6.SendSaveRequest();
         }
 
         private async void btnSaveStation7_Click(object sender, EventArgs e)
         {
-            await sendRequest(txtIPStation7.Text, txtNameStation7.Text, txtServerStation7.Text);
+            station7.IP = txtIPStation7.Text;
+            station7.Server = txtServerStation7.Text;
+            station7.Name = txtNameStation7.Text;
+            station7.Nick = txtNameStation7.Text;
+            await station7.SendSaveRequest();
         }
 
         private async void btnSaveStation8_Click(object sender, EventArgs e)
         {
-            await sendRequest(txtIPStation8.Text, txtNameStation8.Text, txtServerStation8.Text);
-        }
-
-        private void saveIds()
-        {
-            var dictionary = new Dictionary<string, string>
-            {
-                { "1", "115:12.01.15" },
-                { "2", "115:12.01.16" }
-            };
-
-            string jsonString = JsonSerializer.Serialize(dictionary);
-            File.WriteAllText("C:/ids.txt", jsonString);
-        }
-
-        private void readIds()
-        {
-            string jsonString = File.ReadAllText("C:/ids.txt");
-
-            var dictionary = JsonSerializer.Deserialize<Dictionary<string, string>>(jsonString);
-
-            if (dictionary != null)
-            {
-                foreach (var kvp in dictionary)
-                {
-                    Console.WriteLine($"Key: {kvp.Key}, Value: {kvp.Value}");
-                }
-            }
-        }
-
-        private async Task sendRequest(string ip, string name, string serverAndPort)
-        {
-            try
-            {
-                string[] serverData = serverAndPort.Split(':');
-                string server = serverData[0];
-                string port = serverData[1];
-                string url = $"{server}:{port}/";
-
-                // Para post
-                using (var client = new HttpClient())
-                {
-                    var content = new FormUrlEncodedContent(new[]
-                    {
-                        new KeyValuePair<string, string>("name", name)
-                    });
-                    HttpResponseMessage response = await client.PostAsync(url, content);
-                    if (response.IsSuccessStatusCode)
-                    {
-                        string responseBody = await response.Content.ReadAsStringAsync();
-                        Console.WriteLine($"Response: {responseBody}");
-                    }
-                    else
-                    {
-                        Console.WriteLine($"Error: {response.StatusCode} - {response.ReasonPhrase}");
-                    }
-                }
-
-                // Para get
-                using (var client = new HttpClient())
-                {
-                    HttpResponseMessage response = await client.GetAsync(url);
-                    if (response.IsSuccessStatusCode)
-                    {
-                        string responseBody = await response.Content.ReadAsStringAsync();
-                        Console.WriteLine($"Response: {responseBody}");
-                    }
-                    else
-                    {
-                        Console.WriteLine($"Error: {response.StatusCode} - {response.ReasonPhrase}");
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Exception: {ex.Message}");
-            }
+            station8.IP = txtIPStation8.Text;
+            station8.Server = txtServerStation8.Text;
+            station8.Name = txtNameStation8.Text;
+            station8.Nick = txtNameStation8.Text;
+            await station8.SendSaveRequest();
         }
 
         private void btnOptionsStation1_Click(object sender, EventArgs e)
@@ -192,44 +148,52 @@ namespace Server_Admin
 
         }
 
-        private void btnToggleState1_Click(object sender, EventArgs e)
+        private async void btnToggleState1_Click(object sender, EventArgs e)
         {
-
+            station1.IP = txtIPStation1.Text;
+            await station1.SendToggleRequest();
         }
 
-        private void btnToggleState2_Click(object sender, EventArgs e)
+        private async void btnToggleState2_Click(object sender, EventArgs e)
         {
-
+            station2.IP = txtIPStation2.Text;
+            await station2.SendToggleRequest();
         }
 
-        private void btnToggleState3_Click(object sender, EventArgs e)
+        private async void btnToggleState3_Click(object sender, EventArgs e)
         {
-
+            station3.IP = txtIPStation3.Text;
+            await station3.SendToggleRequest();
         }
 
-        private void btnToggleState4_Click(object sender, EventArgs e)
+        private async void btnToggleState4_Click(object sender, EventArgs e)
         {
-
+            station4.IP = txtIPStation4.Text;
+            await station4.SendToggleRequest();
         }
 
-        private void btnToggleState5_Click(object sender, EventArgs e)
+        private async void btnToggleState5_Click(object sender, EventArgs e)
         {
-
+            station5.IP = txtIPStation4.Text;
+            await station5.SendToggleRequest();
         }
 
-        private void btnToggleState6_Click(object sender, EventArgs e)
+        private async void btnToggleState6_Click(object sender, EventArgs e)
         {
-
+            station6.IP = txtIPStation4.Text;
+            await station6.SendToggleRequest();
         }
 
-        private void btnToggleState7_Click(object sender, EventArgs e)
+        private async void btnToggleState7_Click(object sender, EventArgs e)
         {
-
+            station7.IP = txtIPStation4.Text;
+            await station7.SendToggleRequest();
         }
 
-        private void btnToggleState8_Click(object sender, EventArgs e)
+        private async void btnToggleState8_Click(object sender, EventArgs e)
         {
-
+            station8.IP = txtIPStation4.Text;
+            await station8.SendToggleRequest();
         }
 
         private void btnEasyStation1_Click(object sender, EventArgs e)
@@ -390,6 +354,46 @@ namespace Server_Admin
         private void btnManualStation8_Click(object sender, EventArgs e)
         {
             station8 = manualStation;
+        }
+
+        private void btnEndRace1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEndRace2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEndRace3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEndRace4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEndRace5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEndRace6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEndRace7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEndRace8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
