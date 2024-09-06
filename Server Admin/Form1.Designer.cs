@@ -36,6 +36,7 @@
             txtNameStation1 = new TextBox();
             btnSaveStation1 = new Button();
             gbStation1 = new GroupBox();
+            btnEndRace1 = new Button();
             btnManualStation1 = new Button();
             btnOptionsStation1 = new Button();
             btnHardStation1 = new Button();
@@ -45,6 +46,7 @@
             btnEasyStation1 = new Button();
             txtServerStation1 = new TextBox();
             gbStation2 = new GroupBox();
+            btnEndRace2 = new Button();
             btnManualStation2 = new Button();
             btnOptionsStation2 = new Button();
             btnHardStation2 = new Button();
@@ -60,6 +62,7 @@
             txtIPStation2 = new TextBox();
             lblStation2 = new Label();
             gbStation3 = new GroupBox();
+            btnEndRace3 = new Button();
             btnManualStation3 = new Button();
             btnOptionsStation3 = new Button();
             btnHardStation3 = new Button();
@@ -75,6 +78,7 @@
             txtIPStation3 = new TextBox();
             lblStation3 = new Label();
             gbStation4 = new GroupBox();
+            btnEndRace4 = new Button();
             btnManualStation4 = new Button();
             btnOptionsStation4 = new Button();
             btnHardStation4 = new Button();
@@ -90,6 +94,7 @@
             txtIPStation4 = new TextBox();
             lblStation4 = new Label();
             gbStation8 = new GroupBox();
+            btnEndRace8 = new Button();
             btnManualStation8 = new Button();
             btnOptionsStation8 = new Button();
             btnHardStation8 = new Button();
@@ -105,6 +110,7 @@
             txtIPStation8 = new TextBox();
             lblStation8 = new Label();
             gbStation7 = new GroupBox();
+            btnEndRace7 = new Button();
             btnManualStation7 = new Button();
             btnOptionsStation7 = new Button();
             btnHardStation7 = new Button();
@@ -123,6 +129,7 @@
             txtIPStation7 = new TextBox();
             lblStation7 = new Label();
             gbStation6 = new GroupBox();
+            btnEndRace6 = new Button();
             btnManualStation6 = new Button();
             btnOptionsStation6 = new Button();
             btnHardStation6 = new Button();
@@ -138,6 +145,7 @@
             txtIPStation6 = new TextBox();
             lblStation6 = new Label();
             gbStation5 = new GroupBox();
+            btnEndRace5 = new Button();
             btnManualStation5 = new Button();
             btnHardStation5 = new Button();
             btnMediumStation5 = new Button();
@@ -153,14 +161,6 @@
             txtIPStation5 = new TextBox();
             lblStation5 = new Label();
             lblTitle = new Label();
-            btnEndRace1 = new Button();
-            btnEndRace2 = new Button();
-            btnEndRace3 = new Button();
-            btnEndRace4 = new Button();
-            btnEndRace8 = new Button();
-            btnEndRace7 = new Button();
-            btnEndRace6 = new Button();
-            btnEndRace5 = new Button();
             gbStation1.SuspendLayout();
             gbStation2.SuspendLayout();
             gbStation3.SuspendLayout();
@@ -253,6 +253,17 @@
             gbStation1.Size = new Size(258, 224);
             gbStation1.TabIndex = 15;
             gbStation1.TabStop = false;
+            // 
+            // btnEndRace1
+            // 
+            btnEndRace1.BackColor = Color.White;
+            btnEndRace1.BackgroundImage = (Image)resources.GetObject("btnEndRace1.BackgroundImage");
+            btnEndRace1.Location = new Point(114, 170);
+            btnEndRace1.Name = "btnEndRace1";
+            btnEndRace1.Size = new Size(30, 30);
+            btnEndRace1.TabIndex = 60;
+            btnEndRace1.UseVisualStyleBackColor = false;
+            btnEndRace1.Click += btnEndRace1_Click;
             // 
             // btnManualStation1
             // 
@@ -357,6 +368,17 @@
             gbStation2.Size = new Size(258, 224);
             gbStation2.TabIndex = 17;
             gbStation2.TabStop = false;
+            // 
+            // btnEndRace2
+            // 
+            btnEndRace2.BackColor = Color.White;
+            btnEndRace2.BackgroundImage = (Image)resources.GetObject("btnEndRace2.BackgroundImage");
+            btnEndRace2.Location = new Point(112, 171);
+            btnEndRace2.Name = "btnEndRace2";
+            btnEndRace2.Size = new Size(30, 30);
+            btnEndRace2.TabIndex = 61;
+            btnEndRace2.UseVisualStyleBackColor = false;
+            btnEndRace2.Click += btnEndRace2_Click;
             // 
             // btnManualStation2
             // 
@@ -523,6 +545,17 @@
             gbStation3.TabIndex = 18;
             gbStation3.TabStop = false;
             // 
+            // btnEndRace3
+            // 
+            btnEndRace3.BackColor = Color.White;
+            btnEndRace3.BackgroundImage = (Image)resources.GetObject("btnEndRace3.BackgroundImage");
+            btnEndRace3.Location = new Point(112, 170);
+            btnEndRace3.Name = "btnEndRace3";
+            btnEndRace3.Size = new Size(30, 30);
+            btnEndRace3.TabIndex = 62;
+            btnEndRace3.UseVisualStyleBackColor = false;
+            btnEndRace3.Click += btnEndRace3_Click;
+            // 
             // btnManualStation3
             // 
             btnManualStation3.BackColor = Color.FromArgb(255, 192, 192);
@@ -687,6 +720,17 @@
             gbStation4.TabIndex = 18;
             gbStation4.TabStop = false;
             // 
+            // btnEndRace4
+            // 
+            btnEndRace4.BackColor = Color.White;
+            btnEndRace4.BackgroundImage = (Image)resources.GetObject("btnEndRace4.BackgroundImage");
+            btnEndRace4.Location = new Point(113, 170);
+            btnEndRace4.Name = "btnEndRace4";
+            btnEndRace4.Size = new Size(30, 30);
+            btnEndRace4.TabIndex = 63;
+            btnEndRace4.UseVisualStyleBackColor = false;
+            btnEndRace4.Click += btnEndRace4_Click;
+            // 
             // btnManualStation4
             // 
             btnManualStation4.BackColor = Color.FromArgb(255, 192, 192);
@@ -850,6 +894,17 @@
             gbStation8.Size = new Size(258, 224);
             gbStation8.TabIndex = 21;
             gbStation8.TabStop = false;
+            // 
+            // btnEndRace8
+            // 
+            btnEndRace8.BackColor = Color.White;
+            btnEndRace8.BackgroundImage = (Image)resources.GetObject("btnEndRace8.BackgroundImage");
+            btnEndRace8.Location = new Point(113, 170);
+            btnEndRace8.Name = "btnEndRace8";
+            btnEndRace8.Size = new Size(30, 30);
+            btnEndRace8.TabIndex = 64;
+            btnEndRace8.UseVisualStyleBackColor = false;
+            btnEndRace8.Click += btnEndRace8_Click;
             // 
             // btnManualStation8
             // 
@@ -1017,6 +1072,17 @@
             gbStation7.Size = new Size(258, 224);
             gbStation7.TabIndex = 22;
             gbStation7.TabStop = false;
+            // 
+            // btnEndRace7
+            // 
+            btnEndRace7.BackColor = Color.White;
+            btnEndRace7.BackgroundImage = (Image)resources.GetObject("btnEndRace7.BackgroundImage");
+            btnEndRace7.Location = new Point(113, 170);
+            btnEndRace7.Name = "btnEndRace7";
+            btnEndRace7.Size = new Size(30, 30);
+            btnEndRace7.TabIndex = 65;
+            btnEndRace7.UseVisualStyleBackColor = false;
+            btnEndRace7.Click += btnEndRace7_Click;
             // 
             // btnManualStation7
             // 
@@ -1215,6 +1281,17 @@
             gbStation6.TabIndex = 20;
             gbStation6.TabStop = false;
             // 
+            // btnEndRace6
+            // 
+            btnEndRace6.BackColor = Color.White;
+            btnEndRace6.BackgroundImage = (Image)resources.GetObject("btnEndRace6.BackgroundImage");
+            btnEndRace6.Location = new Point(112, 171);
+            btnEndRace6.Name = "btnEndRace6";
+            btnEndRace6.Size = new Size(30, 30);
+            btnEndRace6.TabIndex = 66;
+            btnEndRace6.UseVisualStyleBackColor = false;
+            btnEndRace6.Click += btnEndRace6_Click;
+            // 
             // btnManualStation6
             // 
             btnManualStation6.BackColor = Color.FromArgb(255, 192, 192);
@@ -1379,6 +1456,17 @@
             gbStation5.TabIndex = 19;
             gbStation5.TabStop = false;
             // 
+            // btnEndRace5
+            // 
+            btnEndRace5.BackColor = Color.White;
+            btnEndRace5.BackgroundImage = (Image)resources.GetObject("btnEndRace5.BackgroundImage");
+            btnEndRace5.Location = new Point(114, 171);
+            btnEndRace5.Name = "btnEndRace5";
+            btnEndRace5.Size = new Size(30, 30);
+            btnEndRace5.TabIndex = 67;
+            btnEndRace5.UseVisualStyleBackColor = false;
+            btnEndRace5.Click += btnEndRace5_Click;
+            // 
             // btnManualStation5
             // 
             btnManualStation5.BackColor = Color.FromArgb(255, 192, 192);
@@ -1531,94 +1619,6 @@
             lblTitle.Text = "PANEL DE CONTROL";
             lblTitle.TextAlign = ContentAlignment.MiddleCenter;
             lblTitle.UseWaitCursor = true;
-            // 
-            // btnEndRace1
-            // 
-            btnEndRace1.BackColor = Color.White;
-            btnEndRace1.BackgroundImage = (Image)resources.GetObject("btnEndRace1.BackgroundImage");
-            btnEndRace1.Location = new Point(114, 170);
-            btnEndRace1.Name = "btnEndRace1";
-            btnEndRace1.Size = new Size(30, 30);
-            btnEndRace1.TabIndex = 60;
-            btnEndRace1.UseVisualStyleBackColor = false;
-            btnEndRace1.Click += btnEndRace1_Click;
-            // 
-            // btnEndRace2
-            // 
-            btnEndRace2.BackColor = Color.White;
-            btnEndRace2.BackgroundImage = (Image)resources.GetObject("btnEndRace2.BackgroundImage");
-            btnEndRace2.Location = new Point(112, 171);
-            btnEndRace2.Name = "btnEndRace2";
-            btnEndRace2.Size = new Size(30, 30);
-            btnEndRace2.TabIndex = 61;
-            btnEndRace2.UseVisualStyleBackColor = false;
-            btnEndRace2.Click += btnEndRace2_Click;
-            // 
-            // btnEndRace3
-            // 
-            btnEndRace3.BackColor = Color.White;
-            btnEndRace3.BackgroundImage = (Image)resources.GetObject("btnEndRace3.BackgroundImage");
-            btnEndRace3.Location = new Point(112, 170);
-            btnEndRace3.Name = "btnEndRace3";
-            btnEndRace3.Size = new Size(30, 30);
-            btnEndRace3.TabIndex = 62;
-            btnEndRace3.UseVisualStyleBackColor = false;
-            btnEndRace3.Click += btnEndRace3_Click;
-            // 
-            // btnEndRace4
-            // 
-            btnEndRace4.BackColor = Color.White;
-            btnEndRace4.BackgroundImage = (Image)resources.GetObject("btnEndRace4.BackgroundImage");
-            btnEndRace4.Location = new Point(113, 170);
-            btnEndRace4.Name = "btnEndRace4";
-            btnEndRace4.Size = new Size(30, 30);
-            btnEndRace4.TabIndex = 63;
-            btnEndRace4.UseVisualStyleBackColor = false;
-            btnEndRace4.Click += btnEndRace4_Click;
-            // 
-            // btnEndRace8
-            // 
-            btnEndRace8.BackColor = Color.White;
-            btnEndRace8.BackgroundImage = (Image)resources.GetObject("btnEndRace8.BackgroundImage");
-            btnEndRace8.Location = new Point(113, 170);
-            btnEndRace8.Name = "btnEndRace8";
-            btnEndRace8.Size = new Size(30, 30);
-            btnEndRace8.TabIndex = 64;
-            btnEndRace8.UseVisualStyleBackColor = false;
-            btnEndRace8.Click += btnEndRace8_Click;
-            // 
-            // btnEndRace7
-            // 
-            btnEndRace7.BackColor = Color.White;
-            btnEndRace7.BackgroundImage = (Image)resources.GetObject("btnEndRace7.BackgroundImage");
-            btnEndRace7.Location = new Point(113, 170);
-            btnEndRace7.Name = "btnEndRace7";
-            btnEndRace7.Size = new Size(30, 30);
-            btnEndRace7.TabIndex = 65;
-            btnEndRace7.UseVisualStyleBackColor = false;
-            btnEndRace7.Click += btnEndRace7_Click;
-            // 
-            // btnEndRace6
-            // 
-            btnEndRace6.BackColor = Color.White;
-            btnEndRace6.BackgroundImage = (Image)resources.GetObject("btnEndRace6.BackgroundImage");
-            btnEndRace6.Location = new Point(112, 171);
-            btnEndRace6.Name = "btnEndRace6";
-            btnEndRace6.Size = new Size(30, 30);
-            btnEndRace6.TabIndex = 66;
-            btnEndRace6.UseVisualStyleBackColor = false;
-            btnEndRace6.Click += btnEndRace6_Click;
-            // 
-            // btnEndRace5
-            // 
-            btnEndRace5.BackColor = Color.White;
-            btnEndRace5.BackgroundImage = (Image)resources.GetObject("btnEndRace5.BackgroundImage");
-            btnEndRace5.Location = new Point(114, 171);
-            btnEndRace5.Name = "btnEndRace5";
-            btnEndRace5.Size = new Size(30, 30);
-            btnEndRace5.TabIndex = 67;
-            btnEndRace5.UseVisualStyleBackColor = false;
-            btnEndRace5.Click += btnEndRace5_Click;
             // 
             // Form1
             // 

@@ -151,50 +151,107 @@ namespace Server_Admin
         private async void btnToggleState1_Click(object sender, EventArgs e)
         {
             station1.IP = txtIPStation1.Text;
-            await station1.SendToggleRequest();
+            bool result = await station1.SendToggleRequest();
+            if (result)
+            {
+                if (station1.IsAlive)
+                    btnToggleState1.BackColor = Color.Lime;
+                else
+                    btnToggleState1.BackColor = Color.FromArgb(255, 128, 128);
+            }
         }
 
         private async void btnToggleState2_Click(object sender, EventArgs e)
         {
             station2.IP = txtIPStation2.Text;
-            await station2.SendToggleRequest();
+            bool result = await station2.SendToggleRequest();
+            if (result)
+            {
+                if (station2.IsAlive)
+                    btnToggleState2.BackColor = Color.Lime;
+                else
+                    btnToggleState2.BackColor = Color.FromArgb(255, 128, 128);
+            }
         }
 
         private async void btnToggleState3_Click(object sender, EventArgs e)
         {
             station3.IP = txtIPStation3.Text;
-            await station3.SendToggleRequest();
+            bool result = await station3.SendToggleRequest();
+            if (result)
+            {
+                if (station3.IsAlive)
+                    btnToggleState3.BackColor = Color.Lime;
+                else
+                    btnToggleState3.BackColor = Color.FromArgb(255, 128, 128);
+            }
         }
 
         private async void btnToggleState4_Click(object sender, EventArgs e)
         {
             station4.IP = txtIPStation4.Text;
-            await station4.SendToggleRequest();
+            bool result = await station4.SendToggleRequest();
+            if (result)
+            {
+                if (station4.IsAlive)
+                    btnToggleState4.BackColor = Color.Lime;
+                else
+                    btnToggleState4.BackColor = Color.FromArgb(255, 128, 128);
+            }
         }
 
         private async void btnToggleState5_Click(object sender, EventArgs e)
         {
-            station5.IP = txtIPStation4.Text;
-            await station5.SendToggleRequest();
+            station5.IP = txtIPStation5.Text;
+            bool result = await station5.SendToggleRequest();
+            if (result)
+            {
+                if (station5.IsAlive)
+                    btnToggleState5.BackColor = Color.Lime;
+                else
+                    btnToggleState5.BackColor = Color.FromArgb(255, 128, 128);
+            }
         }
 
         private async void btnToggleState6_Click(object sender, EventArgs e)
         {
-            station6.IP = txtIPStation4.Text;
-            await station6.SendToggleRequest();
+            station6.IP = txtIPStation6.Text;
+            bool result = await station6.SendToggleRequest();
+            if (result)
+            {
+                if (station6.IsAlive)
+                    btnToggleState6.BackColor = Color.Lime;
+                else
+                    btnToggleState6.BackColor = Color.FromArgb(255, 128, 128);
+            }
         }
 
         private async void btnToggleState7_Click(object sender, EventArgs e)
         {
-            station7.IP = txtIPStation4.Text;
-            await station7.SendToggleRequest();
+            station7.IP = txtIPStation7.Text;
+            bool result = await station7.SendToggleRequest();
+            if (result)
+            {
+                if (station7.IsAlive)
+                    btnToggleState7.BackColor = Color.Lime;
+                else
+                    btnToggleState7.BackColor = Color.FromArgb(255, 128, 128);
+            }
         }
 
         private async void btnToggleState8_Click(object sender, EventArgs e)
         {
-            station8.IP = txtIPStation4.Text;
-            await station8.SendToggleRequest();
+            station8.IP = txtIPStation8.Text;
+            bool result = await station8.SendToggleRequest();
+            if (result)
+            {
+                if (station8.IsAlive)
+                    btnToggleState8.BackColor = Color.Lime;
+                else
+                    btnToggleState8.BackColor = Color.FromArgb(255, 128, 128);
+            }
         }
+
 
         private void btnEasyStation1_Click(object sender, EventArgs e)
         {
@@ -356,44 +413,44 @@ namespace Server_Admin
             station8 = manualStation;
         }
 
-        private void btnEndRace1_Click(object sender, EventArgs e)
+        private async void btnEndRace1_Click(object sender, EventArgs e)
         {
-
+            await station1.SendFinishRaceRequest();
         }
 
-        private void btnEndRace2_Click(object sender, EventArgs e)
+        private async void btnEndRace2_Click(object sender, EventArgs e)
         {
-
+           await station2.SendFinishRaceRequest();
         }
 
-        private void btnEndRace3_Click(object sender, EventArgs e)
+        private async void btnEndRace3_Click(object sender, EventArgs e)
         {
-
+            await station3.SendFinishRaceRequest();
         }
 
-        private void btnEndRace4_Click(object sender, EventArgs e)
+        private async void btnEndRace4_Click(object sender, EventArgs e)
         {
-
+            await station4.SendFinishRaceRequest();
         }
 
-        private void btnEndRace5_Click(object sender, EventArgs e)
+        private async void btnEndRace5_Click(object sender, EventArgs e)
         {
-
+            await station5.SendFinishRaceRequest();
         }
 
-        private void btnEndRace6_Click(object sender, EventArgs e)
+        private async void btnEndRace6_Click(object sender, EventArgs e)
         {
-
+            await station6.SendFinishRaceRequest();
         }
 
-        private void btnEndRace7_Click(object sender, EventArgs e)
+        private async void btnEndRace7_Click(object sender, EventArgs e)
         {
-
+            await station7.SendFinishRaceRequest();
         }
 
-        private void btnEndRace8_Click(object sender, EventArgs e)
+        private async void btnEndRace8_Click(object sender, EventArgs e)
         {
-
+            await station8.SendFinishRaceRequest();
         }
     }
 }

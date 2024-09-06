@@ -71,7 +71,7 @@ namespace Server_Admin
             Nick = "Jugador";
         }
 
-        public async Task SendToggleRequest()
+        public async Task<bool> SendToggleRequest()
         {
             try
             {
@@ -91,23 +91,26 @@ namespace Server_Admin
                     {
                         url += "open_game";
                     }
-
                     HttpResponseMessage response = await client.PostAsync(url, null);
 
                     if (response.IsSuccessStatusCode)
                     {
+                        IsAlive = !IsAlive;
                         string responseBody = await response.Content.ReadAsStringAsync();
                         MessageBox.Show($"{responseBody}");
+                        return true;
                     }
                     else
                     {
                         MessageBox.Show($"Error: {response.StatusCode} - {response.ReasonPhrase}");
+                        return false;
                     }
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Exception: {ex.Message}");
+                return false;
             }
         }
 
@@ -129,7 +132,10 @@ namespace Server_Admin
                 string server = serverData[0];
                 string port = serverData[1];
                 string url = $"{server}:{port}/modify_file";
-                string url2 = $"{server}:{port}/";
+                string[] multiServerData = IP.Split(':');
+                string multiServer = multiServerData[0];
+                string multiPort = multiServerData[1];
+                string url2 = $"{server}:5397/rest/multiplayer/join?host={multiServer}&port={multiPort}";
 
                 Dictionary<string, object> options = new Dictionary<string, object>(new[] {
                     new KeyValuePair<string, object>("Steering Help", SteeringHelp),
@@ -187,6 +193,35 @@ namespace Server_Admin
                             PropertyNameCaseInsensitive = true
                         };
                         Dictionary<string, object> dictionary = JsonSerializer.Deserialize<Dictionary<string, object>>(responseBody, options);
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Error: {response.StatusCode} - {response.ReasonPhrase}");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
+            }
+        }
+
+        public async Task SendFinishRaceRequest()
+        {
+            try
+            {
+                string[] serverData = IP.Split(':');
+                string server = serverData[0];
+                string port = serverData[1];
+                string url = $"{server}:5397/navigation/action/NAV_BACK_TO_EVENT";
+
+                using (var client = new HttpClient())
+                {
+                    HttpResponseMessage response = await client.PostAsync(url, null);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        string responseBody = await response.Content.ReadAsStringAsync();
+                        MessageBox.Show($"{responseBody}");
                     }
                     else
                     {
