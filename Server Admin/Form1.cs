@@ -466,15 +466,21 @@ namespace Server_Admin
         {
             List<Station> stationList = new List<Station> { station1, station2, station3, station4, station5, station6, station7, station8 };
             string jsonData = JsonSerializer.Serialize(stationList);
-
-            File.WriteAllText("C:\\Users\\alexm\\source\\repos\\RFactor2ControlPanel\\userData.json", jsonData);
+            string programFilesX86 = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
+            File.WriteAllText(programFilesX86 + "\\rFactorServerAdmin\\userData.json", jsonData);
         }
         private void loadStations()
         {
-            if(File.Exists("C:\\Users\\alexm\\source\\repos\\RFactor2ControlPanel\\userData.json"))
+            string programFilesX86 = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
+            string saveFolder = programFilesX86 + "\\rFactorServerAdmin";
+            if (!Directory.Exists(saveFolder))
             {
-                string data = File.ReadAllText("C:\\Users\\alexm\\source\\repos\\RFactor2ControlPanel\\userData.json");
-                List<Station> stationList = JsonSerializer.Deserialize<List<Station>>(data);
+                Directory.CreateDirectory(saveFolder);
+            }
+            if (File.Exists(saveFolder + "\\userData.json"))
+            {
+                string data = File.ReadAllText(saveFolder + "\\userData.json");
+                List <Station> stationList = JsonSerializer.Deserialize<List<Station>>(data);
 
                 station1 = stationList[0];
                 station2 = stationList[1];
