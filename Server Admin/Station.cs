@@ -71,6 +71,17 @@ namespace Server_Admin
             Nick = "Jugador";
         }
 
+        public void CopyStationDifficulty(Station stationToCopy)
+        {
+            SteeringHelp = stationToCopy.SteeringHelp;
+            BrakingHelp = stationToCopy.BrakingHelp;
+            StabilityControl = stationToCopy.StabilityControl;
+            AutoShifting = stationToCopy.AutoShifting;
+            ThrottleControl = stationToCopy.ThrottleControl;
+            AntiLockBrakes = stationToCopy.AntiLockBrakes;
+            DrivingLine = stationToCopy.DrivingLine;
+        }
+
         public async Task<bool> SendToggleRequest()
         {
             try

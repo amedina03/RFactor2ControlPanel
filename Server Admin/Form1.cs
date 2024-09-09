@@ -12,18 +12,19 @@ namespace Server_Admin
         private Station hardStation = new Station(0, 0, 1, 0, 1, 1, 3);
         private Station manualStation = new Station(0, 0, 0, 0, 0, 0, 0);
         // Holds station values
-        private Station station1 = new Station();
-        private Station station2 = new Station();
-        private Station station3 = new Station();
-        private Station station4 = new Station();
-        private Station station5 = new Station();
-        private Station station6 = new Station();
-        private Station station7 = new Station();
-        private Station station8 = new Station();
+        private Station station1;
+        private Station station2;
+        private Station station3;
+        private Station station4;
+        private Station station5;
+        private Station station6;
+        private Station station7;
+        private Station station8;
 
         public Form1()
         {
             InitializeComponent();
+            loadStations();
             // El texto vendrá de la api en formato json
             //string jsonString = File.ReadAllText("C:/Users/alexm/source/repos/RFactor2ControlPanel/Server Admin/Assets/player.json");
             //var optionsDictionary = JsonSerializer.Deserialize<Dictionary<string, object>>(jsonString);
@@ -42,6 +43,7 @@ namespace Server_Admin
             station1.Server = txtServerStation1.Text;
             station1.Name = txtNameStation1.Text;
             station1.Nick = txtNameStation1.Text;
+            saveStations();
             await station1.SendSaveRequest();
         }
 
@@ -51,6 +53,7 @@ namespace Server_Admin
             station2.Server = txtServerStation2.Text;
             station2.Name = txtNameStation2.Text;
             station2.Nick = txtNameStation2.Text;
+            saveStations();
             await station2.SendSaveRequest();
         }
 
@@ -60,6 +63,7 @@ namespace Server_Admin
             station3.Server = txtServerStation3.Text;
             station3.Name = txtNameStation3.Text;
             station3.Nick = txtNameStation3.Text;
+            saveStations();
             await station3.SendSaveRequest();
         }
 
@@ -69,6 +73,7 @@ namespace Server_Admin
             station4.Server = txtServerStation4.Text;
             station4.Name = txtNameStation4.Text;
             station4.Nick = txtNameStation4.Text;
+            saveStations();
             await station4.SendSaveRequest();
         }
 
@@ -78,6 +83,7 @@ namespace Server_Admin
             station5.Server = txtServerStation5.Text;
             station5.Name = txtNameStation5.Text;
             station5.Nick = txtNameStation5.Text;
+            saveStations();
             await station5.SendSaveRequest();
         }
 
@@ -87,6 +93,7 @@ namespace Server_Admin
             station6.Server = txtServerStation6.Text;
             station6.Name = txtNameStation6.Text;
             station6.Nick = txtNameStation6.Text;
+            saveStations();
             await station6.SendSaveRequest();
         }
 
@@ -96,6 +103,7 @@ namespace Server_Admin
             station7.Server = txtServerStation7.Text;
             station7.Name = txtNameStation7.Text;
             station7.Nick = txtNameStation7.Text;
+            saveStations();
             await station7.SendSaveRequest();
         }
 
@@ -105,6 +113,7 @@ namespace Server_Admin
             station8.Server = txtServerStation8.Text;
             station8.Name = txtNameStation8.Text;
             station8.Nick = txtNameStation8.Text;
+            saveStations();
             await station8.SendSaveRequest();
         }
 
@@ -255,162 +264,162 @@ namespace Server_Admin
 
         private void btnEasyStation1_Click(object sender, EventArgs e)
         {
-            station1 = easyStation;
+            station1.CopyStationDifficulty(easyStation);
         }
 
         private void btnMediumStation1_Click(object sender, EventArgs e)
         {
-            station1 = mediumStation;
+            station1.CopyStationDifficulty(mediumStation);
         }
 
         private void btnHardStation1_Click(object sender, EventArgs e)
         {
-            station1 = hardStation;
+            station1.CopyStationDifficulty(hardStation);
         }
 
         private void btnManualStation1_Click(object sender, EventArgs e)
         {
-            station1 = manualStation;
+            station1.CopyStationDifficulty(manualStation);
         }
 
         private void btnEasyStation2_Click(object sender, EventArgs e)
         {
-            station2 = easyStation;
+            station2.CopyStationDifficulty(easyStation);
         }
 
         private void btnMediumStation2_Click(object sender, EventArgs e)
         {
-            station2 = mediumStation;
+            station2.CopyStationDifficulty(mediumStation);
         }
 
         private void btnHardStation2_Click(object sender, EventArgs e)
         {
-            station2 = hardStation;
+            station2.CopyStationDifficulty(hardStation);
         }
 
         private void btnManualStation2_Click(object sender, EventArgs e)
         {
-            station2 = manualStation;
+            station2.CopyStationDifficulty(manualStation);
         }
 
         private void btnEasyStation3_Click(object sender, EventArgs e)
         {
-            station3 = easyStation;
+            station3.CopyStationDifficulty(easyStation);
         }
 
         private void btnMediumStation3_Click(object sender, EventArgs e)
         {
-            station3 = mediumStation;
+            station3.CopyStationDifficulty(mediumStation);
         }
 
         private void btnHardStation3_Click(object sender, EventArgs e)
         {
-            station3 = hardStation;
+            station3.CopyStationDifficulty(hardStation);
         }
 
         private void btnManualStation3_Click(object sender, EventArgs e)
         {
-            station3 = manualStation;
+            station3.CopyStationDifficulty(manualStation);
         }
 
         private void btnEasyStation4_Click(object sender, EventArgs e)
         {
-            station4 = easyStation;
+            station4.CopyStationDifficulty(easyStation);
         }
 
         private void btnMediumStation4_Click(object sender, EventArgs e)
         {
-            station4 = mediumStation;
+            station4.CopyStationDifficulty(mediumStation);
         }
 
         private void btnHardStation4_Click(object sender, EventArgs e)
         {
-            station4 = hardStation;
+            station4.CopyStationDifficulty(hardStation);
         }
 
         private void btnManualStation4_Click(object sender, EventArgs e)
         {
-            station4 = manualStation;
+            station4.CopyStationDifficulty(manualStation);
         }
 
         private void btnEasyStation5_Click(object sender, EventArgs e)
         {
-            station5 = easyStation;
+            station5.CopyStationDifficulty(easyStation);
         }
 
         private void btnMediumStation5_Click(object sender, EventArgs e)
         {
-            station5 = mediumStation;
+            station5.CopyStationDifficulty(mediumStation);
         }
 
         private void btnHardStation5_Click(object sender, EventArgs e)
         {
-            station5 = hardStation;
+            station5.CopyStationDifficulty(hardStation);
         }
 
         private void btnManualStation5_Click(object sender, EventArgs e)
         {
-            station5 = manualStation;
+            station5.CopyStationDifficulty(manualStation);
         }
 
         private void btnEasyStation6_Click(object sender, EventArgs e)
         {
-            station6 = easyStation;
+            station6.CopyStationDifficulty(easyStation);
         }
 
         private void btnMediumStation6_Click(object sender, EventArgs e)
         {
-            station6 = mediumStation;
+            station6.CopyStationDifficulty(mediumStation);
         }
 
         private void btnHardStation6_Click(object sender, EventArgs e)
         {
-            station6 = hardStation;
+            station6.CopyStationDifficulty(hardStation);
         }
 
         private void btnManualStation6_Click(object sender, EventArgs e)
         {
-            station6 = manualStation;
+            station6.CopyStationDifficulty(manualStation);
         }
 
         private void btnEasyStation7_Click(object sender, EventArgs e)
         {
-            station7 = easyStation;
+            station7.CopyStationDifficulty(easyStation);
         }
 
         private void btnMediumStation7_Click(object sender, EventArgs e)
         {
-            station7 = mediumStation;
+            station7.CopyStationDifficulty(mediumStation);
         }
 
         private void btnHardStation7_Click(object sender, EventArgs e)
         {
-            station7 = hardStation;
+            station7.CopyStationDifficulty(hardStation);
         }
 
         private void btnManualStation7_Click(object sender, EventArgs e)
         {
-            station7 = manualStation;
+            station7.CopyStationDifficulty(manualStation);
         }
 
         private void btnEasyStation8_Click(object sender, EventArgs e)
         {
-            station8 = easyStation;
+            station8.CopyStationDifficulty(easyStation);
         }
 
         private void btnMediumStation8_Click(object sender, EventArgs e)
         {
-            station8 = mediumStation;
+            station8.CopyStationDifficulty(mediumStation);
         }
 
         private void btnHardStation8_Click(object sender, EventArgs e)
         {
-            station8 = hardStation;
+            station8.CopyStationDifficulty(hardStation);
         }
 
         private void btnManualStation8_Click(object sender, EventArgs e)
         {
-            station8 = manualStation;
+            station8.CopyStationDifficulty(manualStation);
         }
 
         private async void btnEndRace1_Click(object sender, EventArgs e)
@@ -451,6 +460,76 @@ namespace Server_Admin
         private async void btnEndRace8_Click(object sender, EventArgs e)
         {
             await station8.SendFinishRaceRequest();
+        }
+
+        private void saveStations()
+        {
+            List<Station> stationList = new List<Station> { station1, station2, station3, station4, station5, station6, station7, station8 };
+            string jsonData = JsonSerializer.Serialize(stationList);
+
+            File.WriteAllText("C:\\Users\\alexm\\source\\repos\\RFactor2ControlPanel\\userData.json", jsonData);
+        }
+        private void loadStations()
+        {
+            if(File.Exists("C:\\Users\\alexm\\source\\repos\\RFactor2ControlPanel\\userData.json"))
+            {
+                string data = File.ReadAllText("C:\\Users\\alexm\\source\\repos\\RFactor2ControlPanel\\userData.json");
+                List<Station> stationList = JsonSerializer.Deserialize<List<Station>>(data);
+
+                station1 = stationList[0];
+                station2 = stationList[1];
+                station3 = stationList[2];
+                station4 = stationList[3];
+                station5 = stationList[4];
+                station6 = stationList[5];
+                station7 = stationList[6];
+                station8 = stationList[7];
+
+
+                txtNameStation1.Text = station1.Name == "Jugador" ? "" : station1.Name;
+                txtIPStation1.Text = station1.IP;
+                txtServerStation1.Text = station1.Server;
+
+                txtNameStation2.Text = station2.Name == "Jugador" ? "": station2.Name;
+                txtIPStation2.Text = station2.IP;
+                txtServerStation2.Text = station2.Server;
+
+                txtNameStation3.Text = station3.Name == "Jugador" ? "" : station3.Name;
+                txtIPStation3.Text = station3.IP;
+                txtServerStation3.Text = station3.Server;
+
+                txtNameStation4.Text = station4.Name == "Jugador" ? "" : station4.Name;
+                txtIPStation4.Text = station4.IP;
+                txtServerStation4.Text = station4.Server;
+
+                txtNameStation5.Text = station5.Name == "Jugador" ? "" : station5.Name;
+                txtIPStation5.Text = station5.IP;
+                txtServerStation5.Text = station5.Server;
+
+                txtNameStation6.Text = station6.Name == "Jugador" ? "" : station6.Name;
+                txtIPStation6.Text = station6.IP;
+                txtServerStation6.Text = station6.Server;
+
+                txtNameStation7.Text = station7.Name == "Jugador" ? "" : station7.Name;
+                txtIPStation7.Text = station7.IP;
+                txtServerStation7.Text = station7.Server;
+
+                txtNameStation8.Text = station8.Name == "Jugador" ? "" : station8.Name;
+                txtIPStation8.Text = station8.IP;
+                txtServerStation8.Text = station8.Server;
+
+            }
+            else
+            {
+                station1 = new Station();
+                station2 = new Station();
+                station3 = new Station();
+                station4 = new Station();
+                station5 = new Station();
+                station6 = new Station();
+                station7 = new Station();
+                station8 = new Station();
+            }
         }
     }
 }
