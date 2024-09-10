@@ -420,7 +420,7 @@ namespace Server_Admin
 
         private async void btnEndRace2_Click(object sender, EventArgs e)
         {
-           await station2.SendFinishRaceRequest();
+            await station2.SendFinishRaceRequest();
         }
 
         private async void btnEndRace3_Click(object sender, EventArgs e)
@@ -451,6 +451,46 @@ namespace Server_Admin
         private async void btnEndRace8_Click(object sender, EventArgs e)
         {
             await station8.SendFinishRaceRequest();
+        }
+
+        private async void btnConnectStation1_Click(object sender, EventArgs e)
+        {
+            await station1.SendJoinRequest();
+        }
+
+        private async void btnConnectStation2_Click(object sender, EventArgs e)
+        {
+            await station2.SendJoinRequest();
+        }
+
+        private async void btnConnectStation3_Click(object sender, EventArgs e)
+        {
+            await station3.SendJoinRequest();
+        }
+
+        private async void btnConnectStation4_Click(object sender, EventArgs e)
+        {
+            await station4.SendJoinRequest();
+        }
+
+        private async void btnConnectStation5_Click(object sender, EventArgs e)
+        {
+            await station5.SendJoinRequest();
+        }
+
+        private async void btnConnectStation6_Click(object sender, EventArgs e)
+        {
+            await station6.SendJoinRequest();
+        }
+
+        private async void btnConnectStation7_Click(object sender, EventArgs e)
+        {
+            await station7.SendJoinRequest();
+        }
+
+        private async void btnConnectStation8_Click(object sender, EventArgs e)
+        {
+            await station8.SendJoinRequest();
         }
     }
 }

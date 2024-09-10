@@ -19,11 +19,20 @@ def get_file():
             drivingAids = data['DRIVING AIDS']
             driver = data['DRIVER']
 
+            print(valuesDictionary)
+            print( drivingAids['Steering Help'])
+            print( drivingAids['Brake Help'])
+            print( drivingAids['Stability Control'])
+            print( drivingAids['Steering Help'])
+            print( drivingAids['Steering Help'])
+            print( drivingAids['Driving Line'])
+            print( driver['Player Name'])
+            print( driver['Player Nick'])
             valuesDictionary['Steering Help'] = drivingAids['Steering Help']
             valuesDictionary['Brake Help'] = drivingAids['Brake Help']
             valuesDictionary['Stability Control'] = drivingAids['Stability Control']
             valuesDictionary['Shift Mode'] = drivingAids['Shift Mode']
-            valuesDictionary['Throttle Control'] = drivingAids['TThrottle Control']
+            valuesDictionary['Throttle Control'] = drivingAids['Throttle Control']
             valuesDictionary['Antilock Brakes'] = drivingAids['Antilock Brakes']
             valuesDictionary['Driving Line'] = drivingAids['Driving Line']
             valuesDictionary['Player Name'] = driver['Player Name']

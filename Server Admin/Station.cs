@@ -78,7 +78,7 @@ namespace Server_Admin
                 string[] serverData = IP.Split(':');
                 string server = serverData[0];
                 string port = serverData[1];
-                string url = $"{server}:{port}/";
+                string url = $"http://{server}:{port}/";
 
                 // Para post
                 using (var client = new HttpClient())
@@ -114,62 +114,106 @@ namespace Server_Admin
             }
         }
 
-        public async Task SendSaveRequest()
+        public async Task<bool> SendSaveRequest()
         {
             if (IsAlive)
             {
                 MessageBox.Show("Apague la máquina antes");
-                return;
+                return false;
             }
             else if (Name == "Jugador" && Nick == "Jugador")
             {
                 MessageBox.Show("Introduzca datos para la máquina");
-                return;
+                return false;
             }
             try
             {
                 string[] serverData = IP.Split(':');
                 string server = serverData[0];
                 string port = serverData[1];
-                string url = $"{server}:{port}/modify_file";
-                string[] multiServerData = IP.Split(':');
-                string multiServer = multiServerData[0];
-                string multiPort = multiServerData[1];
-                string url2 = $"{server}:5397/rest/multiplayer/join?host={multiServer}&port={multiPort}";
+                string url = $"http://{server}:{port}/modify_file";
 
                 Dictionary<string, object> options = new Dictionary<string, object>(new[] {
                     new KeyValuePair<string, object>("Steering Help", SteeringHelp),
                     new KeyValuePair<string, object>("Brake Help", BrakingHelp),
                     new KeyValuePair<string, object>("Stability Control", StabilityControl),
                     new KeyValuePair<string, object>("Shift Mode", AutoShifting),
-                    new KeyValuePair<string, object>("Traction Control", ThrottleControl),
+                    new KeyValuePair<string, object>("Throttle Control", ThrottleControl),
                     new KeyValuePair<string, object>("Antilock Brakes", AntiLockBrakes),
                     new KeyValuePair<string, object>("Driving Line", DrivingLine),
-                    new KeyValuePair<string, object>("Player Name", Name)
+                    new KeyValuePair<string, object>("Player Name", Name),
+                    new KeyValuePair<string, object>("Player Nick", Nick)
                 });
                 string json = JsonSerializer.Serialize(options);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
-
                 using (var client = new HttpClient())
                 {
                     HttpResponseMessage response = await client.PostAsync(url, content);
 
                     // Ver como te conectas con la api
-                    HttpResponseMessage response2 = await client.GetAsync(url2);
-                    if (response.IsSuccessStatusCode && response2.IsSuccessStatusCode)
+                    if (response.IsSuccessStatusCode)
                     {
                         string responseBody = await response.Content.ReadAsStringAsync();
                         MessageBox.Show($"{responseBody}");
+                        return true;
                     }
                     else
                     {
                         MessageBox.Show($"Error: {response.StatusCode} - {response.ReasonPhrase}");
+                        return false;
                     }
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Exception: {ex.Message}");
+                return false;
+            }
+        }
+
+        public async Task<bool> SendJoinRequest()
+        {
+            if (!IsAlive)
+            {
+                MessageBox.Show("Encienda la máquina antes");
+                return false;
+            }
+            else if (Name == "Jugador" && Nick == "Jugador")
+            {
+                MessageBox.Show("Introduzca datos para la máquina");
+                return false;
+            }
+            try
+            {
+                string[] serverData = IP.Split(':');
+                string server = serverData[0];
+                string[] multiServerData = IP.Split(':');
+                string multiServer = multiServerData[0];
+                string multiPort = multiServerData[1];
+                string url = $"http://{server}:5397/rest/multiplayer/join?host={multiServer}&port={multiPort}";
+
+
+                using (var client = new HttpClient())
+                {
+                    // Ver como te conectas con la api
+                    HttpResponseMessage response = await client.GetAsync(url);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        string responseBody = await response.Content.ReadAsStringAsync();
+                        MessageBox.Show($"{responseBody}");
+                        return true;
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Error: {response.StatusCode} - {response.ReasonPhrase}");
+                        return false;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
+                return false;
             }
         }
 
@@ -180,7 +224,7 @@ namespace Server_Admin
                 string[] serverData = IP.Split(':');
                 string server = serverData[0];
                 string port = serverData[1];
-                string url = $"{server}:{port}/get_file";
+                string url = $"http://{server}:{port}/get_file";
 
                 using (var client = new HttpClient())
                 {
@@ -213,7 +257,7 @@ namespace Server_Admin
                 string[] serverData = IP.Split(':');
                 string server = serverData[0];
                 string port = serverData[1];
-                string url = $"{server}:5397/navigation/action/NAV_BACK_TO_EVENT";
+                string url = $"http://{server}:5397/navigation/action/NAV_BACK_TO_EVENT";
 
                 using (var client = new HttpClient())
                 {
