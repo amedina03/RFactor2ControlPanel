@@ -500,12 +500,18 @@ namespace Server_Admin
         private async void btnConnectStation8_Click(object sender, EventArgs e)
         {
             await station8.SendJoinRequest();
+        }
         private void saveStations()
         {
             List<Station> stationList = new List<Station> { station1, station2, station3, station4, station5, station6, station7, station8 };
             string jsonData = JsonSerializer.Serialize(stationList);
             string programFilesX86 = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
-            File.WriteAllText(programFilesX86 + "\\rFactorServerAdmin\\userData.json", jsonData);
+            string saveFolder = programFilesX86 + "\\rFactorServerAdmin";
+            if (!Directory.Exists(saveFolder))
+            {
+                Directory.CreateDirectory(saveFolder);
+            }
+            File.WriteAllText(saveFolder + "\\userData.json", jsonData);
         }
         private void loadStations()
         {
