@@ -22,7 +22,7 @@ bash
 - Again, ensure the executable is run as an administrator.
 
 ---
-Usage Instructions
+### Usage Instructions
 1. Select Difficulty Level:
 The system offers predefined difficulty levels from Green to Red, affecting settings like: Shift mode, Stability control, Auto brakes. Select the appropriate difficulty level based on your needs.
 
