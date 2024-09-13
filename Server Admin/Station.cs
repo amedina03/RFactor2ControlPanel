@@ -20,10 +20,11 @@ namespace Server_Admin
         public int ThrottleControl { get; set; }
         public int AntiLockBrakes { get; set; }
         public int DrivingLine { get; set; }
+        public int AutoReverse { get; set; }
         public string Name { get; set; }
         public string Nick { get; set; }
 
-        public Station(bool isAlive, string server, string ip, int steeringHelp, int brakingHelp, int stabilityControl, int autoShifting, int throttleControl, int antiLockBrakes, int drivingLine, string name, string nick)
+        public Station(bool isAlive, string server, string ip, int steeringHelp, int brakingHelp, int stabilityControl, int autoShifting, int throttleControl, int antiLockBrakes, int drivingLine, int autoReverse, string name, string nick)
         {
             IsAlive = isAlive;
             Server = server;
@@ -35,11 +36,12 @@ namespace Server_Admin
             ThrottleControl = throttleControl;
             AntiLockBrakes = antiLockBrakes;
             DrivingLine = drivingLine;
+            AutoReverse = autoReverse;
             Name = name;
             Nick = nick;
         }
 
-        public Station(int steeringHelp, int brakingHelp, int stabilityControl, int autoShifting, int throttleControl, int antiLockBrakes, int drivingLine)
+        public Station(int steeringHelp, int brakingHelp, int stabilityControl, int autoShifting, int throttleControl, int antiLockBrakes, int drivingLine, int autoReverse)
         {
             IsAlive = false;
             Server = "";
@@ -51,6 +53,7 @@ namespace Server_Admin
             ThrottleControl = throttleControl;
             AntiLockBrakes = antiLockBrakes;
             DrivingLine = drivingLine;
+            AutoReverse = autoReverse;
             Name = "Jugador";
             Nick = "Jugador";
         }
@@ -67,6 +70,7 @@ namespace Server_Admin
             ThrottleControl = 0;
             AntiLockBrakes = 0;
             DrivingLine = 0;
+            AutoReverse = 0;
             Name = "Jugador";
             Nick = "Jugador";
         }
@@ -80,6 +84,7 @@ namespace Server_Admin
             ThrottleControl = stationToCopy.ThrottleControl;
             AntiLockBrakes = stationToCopy.AntiLockBrakes;
             DrivingLine = stationToCopy.DrivingLine;
+            AutoReverse = stationToCopy.AutoReverse;
         }
 
         public async Task<bool> SendToggleRequest()
@@ -152,6 +157,7 @@ namespace Server_Admin
                     new KeyValuePair<string, object>("Throttle Control", ThrottleControl),
                     new KeyValuePair<string, object>("Antilock Brakes", AntiLockBrakes),
                     new KeyValuePair<string, object>("Driving Line", DrivingLine),
+                    new KeyValuePair<string, object>("Auto Reverse", AutoReverse),
                     new KeyValuePair<string, object>("Player Name", Name),
                     new KeyValuePair<string, object>("Player Nick", Nick)
                 });
@@ -198,7 +204,7 @@ namespace Server_Admin
             {
                 string[] serverData = IP.Split(':');
                 string server = serverData[0];
-                string[] multiServerData = IP.Split(':');
+                string[] multiServerData = Server.Split(':');
                 string multiServer = multiServerData[0];
                 string multiPort = multiServerData[1];
                 string url = $"http://{server}:5397/rest/multiplayer/join?host={multiServer}&port={multiPort}";
@@ -211,7 +217,6 @@ namespace Server_Admin
                     if (response.IsSuccessStatusCode)
                     {
                         string responseBody = await response.Content.ReadAsStringAsync();
-                        MessageBox.Show($"{responseBody}");
                         return true;
                     }
                     else
@@ -276,7 +281,6 @@ namespace Server_Admin
                     if (response.IsSuccessStatusCode)
                     {
                         string responseBody = await response.Content.ReadAsStringAsync();
-                        MessageBox.Show($"{responseBody}");
                     }
                     else
                     {

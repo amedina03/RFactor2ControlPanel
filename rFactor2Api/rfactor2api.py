@@ -11,23 +11,15 @@ def get_file():
     try:
         # Change file path
         file_path = "C:/Program Files (x86)/Steam/steamapps/common/rFactor 2/UserData/player/player.json"
+        controller_file_path = "C:/Program Files (x86)/Steam/steamapps/common/rFactor 2/UserData/player/Controller.json"
         with open(file_path, 'r') as f:
             # Get data from the options file and send as response
             data = json.load(f)
-            valuesDictionary:dict = {'Steering Help': 0, 'Brake Help': 0, 'Stability Control':0, 'Shift Mode':0, 'Throttle Control':0, 'Antilock Brakes': 0, 'Driving Line': 0, 'Player Name': "", 'Player Nick': ""}
+            valuesDictionary:dict = {'Steering Help': 0, 'Brake Help': 0, 'Stability Control':0, 'Shift Mode':0, 'Throttle Control':0, 'Antilock Brakes': 0, 'Driving Line': 0, 'Auto Reverse': 0, 'Player Name': "", 'Player Nick': ""}
 
             drivingAids = data['DRIVING AIDS']
             driver = data['DRIVER']
 
-            print(valuesDictionary)
-            print( drivingAids['Steering Help'])
-            print( drivingAids['Brake Help'])
-            print( drivingAids['Stability Control'])
-            print( drivingAids['Steering Help'])
-            print( drivingAids['Steering Help'])
-            print( drivingAids['Driving Line'])
-            print( driver['Player Name'])
-            print( driver['Player Nick'])
             valuesDictionary['Steering Help'] = drivingAids['Steering Help']
             valuesDictionary['Brake Help'] = drivingAids['Brake Help']
             valuesDictionary['Stability Control'] = drivingAids['Stability Control']
@@ -39,15 +31,21 @@ def get_file():
             valuesDictionary['Player Nick'] = driver['Player Nick']
             
             # Only return necessary options
-            return jsonify(valuesDictionary), 200
+            with open(controller_file_path, 'r') as f:
+                data = json.load(f)
+                controls = data['General Controls']
+                valuesDictionary['Auto Reverse'] = controls['Auto Reverse']
+        return jsonify(valuesDictionary), 200
     except Exception as e:
         return jsonify({"result": "error", "error": str(e)}), 500
+    
 
 @app.route('/modify_file', methods=['POST'])
 def modify_file():
     try:
         # Change file path
         file_path = "C:/Program Files (x86)/Steam/steamapps/common/rFactor 2/UserData/player/player.json"
+        controller_file_path = "C:/Program Files (x86)/Steam/steamapps/common/rFactor 2/UserData/player/Controller.json"
         data = request.get_json(force=True)
         with open(file_path, 'r') as f:
             # Modify file to save options
@@ -64,6 +62,12 @@ def modify_file():
             fileData['DRIVER']['Player Nick'] = data['Player Name']
 
         with open(file_path, 'w') as f:
+            json.dump(fileData, f, indent = 4)
+
+        with open(controller_file_path, 'r') as f:
+            fileData = json.load(f)
+            fileData['General Controls']['Auto Reverse'] = data['Auto Reverse']
+        with open(controller_file_path, 'w') as f:
             json.dump(fileData, f, indent = 4)
 
         return jsonify({"result": "success", "message": "File modified successfully."}), 200

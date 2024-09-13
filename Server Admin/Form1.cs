@@ -7,10 +7,10 @@ namespace Server_Admin
 {
     public partial class Form1 : Form
     {
-        private Station easyStation = new Station(1, 1, 2, 3, 3, 2, 3);
-        private Station mediumStation = new Station(0, 0, 2, 3, 3, 2, 3);
-        private Station hardStation = new Station(0, 0, 1, 0, 1, 1, 3);
-        private Station manualStation = new Station(0, 0, 0, 0, 0, 0, 0);
+        private Station easyStation = new Station(1, 1, 2, 3, 3, 2, 3, 1);
+        private Station mediumStation = new Station(0, 0, 2, 3, 3, 2, 3, 1);
+        private Station hardStation = new Station(0, 0, 1, 0, 1, 1, 3, 0);
+        private Station manualStation = new Station(0, 0, 0, 0, 0, 0, 0, 0);
         // Holds station values
         private Station station1;
         private Station station2;
@@ -424,81 +424,97 @@ namespace Server_Admin
 
         private async void btnEndRace1_Click(object sender, EventArgs e)
         {
+            saveStationConnections(station1, false);
             await station1.SendFinishRaceRequest();
         }
 
         private async void btnEndRace2_Click(object sender, EventArgs e)
         {
+            saveStationConnections(station2, false);
             await station2.SendFinishRaceRequest();
         }
 
         private async void btnEndRace3_Click(object sender, EventArgs e)
         {
+            saveStationConnections(station3, false);
             await station3.SendFinishRaceRequest();
         }
 
         private async void btnEndRace4_Click(object sender, EventArgs e)
         {
+            saveStationConnections(station4, false);
             await station4.SendFinishRaceRequest();
         }
 
         private async void btnEndRace5_Click(object sender, EventArgs e)
         {
+            saveStationConnections(station5, false);
             await station5.SendFinishRaceRequest();
         }
 
         private async void btnEndRace6_Click(object sender, EventArgs e)
         {
+            saveStationConnections(station6, false);
             await station6.SendFinishRaceRequest();
         }
 
         private async void btnEndRace7_Click(object sender, EventArgs e)
         {
+            saveStationConnections(station7, false);
             await station7.SendFinishRaceRequest();
         }
 
         private async void btnEndRace8_Click(object sender, EventArgs e)
         {
+            saveStationConnections(station8, false);
             await station8.SendFinishRaceRequest();
         }
 
         private async void btnConnectStation1_Click(object sender, EventArgs e)
         {
+            saveStationConnections(station1, true);
             await station1.SendJoinRequest();
         }
 
         private async void btnConnectStation2_Click(object sender, EventArgs e)
         {
+            saveStationConnections(station2, true);
             await station2.SendJoinRequest();
         }
 
         private async void btnConnectStation3_Click(object sender, EventArgs e)
         {
+            saveStationConnections(station3, true);
             await station3.SendJoinRequest();
         }
 
         private async void btnConnectStation4_Click(object sender, EventArgs e)
         {
+            saveStationConnections(station4, true);
             await station4.SendJoinRequest();
         }
 
         private async void btnConnectStation5_Click(object sender, EventArgs e)
         {
+            saveStationConnections(station5, true);
             await station5.SendJoinRequest();
         }
 
         private async void btnConnectStation6_Click(object sender, EventArgs e)
         {
+            saveStationConnections(station6, true);
             await station6.SendJoinRequest();
         }
 
         private async void btnConnectStation7_Click(object sender, EventArgs e)
         {
+            saveStationConnections(station7, true);
             await station7.SendJoinRequest();
         }
 
         private async void btnConnectStation8_Click(object sender, EventArgs e)
         {
+            saveStationConnections(station8, true);
             await station8.SendJoinRequest();
         }
         private void saveStations()
@@ -507,11 +523,53 @@ namespace Server_Admin
             string jsonData = JsonSerializer.Serialize(stationList);
             string programFilesX86 = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
             string saveFolder = programFilesX86 + "\\rFactorServerAdmin";
-            if (!Directory.Exists(saveFolder))
-            {
-                Directory.CreateDirectory(saveFolder);
-            }
             File.WriteAllText(saveFolder + "\\userData.json", jsonData);
+        }
+        private void saveStationConnections(Station stationToSave, bool start)
+        {
+            string programFilesX86 = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
+            string saveFolder = programFilesX86 + "\\rFactorServerAdmin";
+            string filePath = saveFolder + "\\connectionRegistry.json";
+
+            List<Dictionary<string, object>> stations = new List<Dictionary<string, object>>();
+
+            if (File.Exists(filePath))
+            {
+                string existingJson = File.ReadAllText(filePath);
+                if (!string.IsNullOrEmpty(existingJson))
+                {
+                    stations = JsonSerializer.Deserialize<List<Dictionary<string, object>>>(existingJson);
+                }
+            }
+
+            var stationDict = JsonSerializer.Deserialize<Dictionary<string, object>>(JsonSerializer.Serialize(stationToSave));
+
+            stationDict["DateAdded"] = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+            if (start) 
+            {
+                stationDict["Action"] = "Start";
+            }
+            else
+            {
+                stationDict["Action"] = "End";
+            }
+
+            stationDict.Remove("IsAlive");
+            stationDict.Remove("SteeringHelp");
+            stationDict.Remove("BrakingHelp");
+            stationDict.Remove("StabilityControl");
+            stationDict.Remove("AutoShifting");
+            stationDict.Remove("ThrottleControl");
+            stationDict.Remove("AntiLockBrakes");
+            stationDict.Remove("DrivingLine");
+            stationDict.Remove("AutoReverse");
+            stationDict.Remove("Nick");
+
+            stations.Add(stationDict);
+
+            string jsonData = JsonSerializer.Serialize(stations);
+            File.WriteAllText(filePath, jsonData);
         }
         private void loadStations()
         {
