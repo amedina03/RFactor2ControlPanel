@@ -8,6 +8,7 @@ This component needs to be installed on each computer running **rFactor2**. Foll
 - If you'd prefer to create a standalone executable file, you can use **pyinstaller** with the following command:
   ```bash
   pyinstaller --onefile rfactor2api.py
+  ```
 This will generate an executable for easier deployment.
 
 ### 2. **Server Admin**
@@ -17,6 +18,7 @@ This is the control console that runs on the main administrator's computer. It a
 bash
 ```bash
   Server Admin/bin/Release/neo8.0-windows
+```
 - Again, ensure the executable is run as an administrator.
 
 ---
