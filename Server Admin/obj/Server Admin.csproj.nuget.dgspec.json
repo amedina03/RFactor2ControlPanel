@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alexm\\Documents\\GitHub\\RFactor2ControlPanel\\Server Admin\\Server Admin.csproj": {}
+    "C:\\Users\\alexm\\source\\repos\\RFactor2ControlPanel\\Server Admin\\Server Admin.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alexm\\Documents\\GitHub\\RFactor2ControlPanel\\Server Admin\\Server Admin.csproj": {
+    "C:\\Users\\alexm\\source\\repos\\RFactor2ControlPanel\\Server Admin\\Server Admin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexm\\Documents\\GitHub\\RFactor2ControlPanel\\Server Admin\\Server Admin.csproj",
+        "projectUniqueName": "C:\\Users\\alexm\\source\\repos\\RFactor2ControlPanel\\Server Admin\\Server Admin.csproj",
         "projectName": "Server Admin",
-        "projectPath": "C:\\Users\\alexm\\Documents\\GitHub\\RFactor2ControlPanel\\Server Admin\\Server Admin.csproj",
+        "projectPath": "C:\\Users\\alexm\\source\\repos\\RFactor2ControlPanel\\Server Admin\\Server Admin.csproj",
         "packagesPath": "C:\\Users\\alexm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alexm\\Documents\\GitHub\\RFactor2ControlPanel\\Server Admin\\obj\\",
+        "outputPath": "C:\\Users\\alexm\\source\\repos\\RFactor2ControlPanel\\Server Admin\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\alexm\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

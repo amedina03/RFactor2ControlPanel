@@ -7,6 +7,16 @@ namespace Server_Admin
 {
     public partial class Form1 : Form
     {
+        private string serverUrl = "192.168.1.20";
+        private Dictionary<string,string> serverPorts = new Dictionary<string,string> {
+            {"Server 1", "27013" },
+            {"Server 2", "27014" },
+            {"Server 3", "27015" },
+            {"Server 4", "27016" },
+            {"Server 5", "27017" },
+            {"Server 6", "27018" }
+        };
+
         private Station easyStation = new Station(1, 1, 2, 3, 3, 2, 3, 1);
         private Station mediumStation = new Station(0, 0, 2, 3, 3, 2, 3, 1);
         private Station hardStation = new Station(0, 0, 1, 0, 1, 1, 3, 0);
@@ -39,8 +49,14 @@ namespace Server_Admin
 
         private async void btnSaveStation1_Click(object sender, EventArgs e)
         {
+            if(cbServer1.Text == "Seleccione servidor")
+            {
+                MessageBox.Show("Seleccione servidor");
+                return;
+            }
             station1.IP = txtIPStation1.Text;
-            station1.Server = txtServerStation1.Text;
+            station1.Server = serverUrl + ":" + serverPorts[cbServer1.Text];
+            station1.ServerNumber = cbServer1.Text;
             station1.Name = txtNameStation1.Text;
             station1.Nick = txtNameStation1.Text;
             saveStations();
@@ -49,8 +65,14 @@ namespace Server_Admin
 
         private async void btnSaveStation2_Click(object sender, EventArgs e)
         {
+            if (cbServer2.Text == "Seleccione servidor")
+            {
+                MessageBox.Show("Seleccione servidor");
+                return;
+            }
             station2.IP = txtIPStation2.Text;
-            station2.Server = txtServerStation2.Text;
+            station2.Server = serverUrl + ":" + serverPorts[cbServer2.Text];
+            station2.ServerNumber = cbServer2.Text;
             station2.Name = txtNameStation2.Text;
             station2.Nick = txtNameStation2.Text;
             saveStations();
@@ -59,8 +81,14 @@ namespace Server_Admin
 
         private async void btnSaveStation3_Click(object sender, EventArgs e)
         {
+            if (cbServer3.Text == "Seleccione servidor")
+            {
+                MessageBox.Show("Seleccione servidor");
+                return;
+            }
             station3.IP = txtIPStation3.Text;
-            station3.Server = txtServerStation3.Text;
+            station3.Server = serverUrl + ":" + serverPorts[cbServer3.Text];
+            station3.ServerNumber = cbServer3.Text;
             station3.Name = txtNameStation3.Text;
             station3.Nick = txtNameStation3.Text;
             saveStations();
@@ -69,8 +97,14 @@ namespace Server_Admin
 
         private async void btnSaveStation4_Click(object sender, EventArgs e)
         {
+            if (cbServer4.Text == "Seleccione servidor")
+            {
+                MessageBox.Show("Seleccione servidor");
+                return;
+            }
             station4.IP = txtIPStation4.Text;
-            station4.Server = txtServerStation4.Text;
+            station4.Server = serverUrl + ":" + serverPorts[cbServer4.Text];
+            station4.ServerNumber = cbServer4.Text;
             station4.Name = txtNameStation4.Text;
             station4.Nick = txtNameStation4.Text;
             saveStations();
@@ -79,8 +113,14 @@ namespace Server_Admin
 
         private async void btnSaveStation5_Click(object sender, EventArgs e)
         {
+            if (cbServer5.Text == "Seleccione servidor")
+            {
+                MessageBox.Show("Seleccione servidor");
+                return;
+            }
             station5.IP = txtIPStation5.Text;
-            station5.Server = txtServerStation5.Text;
+            station5.Server = serverUrl + ":" + serverPorts[cbServer5.Text];
+            station5.ServerNumber = cbServer5.Text;
             station5.Name = txtNameStation5.Text;
             station5.Nick = txtNameStation5.Text;
             saveStations();
@@ -89,8 +129,14 @@ namespace Server_Admin
 
         private async void btnSaveStation6_Click(object sender, EventArgs e)
         {
+            if (cbServer6.Text == "Seleccione servidor")
+            {
+                MessageBox.Show("Seleccione servidor");
+                return;
+            }
             station6.IP = txtIPStation6.Text;
-            station6.Server = txtServerStation6.Text;
+            station6.Server = serverUrl + ":" + serverPorts[cbServer6.Text];
+            station6.ServerNumber = cbServer6.Text;
             station6.Name = txtNameStation6.Text;
             station6.Nick = txtNameStation6.Text;
             saveStations();
@@ -99,8 +145,14 @@ namespace Server_Admin
 
         private async void btnSaveStation7_Click(object sender, EventArgs e)
         {
+            if (cbServer7.Text == "Seleccione servidor")
+            {
+                MessageBox.Show("Seleccione servidor");
+                return;
+            }
             station7.IP = txtIPStation7.Text;
-            station7.Server = txtServerStation7.Text;
+            station7.Server = serverUrl + ":" + serverPorts[cbServer7.Text];
+            station7.ServerNumber = cbServer7.Text;
             station7.Name = txtNameStation7.Text;
             station7.Nick = txtNameStation7.Text;
             saveStations();
@@ -109,8 +161,14 @@ namespace Server_Admin
 
         private async void btnSaveStation8_Click(object sender, EventArgs e)
         {
+            if (cbServer8.Text == "Seleccione servidor")
+            {
+                MessageBox.Show("Seleccione servidor");
+                return;
+            }
             station8.IP = txtIPStation8.Text;
-            station8.Server = txtServerStation8.Text;
+            station8.Server = serverUrl + ":" + serverPorts[cbServer8.Text];
+            station8.ServerNumber = cbServer8.Text;
             station8.Name = txtNameStation8.Text;
             station8.Nick = txtNameStation8.Text;
             saveStations();
@@ -546,7 +604,7 @@ namespace Server_Admin
 
             stationDict["DateAdded"] = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
-            if (start) 
+            if (start)
             {
                 stationDict["Action"] = "Start";
             }
@@ -582,7 +640,7 @@ namespace Server_Admin
             if (File.Exists(saveFolder + "\\userData.json"))
             {
                 string data = File.ReadAllText(saveFolder + "\\userData.json");
-                List <Station> stationList = JsonSerializer.Deserialize<List<Station>>(data);
+                List<Station> stationList = JsonSerializer.Deserialize<List<Station>>(data);
 
                 station1 = stationList[0];
                 station2 = stationList[1];
@@ -596,35 +654,35 @@ namespace Server_Admin
 
                 txtNameStation1.Text = station1.Name == "Jugador" ? "" : station1.Name;
                 txtIPStation1.Text = station1.IP;
-                txtServerStation1.Text = station1.Server;
+                cbServer1.Text = station1.ServerNumber == "" ? "Seleccione servidor" : station1.ServerNumber;
 
-                txtNameStation2.Text = station2.Name == "Jugador" ? "": station2.Name;
+                txtNameStation2.Text = station2.Name == "Jugador" ? "" : station2.Name;
                 txtIPStation2.Text = station2.IP;
-                txtServerStation2.Text = station2.Server;
+                cbServer2.Text = station2.ServerNumber == "" ? "Seleccione servidor" : station2.ServerNumber;
 
                 txtNameStation3.Text = station3.Name == "Jugador" ? "" : station3.Name;
                 txtIPStation3.Text = station3.IP;
-                txtServerStation3.Text = station3.Server;
+                cbServer3.Text = station3.ServerNumber == "" ? "Seleccione servidor" : station3.ServerNumber;
 
                 txtNameStation4.Text = station4.Name == "Jugador" ? "" : station4.Name;
                 txtIPStation4.Text = station4.IP;
-                txtServerStation4.Text = station4.Server;
+                cbServer4.Text = station4.ServerNumber == "" ? "Seleccione servidor" : station4.ServerNumber;
 
                 txtNameStation5.Text = station5.Name == "Jugador" ? "" : station5.Name;
                 txtIPStation5.Text = station5.IP;
-                txtServerStation5.Text = station5.Server;
+                cbServer5.Text = station5.ServerNumber == "" ? "Seleccione servidor" : station5.ServerNumber;
 
                 txtNameStation6.Text = station6.Name == "Jugador" ? "" : station6.Name;
                 txtIPStation6.Text = station6.IP;
-                txtServerStation6.Text = station6.Server;
+                cbServer6.Text = station6.ServerNumber == "" ? "Seleccione servidor" : station6.ServerNumber;
 
                 txtNameStation7.Text = station7.Name == "Jugador" ? "" : station7.Name;
                 txtIPStation7.Text = station7.IP;
-                txtServerStation7.Text = station7.Server;
+                cbServer7.Text = station7.ServerNumber == "" ? "Seleccione servidor" : station7.ServerNumber;
 
                 txtNameStation8.Text = station8.Name == "Jugador" ? "" : station8.Name;
                 txtIPStation8.Text = station8.IP;
-                txtServerStation8.Text = station8.Server;
+                cbServer8.Text = station8.ServerNumber == "" ? "Seleccione servidor" : station7.ServerNumber;
 
             }
             else
@@ -638,6 +696,54 @@ namespace Server_Admin
                 station7 = new Station();
                 station8 = new Station();
             }
+        }
+
+        private async void btnConnectDirect1_Click(object sender, EventArgs e)
+        {
+            saveStationConnections(station1, true);
+            await station1.SendJoinRequest(true);
+        }
+
+        private async void btnConnectDirect2_Click(object sender, EventArgs e)
+        {
+            saveStationConnections(station2, true);
+            await station2.SendJoinRequest(true);
+        }
+
+        private async void btnConnectDirect3_Click(object sender, EventArgs e)
+        {
+            saveStationConnections(station3, true);
+            await station3.SendJoinRequest(true);
+        }
+
+        private async void btnConnectDirect4_Click(object sender, EventArgs e)
+        {
+            saveStationConnections(station4, true);
+            await station4.SendJoinRequest(true);
+        }
+
+        private async void btnConnectDirect5_Click(object sender, EventArgs e)
+        {
+            saveStationConnections(station5, true);
+            await station5.SendJoinRequest(true);
+        }
+
+        private async void btnConnectDirect6_Click(object sender, EventArgs e)
+        {
+            saveStationConnections(station6, true);
+            await station6.SendJoinRequest(true);
+        }
+
+        private async void btnConnectDirect7_Click(object sender, EventArgs e)
+        {
+            saveStationConnections(station7, true);
+            await station7.SendJoinRequest(true);
+        }
+
+        private async void btnConnectDirect8_Click(object sender, EventArgs e)
+        {
+            saveStationConnections(station8, true);
+            await station8.SendJoinRequest(true);
         }
     }
 }

@@ -12,6 +12,7 @@ namespace Server_Admin
     {
         public bool IsAlive { get; set; }
         public string Server { get; set; }
+        public string ServerNumber { get; set; }
         public string IP { get; set; }
         public int SteeringHelp { get; set; }
         public int BrakingHelp { get; set; }
@@ -24,10 +25,11 @@ namespace Server_Admin
         public string Name { get; set; }
         public string Nick { get; set; }
 
-        public Station(bool isAlive, string server, string ip, int steeringHelp, int brakingHelp, int stabilityControl, int autoShifting, int throttleControl, int antiLockBrakes, int drivingLine, int autoReverse, string name, string nick)
+        public Station(bool isAlive, string server, string serverNumber, string ip, int steeringHelp, int brakingHelp, int stabilityControl, int autoShifting, int throttleControl, int antiLockBrakes, int drivingLine, int autoReverse, string name, string nick)
         {
             IsAlive = isAlive;
             Server = server;
+            ServerNumber = serverNumber;
             IP = ip;
             SteeringHelp = steeringHelp;
             BrakingHelp = brakingHelp;
@@ -45,6 +47,7 @@ namespace Server_Admin
         {
             IsAlive = false;
             Server = "";
+            ServerNumber = "";
             IP = "";
             SteeringHelp = steeringHelp;
             BrakingHelp = brakingHelp;
@@ -62,6 +65,7 @@ namespace Server_Admin
         {
             IsAlive = false;
             Server = "";
+            ServerNumber = "";
             IP = "";
             SteeringHelp = 0;
             BrakingHelp = 0;
@@ -188,7 +192,7 @@ namespace Server_Admin
             }
         }
 
-        public async Task<bool> SendJoinRequest()
+        public async Task<bool> SendJoinRequest(bool connectDirectly = false)
         {
             if (!IsAlive)
             {
@@ -217,6 +221,20 @@ namespace Server_Admin
                     if (response.IsSuccessStatusCode)
                     {
                         string responseBody = await response.Content.ReadAsStringAsync();
+                        if (connectDirectly)
+                        {
+                            url = $"http://{server}:5397/rest/"; // Poner la url de ir a multiplayer
+                            response = await client.GetAsync(url);
+                            if (response.IsSuccessStatusCode)
+                            {
+                                return true;
+                            }
+                            else
+                            {
+                                MessageBox.Show($"Error: {response.StatusCode} - {response.ReasonPhrase}");
+                                return false;
+                            }
+                        }
                         return true;
                     }
                     else
