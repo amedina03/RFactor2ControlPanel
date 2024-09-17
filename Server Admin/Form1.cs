@@ -651,6 +651,14 @@ namespace Server_Admin
                 station7 = stationList[6];
                 station8 = stationList[7];
 
+                station1.IsAlive = false;
+                station2.IsAlive = false;
+                station3.IsAlive = false;
+                station4.IsAlive = false;
+                station5.IsAlive = false;
+                station6.IsAlive = false;
+                station7.IsAlive = false;
+                station8.IsAlive = false;
 
                 txtNameStation1.Text = station1.Name == "Jugador" ? "" : station1.Name;
                 txtIPStation1.Text = station1.IP;

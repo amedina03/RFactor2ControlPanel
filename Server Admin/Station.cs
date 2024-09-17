@@ -223,8 +223,9 @@ namespace Server_Admin
                         string responseBody = await response.Content.ReadAsStringAsync();
                         if (connectDirectly)
                         {
-                            url = $"http://{server}:5397/rest/"; // Poner la url de ir a multiplayer
-                            response = await client.GetAsync(url);
+                            await Task.Delay(5000);
+                            url = $"http://{server}:5397/navigation/action/NAV_RACE_MULTIPLAYER"; // Poner la url de ir a multiplayer
+                            response = await client.PostAsync(url, new StringContent(string.Empty));
                             if (response.IsSuccessStatusCode)
                             {
                                 return true;
