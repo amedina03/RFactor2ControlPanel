@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 import os
 import subprocess
 import json
-
+import requests
 app = Flask(__name__)
 
 
@@ -95,6 +95,11 @@ def open_game():
 def close_game():
     try:
         # Check name in task manager
+        import time
+        url = "http://localhost:5397/navigation/action/NAV_TO_MAIN_MENU"
+
+        requests.post(url)
+        time.sleep(5)
         game_name = "rFactor2"
         result = os.system(f"taskkill /IM {game_name}.exe /F")
         if result == 0:

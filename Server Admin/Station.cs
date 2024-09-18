@@ -113,7 +113,6 @@ namespace Server_Admin
                     {
                         IsAlive = !IsAlive;
                         string responseBody = await response.Content.ReadAsStringAsync();
-                        MessageBox.Show($"{responseBody}");
                         return true;
                     }
                     else
@@ -171,7 +170,6 @@ namespace Server_Admin
                     if (response.IsSuccessStatusCode)
                     {
                         string responseBody = await response.Content.ReadAsStringAsync();
-                        MessageBox.Show($"{responseBody}");
                         return true;
                     }
                     else

@@ -38,19 +38,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Station.cs",
+              "DocumentMoniker": "C:\\Users\\alexm\\Documents\\GitHub\\RFactor2ControlPanel\\Server Admin\\Station.cs",
+              "RelativeDocumentMoniker": "Server Admin\\Station.cs",
+              "ToolTip": "C:\\Users\\alexm\\Documents\\GitHub\\RFactor2ControlPanel\\Server Admin\\Station.cs",
+              "RelativeToolTip": "Server Admin\\Station.cs",
+              "ViewState": "AQIAAJUAAAAAAAAAAAAtwKsAAABZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T18:46:39.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Form1.cs [Dise\u00F1o]",
+              "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\alexm\\Documents\\GitHub\\RFactor2ControlPanel\\Server Admin\\Form1.cs",
               "RelativeDocumentMoniker": "Server Admin\\Form1.cs",
-              "ToolTip": "C:\\Users\\alexm\\Documents\\GitHub\\RFactor2ControlPanel\\Server Admin\\Form1.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Server Admin\\Form1.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\alexm\\Documents\\GitHub\\RFactor2ControlPanel\\Server Admin\\Form1.cs [Design]",
+              "RelativeToolTip": "Server Admin\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-06T15:23:03.863Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -86,9 +99,8 @@
               "RelativeDocumentMoniker": "Server Admin\\Form2.cs",
               "ToolTip": "C:\\Users\\alexm\\Documents\\GitHub\\RFactor2ControlPanel\\Server Admin\\Form2.cs [Dise\u00F1o]",
               "RelativeToolTip": "Server Admin\\Form2.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-28T18:46:01.369Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-08-28T18:46:01.369Z"
             },
             {
               "$type": "Document",
@@ -100,8 +112,7 @@
               "RelativeToolTip": "Server Admin\\Form2.Designer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-28T18:46:02.874Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-28T18:46:02.874Z"
             },
             {
               "$type": "Document",
@@ -113,21 +124,7 @@
               "RelativeToolTip": "Server Admin\\Form2.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-06T15:21:42.744Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Station.cs",
-              "DocumentMoniker": "C:\\Users\\alexm\\Documents\\GitHub\\RFactor2ControlPanel\\Server Admin\\Station.cs",
-              "RelativeDocumentMoniker": "Server Admin\\Station.cs",
-              "ToolTip": "C:\\Users\\alexm\\Documents\\GitHub\\RFactor2ControlPanel\\Server Admin\\Station.cs",
-              "RelativeToolTip": "Server Admin\\Station.cs",
-              "ViewState": "AQIAAP4AAAAAAAAAAAAtwBoBAABZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-28T18:45:54.512Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-06T15:21:42.744Z"
             }
           ]
         }
