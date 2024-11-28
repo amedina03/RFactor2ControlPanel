@@ -743,7 +743,7 @@ namespace Server_Admin
             {
                 using (StreamWriter sw = File.CreateText(saveFolder + "\\serverData.json"))
                 {
-                    sw.Write("{}");
+                    sw.Write("{\r\n    \"Station 1\": \"192.84.12.1:5000\",\r\n    \"Station 2\": \"192.84.12.2:5000\",\r\n    \"Station 3\": \"192.84.12.3:5000\",\r\n    \"Station 4\": \"192.84.12.4:5000\"\r\n}");
                 }
             }
         }
@@ -765,7 +765,7 @@ namespace Server_Admin
             {
                 using (StreamWriter sw = File.CreateText(saveFolder + "\\machineData.json"))
                 {
-                    sw.Write("{}");
+                    sw.Write("{\r\n    \"Server 1\": \"192.64.12.124:17501\",\r\n    \"Server 2\": \"192.64.12.124:17502\",\r\n    \"Server 3\": \"192.64.12.124:17503\",\r\n    \"Server 4\": \"192.64.12.124:17504\"\r\n}");
                 }
             }
         }
