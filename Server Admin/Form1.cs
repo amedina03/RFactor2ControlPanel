@@ -7,10 +7,10 @@ namespace Server_Admin
 {
     public partial class Form1 : Form
     {
-        private Station easyStation = new Station(1, 1, 2, 3, 3, 2, 3, 1);
-        private Station mediumStation = new Station(0, 0, 2, 3, 3, 2, 3, 1);
-        private Station hardStation = new Station(0, 0, 1, 0, 1, 1, 3, 0);
-        private Station manualStation = new Station(0, 0, 0, 0, 0, 0, 0, 0);
+        private Station easyStation;
+        private Station mediumStation;
+        private Station hardStation;
+        private Station manualStation;
         // Holds station values
         private Station station1;
         private Station station2;
@@ -21,9 +21,15 @@ namespace Server_Admin
         private Station station7;
         private Station station8;
 
+        private Dictionary<string, string> machines;
+        private Dictionary<string, string> servers;
+
         public Form1()
         {
             InitializeComponent();
+            loadOptions();
+            loadServers();
+            loadMachines();
             loadStations();
             // El texto vendr� de la api en formato json
             //string jsonString = File.ReadAllText("C:/Users/alexm/source/repos/RFactor2ControlPanel/Server Admin/Assets/player.json");
@@ -39,8 +45,10 @@ namespace Server_Admin
 
         private async void btnSaveStation1_Click(object sender, EventArgs e)
         {
-            station1.IP = txtIPStation1.Text;
-            station1.Server = txtServerStation1.Text;
+            string selectedIp = cbMachine1.SelectedValue.ToString();
+            string selectedServer = cbServer1.SelectedValue.ToString();
+            station1.IP = selectedIp;
+            station1.Server = selectedServer;
             station1.Name = txtNameStation1.Text;
             station1.Nick = txtNameStation1.Text;
             saveStations();
@@ -49,8 +57,10 @@ namespace Server_Admin
 
         private async void btnSaveStation2_Click(object sender, EventArgs e)
         {
-            station2.IP = txtIPStation2.Text;
-            station2.Server = txtServerStation2.Text;
+            string selectedIp = cbMachine2.SelectedItem.ToString();
+            string selectedServer = cbServer2.SelectedItem.ToString();
+            station2.IP = selectedIp;
+            station2.Server = selectedServer;
             station2.Name = txtNameStation2.Text;
             station2.Nick = txtNameStation2.Text;
             saveStations();
@@ -59,8 +69,10 @@ namespace Server_Admin
 
         private async void btnSaveStation3_Click(object sender, EventArgs e)
         {
-            station3.IP = txtIPStation3.Text;
-            station3.Server = txtServerStation3.Text;
+            string selectedIp = cbMachine3.SelectedItem.ToString();
+            string selectedServer = cbServer3.SelectedItem.ToString();
+            station3.IP = selectedIp;
+            station3.Server = selectedServer;
             station3.Name = txtNameStation3.Text;
             station3.Nick = txtNameStation3.Text;
             saveStations();
@@ -69,8 +81,10 @@ namespace Server_Admin
 
         private async void btnSaveStation4_Click(object sender, EventArgs e)
         {
-            station4.IP = txtIPStation4.Text;
-            station4.Server = txtServerStation4.Text;
+            string selectedIp = cbMachine4.SelectedItem.ToString();
+            string selectedServer = cbServer4.SelectedItem.ToString();
+            station4.IP = selectedIp;
+            station4.Server = selectedServer;
             station4.Name = txtNameStation4.Text;
             station4.Nick = txtNameStation4.Text;
             saveStations();
@@ -79,8 +93,10 @@ namespace Server_Admin
 
         private async void btnSaveStation5_Click(object sender, EventArgs e)
         {
-            station5.IP = txtIPStation5.Text;
-            station5.Server = txtServerStation5.Text;
+            string selectedIp = cbMachine5.SelectedItem.ToString();
+            string selectedServer = cbServer5.SelectedItem.ToString();
+            station5.IP = selectedIp;
+            station5.Server = selectedServer;
             station5.Name = txtNameStation5.Text;
             station5.Nick = txtNameStation5.Text;
             saveStations();
@@ -89,8 +105,10 @@ namespace Server_Admin
 
         private async void btnSaveStation6_Click(object sender, EventArgs e)
         {
-            station6.IP = txtIPStation6.Text;
-            station6.Server = txtServerStation6.Text;
+            string selectedIp = cbMachine6.SelectedItem.ToString();
+            string selectedServer = cbServer6.SelectedItem.ToString();
+            station6.IP = selectedIp;
+            station6.Server = selectedServer;
             station6.Name = txtNameStation6.Text;
             station6.Nick = txtNameStation6.Text;
             saveStations();
@@ -99,8 +117,10 @@ namespace Server_Admin
 
         private async void btnSaveStation7_Click(object sender, EventArgs e)
         {
-            station7.IP = txtIPStation7.Text;
-            station7.Server = txtServerStation7.Text;
+            string selectedIp = cbMachine7.SelectedItem.ToString();
+            string selectedServer = cbServer7.SelectedItem.ToString();
+            station7.IP = selectedIp;
+            station7.Server = selectedServer;
             station7.Name = txtNameStation7.Text;
             station7.Nick = txtNameStation7.Text;
             saveStations();
@@ -109,8 +129,10 @@ namespace Server_Admin
 
         private async void btnSaveStation8_Click(object sender, EventArgs e)
         {
-            station8.IP = txtIPStation8.Text;
-            station8.Server = txtServerStation8.Text;
+            string selectedIp = cbMachine8.SelectedItem.ToString();
+            string selectedServer = cbServer8.SelectedItem.ToString();
+            station8.IP = selectedIp;
+            station8.Server = selectedServer;
             station8.Name = txtNameStation8.Text;
             station8.Nick = txtNameStation8.Text;
             saveStations();
@@ -159,7 +181,7 @@ namespace Server_Admin
 
         private async void btnToggleState1_Click(object sender, EventArgs e)
         {
-            station1.IP = txtIPStation1.Text;
+            station1.IP = cbMachine1.SelectedValue.ToString();
             bool result = await station1.SendToggleRequest();
             if (result)
             {
@@ -172,7 +194,7 @@ namespace Server_Admin
 
         private async void btnToggleState2_Click(object sender, EventArgs e)
         {
-            station2.IP = txtIPStation2.Text;
+            station2.IP = cbMachine2.SelectedValue.ToString();
             bool result = await station2.SendToggleRequest();
             if (result)
             {
@@ -185,7 +207,7 @@ namespace Server_Admin
 
         private async void btnToggleState3_Click(object sender, EventArgs e)
         {
-            station3.IP = txtIPStation3.Text;
+            station3.IP = cbMachine3.SelectedValue.ToString();
             bool result = await station3.SendToggleRequest();
             if (result)
             {
@@ -198,7 +220,7 @@ namespace Server_Admin
 
         private async void btnToggleState4_Click(object sender, EventArgs e)
         {
-            station4.IP = txtIPStation4.Text;
+            station4.IP = cbMachine4.SelectedValue.ToString();
             bool result = await station4.SendToggleRequest();
             if (result)
             {
@@ -211,7 +233,7 @@ namespace Server_Admin
 
         private async void btnToggleState5_Click(object sender, EventArgs e)
         {
-            station5.IP = txtIPStation5.Text;
+            station5.IP = cbMachine5.SelectedValue.ToString();
             bool result = await station5.SendToggleRequest();
             if (result)
             {
@@ -224,7 +246,7 @@ namespace Server_Admin
 
         private async void btnToggleState6_Click(object sender, EventArgs e)
         {
-            station6.IP = txtIPStation6.Text;
+            station6.IP = cbMachine6.SelectedValue.ToString();
             bool result = await station6.SendToggleRequest();
             if (result)
             {
@@ -237,7 +259,7 @@ namespace Server_Admin
 
         private async void btnToggleState7_Click(object sender, EventArgs e)
         {
-            station7.IP = txtIPStation7.Text;
+            station7.IP = cbMachine7.SelectedValue.ToString();
             bool result = await station7.SendToggleRequest();
             if (result)
             {
@@ -250,7 +272,7 @@ namespace Server_Admin
 
         private async void btnToggleState8_Click(object sender, EventArgs e)
         {
-            station8.IP = txtIPStation8.Text;
+            station8.IP = cbMachine8.SelectedValue.ToString();
             bool result = await station8.SendToggleRequest();
             if (result)
             {
@@ -575,14 +597,10 @@ namespace Server_Admin
         {
             string programFilesX86 = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
             string saveFolder = programFilesX86 + "\\rFactorServerAdmin";
-            if (!Directory.Exists(saveFolder))
-            {
-                Directory.CreateDirectory(saveFolder);
-            }
             if (File.Exists(saveFolder + "\\userData.json"))
             {
                 string data = File.ReadAllText(saveFolder + "\\userData.json");
-                List <Station> stationList = JsonSerializer.Deserialize<List<Station>>(data);
+                List<Station> stationList = JsonSerializer.Deserialize<List<Station>>(data);
 
                 station1 = stationList[0];
                 station2 = stationList[1];
@@ -594,38 +612,14 @@ namespace Server_Admin
                 station8 = stationList[7];
 
 
-                txtNameStation1.Text = station1.Name == "Jugador" ? "" : station1.Name;
-                txtIPStation1.Text = station1.IP;
-                txtServerStation1.Text = station1.Server;
-
-                txtNameStation2.Text = station2.Name == "Jugador" ? "": station2.Name;
-                txtIPStation2.Text = station2.IP;
-                txtServerStation2.Text = station2.Server;
-
-                txtNameStation3.Text = station3.Name == "Jugador" ? "" : station3.Name;
-                txtIPStation3.Text = station3.IP;
-                txtServerStation3.Text = station3.Server;
-
-                txtNameStation4.Text = station4.Name == "Jugador" ? "" : station4.Name;
-                txtIPStation4.Text = station4.IP;
-                txtServerStation4.Text = station4.Server;
-
-                txtNameStation5.Text = station5.Name == "Jugador" ? "" : station5.Name;
-                txtIPStation5.Text = station5.IP;
-                txtServerStation5.Text = station5.Server;
-
-                txtNameStation6.Text = station6.Name == "Jugador" ? "" : station6.Name;
-                txtIPStation6.Text = station6.IP;
-                txtServerStation6.Text = station6.Server;
-
-                txtNameStation7.Text = station7.Name == "Jugador" ? "" : station7.Name;
-                txtIPStation7.Text = station7.IP;
-                txtServerStation7.Text = station7.Server;
-
-                txtNameStation8.Text = station8.Name == "Jugador" ? "" : station8.Name;
-                txtIPStation8.Text = station8.IP;
-                txtServerStation8.Text = station8.Server;
-
+                SetupComboBox(cbMachine1, cbServer1, txtNameStation1, station1);
+                SetupComboBox(cbMachine2, cbServer2, txtNameStation2, station2);
+                SetupComboBox(cbMachine3, cbServer3, txtNameStation3, station3);
+                SetupComboBox(cbMachine4, cbServer4, txtNameStation4, station4);
+                SetupComboBox(cbMachine5, cbServer5, txtNameStation5, station5);
+                SetupComboBox(cbMachine6, cbServer6, txtNameStation6, station6);
+                SetupComboBox(cbMachine7, cbServer7, txtNameStation7, station7);
+                SetupComboBox(cbMachine8, cbServer8, txtNameStation8, station8);
             }
             else
             {
@@ -637,6 +631,142 @@ namespace Server_Admin
                 station6 = new Station();
                 station7 = new Station();
                 station8 = new Station();
+            }
+        }
+
+        private void SetupComboBox(ComboBox machineComboBox, ComboBox serverComboBox, TextBox textBox, Station station)
+        {
+            machineComboBox.DataSource = new BindingSource(machines, null);
+            machineComboBox.DisplayMember = "Key";
+            machineComboBox.ValueMember = "Value";
+            machineComboBox.SelectedValue = station.IP;
+
+            serverComboBox.DataSource = new BindingSource(servers, null);
+            serverComboBox.DisplayMember = "Key";
+            serverComboBox.ValueMember = "Value";
+            serverComboBox.SelectedValue = station.Server;
+
+            textBox.Text = station.Name == "Jugador" ? "" : station.Name;
+        }
+
+        private void loadOptions()
+        {
+            string programFilesX86 = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
+            string saveFolder = programFilesX86 + "\\rFactorServerAdmin";
+            if (!Directory.Exists(saveFolder))
+            {
+                Directory.CreateDirectory(saveFolder);
+            }
+            if (File.Exists(saveFolder + "\\optionsData.json"))
+            {
+                string data = File.ReadAllText(saveFolder + "\\optionsData.json");
+                using (JsonDocument doc = JsonDocument.Parse(data))
+                {
+                    JsonElement root = doc.RootElement;
+
+                    JsonElement easyElement = root.GetProperty("easy");
+                    easyStation = new Station(
+                        easyElement.GetProperty("SteeringHelp").GetInt32(),
+                        easyElement.GetProperty("BrakingHelp").GetInt32(),
+                        easyElement.GetProperty("StabilityControl").GetInt32(),
+                        easyElement.GetProperty("AutoShifting").GetInt32(),
+                        easyElement.GetProperty("ThrottleControl").GetInt32(),
+                        easyElement.GetProperty("AntiLockBrakes").GetInt32(),
+                        easyElement.GetProperty("DrivingLine").GetInt32(),
+                        easyElement.GetProperty("AutoReverse").GetInt32(),
+                        easyElement.GetProperty("OppositeLock").GetInt32()
+                    );
+
+                    JsonElement mediumElement = root.GetProperty("medium");
+                    mediumStation = new Station(
+                        mediumElement.GetProperty("SteeringHelp").GetInt32(),
+                        mediumElement.GetProperty("BrakingHelp").GetInt32(),
+                        mediumElement.GetProperty("StabilityControl").GetInt32(),
+                        mediumElement.GetProperty("AutoShifting").GetInt32(),
+                        mediumElement.GetProperty("ThrottleControl").GetInt32(),
+                        mediumElement.GetProperty("AntiLockBrakes").GetInt32(),
+                        mediumElement.GetProperty("DrivingLine").GetInt32(),
+                        mediumElement.GetProperty("AutoReverse").GetInt32(),
+                        mediumElement.GetProperty("OppositeLock").GetInt32()
+                    );
+
+                    JsonElement hardElement = root.GetProperty("hard");
+                    hardStation = new Station(
+                        hardElement.GetProperty("SteeringHelp").GetInt32(),
+                        hardElement.GetProperty("BrakingHelp").GetInt32(),
+                        hardElement.GetProperty("StabilityControl").GetInt32(),
+                        hardElement.GetProperty("AutoShifting").GetInt32(),
+                        hardElement.GetProperty("ThrottleControl").GetInt32(),
+                        hardElement.GetProperty("AntiLockBrakes").GetInt32(),
+                        hardElement.GetProperty("DrivingLine").GetInt32(),
+                        hardElement.GetProperty("AutoReverse").GetInt32(),
+                        hardElement.GetProperty("OppositeLock").GetInt32()
+                    );
+
+                    JsonElement manualElement = root.GetProperty("manual");
+                    manualStation = new Station(
+                        manualElement.GetProperty("SteeringHelp").GetInt32(),
+                        manualElement.GetProperty("BrakingHelp").GetInt32(),
+                        manualElement.GetProperty("StabilityControl").GetInt32(),
+                        manualElement.GetProperty("AutoShifting").GetInt32(),
+                        manualElement.GetProperty("ThrottleControl").GetInt32(),
+                        manualElement.GetProperty("AntiLockBrakes").GetInt32(),
+                        manualElement.GetProperty("DrivingLine").GetInt32(),
+                        manualElement.GetProperty("AutoReverse").GetInt32(),
+                        manualElement.GetProperty("OppositeLock").GetInt32()
+                    );
+                }
+            }
+            else
+            {
+                using (StreamWriter sw = File.CreateText(saveFolder + "\\optionsData.json"))
+                {
+                    sw.Write("{\r\n    \"easy\":{\r\n        \"SteeringHelp\": 1,\r\n        \"BrakingHelp\": 1,\r\n        \"StabilityControl\": 2,\r\n        \"AutoShifting\": 3,\r\n        \"ThrottleControl\": 3,\r\n        \"AntiLockBrakes\": 2,\r\n        \"DrivingLine\": 3,\r\n        \"AutoReverse\": 1,\r\n        \"OppositeLock\":1\r\n    },\r\n    \"medium\":{\r\n        \"SteeringHelp\": 0,\r\n        \"BrakingHelp\": 0,\r\n        \"StabilityControl\": 2,\r\n        \"AutoShifting\": 3,\r\n        \"ThrottleControl\": 3,\r\n        \"AntiLockBrakes\": 2,\r\n        \"DrivingLine\": 3,\r\n        \"AutoReverse\": 1,\r\n        \"OppositeLock\":1\r\n    },\r\n    \"hard\":{\r\n        \"SteeringHelp\": 0,\r\n        \"BrakingHelp\": 0,\r\n        \"StabilityControl\": 1,\r\n        \"AutoShifting\": 0,\r\n        \"ThrottleControl\": 1,\r\n        \"AntiLockBrakes\": 1,\r\n        \"DrivingLine\": 3,\r\n        \"AutoReverse\": 0,\r\n        \"OppositeLock\":1\r\n    },\r\n    \"manual\":{\r\n        \"SteeringHelp\": 0,\r\n        \"BrakingHelp\": 0,\r\n        \"StabilityControl\": 0,\r\n        \"AutoShifting\": 0,\r\n        \"ThrottleControl\": 0,\r\n        \"AntiLockBrakes\": 0,\r\n        \"DrivingLine\": 0,\r\n        \"AutoReverse\": 0,\r\n        \"OppositeLock\":0\r\n    }\r\n}");
+                }
+            }
+        }
+        private void loadServers()
+        {
+            string programFilesX86 = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
+            string saveFolder = programFilesX86 + "\\rFactorServerAdmin";
+            if (!Directory.Exists(saveFolder))
+            {
+                Directory.CreateDirectory(saveFolder);
+            }
+            if (File.Exists(saveFolder + "\\serverData.json"))
+            {
+                string data = File.ReadAllText(saveFolder + "\\serverData.json");
+                servers = JsonSerializer.Deserialize<Dictionary<string, string>>(data);
+                cbServer1.Items.AddRange(servers.Keys.ToArray());
+            }
+            else
+            {
+                using (StreamWriter sw = File.CreateText(saveFolder + "\\serverData.json"))
+                {
+                    sw.Write("{}");
+                }
+            }
+        }
+        private void loadMachines()
+        {
+            string programFilesX86 = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
+            string saveFolder = programFilesX86 + "\\rFactorServerAdmin";
+            if (!Directory.Exists(saveFolder))
+            {
+                Directory.CreateDirectory(saveFolder);
+            }
+            if (File.Exists(saveFolder + "\\machineData.json"))
+            {
+                string data = File.ReadAllText(saveFolder + "\\machineData.json");
+                machines = JsonSerializer.Deserialize<Dictionary<string, string>>(data);
+                cbMachine1.Items.AddRange(machines.Keys.ToArray());
+            }
+            else
+            {
+                using (StreamWriter sw = File.CreateText(saveFolder + "\\machineData.json"))
+                {
+                    sw.Write("{}");
+                }
             }
         }
     }

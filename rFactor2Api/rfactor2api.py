@@ -15,7 +15,7 @@ def get_file():
         with open(file_path, 'r') as f:
             # Get data from the options file and send as response
             data = json.load(f)
-            valuesDictionary:dict = {'Steering Help': 0, 'Brake Help': 0, 'Stability Control':0, 'Shift Mode':0, 'Throttle Control':0, 'Antilock Brakes': 0, 'Driving Line': 0, 'Auto Reverse': 0, 'Player Name': "", 'Player Nick': ""}
+            valuesDictionary:dict = {'Steering Help': 0, 'Brake Help': 0, 'Stability Control':0, 'Shift Mode':0, 'Throttle Control':0, 'Antilock Brakes': 0, 'Driving Line': 0, 'Auto Reverse': 0, 'Opposite Lock': 0, 'Player Name': "", 'Player Nick': ""}
 
             drivingAids = data['DRIVING AIDS']
             driver = data['DRIVER']
@@ -26,6 +26,7 @@ def get_file():
             valuesDictionary['Shift Mode'] = drivingAids['Shift Mode']
             valuesDictionary['Throttle Control'] = drivingAids['Throttle Control']
             valuesDictionary['Antilock Brakes'] = drivingAids['Antilock Brakes']
+            valuesDictionary['Opposite Lock'] = drivingAids['Opposite Lock']
             valuesDictionary['Driving Line'] = drivingAids['Driving Line']
             valuesDictionary['Player Name'] = driver['Player Name']
             valuesDictionary['Player Nick'] = driver['Player Nick']
@@ -59,6 +60,7 @@ def modify_file():
             fileData['DRIVING AIDS']['Shift Mode'] = data['Shift Mode']
             fileData['DRIVING AIDS']['Throttle Control'] = data['Throttle Control']
             fileData['DRIVING AIDS']['Antilock Brakes'] = data['Antilock Brakes']
+            fileData['DRIVING AIDS']['Opposite Lock'] = fileData['Opposite Lock']
             fileData['DRIVING AIDS']['Driving Line'] = data['Driving Line']
             fileData['DRIVING AIDS']['Repeat Shifts'] = 5
             fileData['DRIVING AIDS']['Invulnerability'] = 1
