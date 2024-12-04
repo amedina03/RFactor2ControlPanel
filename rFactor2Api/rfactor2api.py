@@ -30,8 +30,8 @@ def get_file():
             valuesDictionary['Driving Line'] = drivingAids['Driving Line']
             valuesDictionary['Player Name'] = driver['Player Name']
             valuesDictionary['Player Nick'] = driver['Player Nick']
-            valuesDictionary['Repeat Shifts'] = driver['Repeat Shifts']
-            valuesDictionary['Invulnerability'] = driver['Invulnerability']
+            valuesDictionary['Repeat Shifts'] = drivingAids['Repeat Shifts']
+            valuesDictionary['Invulnerability'] = drivingAids['Invulnerability']
             
             # Only return necessary options
             with open(controller_file_path, 'r') as f:
@@ -60,7 +60,7 @@ def modify_file():
             fileData['DRIVING AIDS']['Shift Mode'] = data['Shift Mode']
             fileData['DRIVING AIDS']['Throttle Control'] = data['Throttle Control']
             fileData['DRIVING AIDS']['Antilock Brakes'] = data['Antilock Brakes']
-            fileData['DRIVING AIDS']['Opposite Lock'] = fileData['Opposite Lock']
+            fileData['DRIVING AIDS']['Opposite Lock'] = data['Opposite Lock']
             fileData['DRIVING AIDS']['Driving Line'] = data['Driving Line']
             fileData['DRIVING AIDS']['Repeat Shifts'] = 5
             fileData['DRIVING AIDS']['Invulnerability'] = 1

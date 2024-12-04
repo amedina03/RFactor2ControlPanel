@@ -45,8 +45,8 @@ namespace Server_Admin
 
         private async void btnSaveStation1_Click(object sender, EventArgs e)
         {
-            string selectedIp = cbMachine1.SelectedValue.ToString();
-            string selectedServer = cbServer1.SelectedValue.ToString();
+            string selectedIp = cbMachine1.SelectedValue?.ToString() ?? null;
+            string selectedServer = cbServer1.SelectedValue?.ToString() ?? null;
             station1.IP = selectedIp;
             station1.Server = selectedServer;
             station1.Name = txtNameStation1.Text;
@@ -57,8 +57,8 @@ namespace Server_Admin
 
         private async void btnSaveStation2_Click(object sender, EventArgs e)
         {
-            string selectedIp = cbMachine2.SelectedItem.ToString();
-            string selectedServer = cbServer2.SelectedItem.ToString();
+            string selectedIp = cbMachine2.SelectedValue?.ToString() ?? null;
+            string selectedServer = cbServer2.SelectedValue?.ToString() ?? null;
             station2.IP = selectedIp;
             station2.Server = selectedServer;
             station2.Name = txtNameStation2.Text;
@@ -69,8 +69,8 @@ namespace Server_Admin
 
         private async void btnSaveStation3_Click(object sender, EventArgs e)
         {
-            string selectedIp = cbMachine3.SelectedItem.ToString();
-            string selectedServer = cbServer3.SelectedItem.ToString();
+            string selectedIp = cbMachine3.SelectedValue?.ToString() ?? null;
+            string selectedServer = cbServer3.SelectedValue?.ToString() ?? null;
             station3.IP = selectedIp;
             station3.Server = selectedServer;
             station3.Name = txtNameStation3.Text;
@@ -81,8 +81,8 @@ namespace Server_Admin
 
         private async void btnSaveStation4_Click(object sender, EventArgs e)
         {
-            string selectedIp = cbMachine4.SelectedItem.ToString();
-            string selectedServer = cbServer4.SelectedItem.ToString();
+            string selectedIp = cbMachine4.SelectedValue?.ToString() ?? null;
+            string selectedServer = cbServer4.SelectedValue?.ToString() ?? null;
             station4.IP = selectedIp;
             station4.Server = selectedServer;
             station4.Name = txtNameStation4.Text;
@@ -93,8 +93,8 @@ namespace Server_Admin
 
         private async void btnSaveStation5_Click(object sender, EventArgs e)
         {
-            string selectedIp = cbMachine5.SelectedItem.ToString();
-            string selectedServer = cbServer5.SelectedItem.ToString();
+            string selectedIp = cbMachine5.SelectedValue?.ToString() ?? null;
+            string selectedServer = cbServer5.SelectedValue?.ToString() ?? null;
             station5.IP = selectedIp;
             station5.Server = selectedServer;
             station5.Name = txtNameStation5.Text;
@@ -105,8 +105,8 @@ namespace Server_Admin
 
         private async void btnSaveStation6_Click(object sender, EventArgs e)
         {
-            string selectedIp = cbMachine6.SelectedItem.ToString();
-            string selectedServer = cbServer6.SelectedItem.ToString();
+            string selectedIp = cbMachine6.SelectedValue?.ToString() ?? null;
+            string selectedServer = cbServer6.SelectedValue?.ToString() ?? null;
             station6.IP = selectedIp;
             station6.Server = selectedServer;
             station6.Name = txtNameStation6.Text;
@@ -117,8 +117,8 @@ namespace Server_Admin
 
         private async void btnSaveStation7_Click(object sender, EventArgs e)
         {
-            string selectedIp = cbMachine7.SelectedItem.ToString();
-            string selectedServer = cbServer7.SelectedItem.ToString();
+            string selectedIp = cbMachine7.SelectedValue?.ToString() ?? null;
+            string selectedServer = cbServer7.SelectedValue?.ToString() ?? null;
             station7.IP = selectedIp;
             station7.Server = selectedServer;
             station7.Name = txtNameStation7.Text;
@@ -129,8 +129,8 @@ namespace Server_Admin
 
         private async void btnSaveStation8_Click(object sender, EventArgs e)
         {
-            string selectedIp = cbMachine8.SelectedItem.ToString();
-            string selectedServer = cbServer8.SelectedItem.ToString();
+            string selectedIp = cbMachine8.SelectedValue?.ToString() ?? null;
+            string selectedServer = cbServer8.SelectedValue?.ToString() ?? null;
             station8.IP = selectedIp;
             station8.Server = selectedServer;
             station8.Name = txtNameStation8.Text;
@@ -181,7 +181,7 @@ namespace Server_Admin
 
         private async void btnToggleState1_Click(object sender, EventArgs e)
         {
-            station1.IP = cbMachine1.SelectedValue.ToString();
+            station1.IP = cbMachine1.SelectedValue?.ToString() ?? null;
             bool result = await station1.SendToggleRequest();
             if (result)
             {
@@ -194,7 +194,7 @@ namespace Server_Admin
 
         private async void btnToggleState2_Click(object sender, EventArgs e)
         {
-            station2.IP = cbMachine2.SelectedValue.ToString();
+            station2.IP = cbMachine2.SelectedValue?.ToString() ?? null;
             bool result = await station2.SendToggleRequest();
             if (result)
             {
@@ -207,7 +207,7 @@ namespace Server_Admin
 
         private async void btnToggleState3_Click(object sender, EventArgs e)
         {
-            station3.IP = cbMachine3.SelectedValue.ToString();
+            station3.IP = cbMachine3.SelectedValue?.ToString() ?? null;
             bool result = await station3.SendToggleRequest();
             if (result)
             {
@@ -220,7 +220,7 @@ namespace Server_Admin
 
         private async void btnToggleState4_Click(object sender, EventArgs e)
         {
-            station4.IP = cbMachine4.SelectedValue.ToString();
+            station4.IP = cbMachine4.SelectedValue?.ToString() ?? null;
             bool result = await station4.SendToggleRequest();
             if (result)
             {
@@ -233,7 +233,7 @@ namespace Server_Admin
 
         private async void btnToggleState5_Click(object sender, EventArgs e)
         {
-            station5.IP = cbMachine5.SelectedValue.ToString();
+            station5.IP = cbMachine5.SelectedValue?.ToString() ?? null;
             bool result = await station5.SendToggleRequest();
             if (result)
             {
@@ -246,7 +246,7 @@ namespace Server_Admin
 
         private async void btnToggleState6_Click(object sender, EventArgs e)
         {
-            station6.IP = cbMachine6.SelectedValue.ToString();
+            station6.IP = cbMachine6.SelectedValue?.ToString() ?? null;
             bool result = await station6.SendToggleRequest();
             if (result)
             {
@@ -259,7 +259,7 @@ namespace Server_Admin
 
         private async void btnToggleState7_Click(object sender, EventArgs e)
         {
-            station7.IP = cbMachine7.SelectedValue.ToString();
+            station7.IP = cbMachine7.SelectedValue?.ToString() ?? null;
             bool result = await station7.SendToggleRequest();
             if (result)
             {
@@ -272,7 +272,7 @@ namespace Server_Admin
 
         private async void btnToggleState8_Click(object sender, EventArgs e)
         {
-            station8.IP = cbMachine8.SelectedValue.ToString();
+            station8.IP = cbMachine8.SelectedValue?.ToString() ?? null;
             bool result = await station8.SendToggleRequest();
             if (result)
             {
@@ -639,12 +639,18 @@ namespace Server_Admin
             machineComboBox.DataSource = new BindingSource(machines, null);
             machineComboBox.DisplayMember = "Key";
             machineComboBox.ValueMember = "Value";
-            machineComboBox.SelectedValue = station.IP;
+            if (station.IP != null)
+            {
+                serverComboBox.SelectedValue = station.IP;
+            }
 
             serverComboBox.DataSource = new BindingSource(servers, null);
             serverComboBox.DisplayMember = "Key";
             serverComboBox.ValueMember = "Value";
-            serverComboBox.SelectedValue = station.Server;
+            if(station.Server != null)
+            {
+                serverComboBox.SelectedValue = station.Server;
+            }
 
             textBox.Text = station.Name == "Jugador" ? "" : station.Name;
         }

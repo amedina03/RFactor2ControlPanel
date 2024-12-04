@@ -1751,6 +1751,7 @@
             Controls.Add(gbStation5);
             Controls.Add(gbStation2);
             Controls.Add(gbStation1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             Text = "Server Manager";
             Load += Form1_Load;
