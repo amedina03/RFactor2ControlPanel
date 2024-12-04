@@ -30,13 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             lblStation1 = new Label();
-            label2 = new Label();
             label3 = new Label();
             txtNameStation1 = new TextBox();
             btnSaveStation1 = new Button();
             gbStation1 = new GroupBox();
             cbServer1 = new ComboBox();
-            cbMachine1 = new ComboBox();
             btnConnectStation1 = new Button();
             btnEndRace1 = new Button();
             btnManualStation1 = new Button();
@@ -49,7 +47,6 @@
             gbStation2 = new GroupBox();
             cbServer2 = new ComboBox();
             btnConnectStation2 = new Button();
-            cbMachine2 = new ComboBox();
             btnEndRace2 = new Button();
             btnManualStation2 = new Button();
             btnOptionsStation2 = new Button();
@@ -61,12 +58,10 @@
             btnSaveStation2 = new Button();
             label6 = new Label();
             txtNameStation2 = new TextBox();
-            label7 = new Label();
             lblStation2 = new Label();
             gbStation3 = new GroupBox();
             cbServer3 = new ComboBox();
             btnConnectStation3 = new Button();
-            cbMachine3 = new ComboBox();
             btnEndRace3 = new Button();
             btnManualStation3 = new Button();
             btnOptionsStation3 = new Button();
@@ -78,12 +73,10 @@
             btnSaveStation3 = new Button();
             label10 = new Label();
             txtNameStation3 = new TextBox();
-            label11 = new Label();
             lblStation3 = new Label();
             gbStation4 = new GroupBox();
             cbServer4 = new ComboBox();
             btnConnectStation4 = new Button();
-            cbMachine4 = new ComboBox();
             btnEndRace4 = new Button();
             btnManualStation4 = new Button();
             btnOptionsStation4 = new Button();
@@ -95,12 +88,10 @@
             btnSaveStation4 = new Button();
             label14 = new Label();
             txtNameStation4 = new TextBox();
-            label15 = new Label();
             lblStation4 = new Label();
             gbStation8 = new GroupBox();
             cbServer8 = new ComboBox();
             btnConnectStation8 = new Button();
-            cbMachine8 = new ComboBox();
             btnEndRace8 = new Button();
             btnManualStation8 = new Button();
             btnOptionsStation8 = new Button();
@@ -112,12 +103,10 @@
             btnSaveStation8 = new Button();
             label18 = new Label();
             txtNameStation8 = new TextBox();
-            label19 = new Label();
             lblStation8 = new Label();
             gbStation7 = new GroupBox();
             cbServer7 = new ComboBox();
             btnConnectStation7 = new Button();
-            cbMachine7 = new ComboBox();
             btnEndRace7 = new Button();
             btnManualStation7 = new Button();
             btnOptionsStation7 = new Button();
@@ -131,13 +120,10 @@
             label34 = new Label();
             label22 = new Label();
             txtNameStation7 = new TextBox();
-            label33 = new Label();
-            label23 = new Label();
             lblStation7 = new Label();
             gbStation6 = new GroupBox();
             cbServer6 = new ComboBox();
             btnConnectStation6 = new Button();
-            cbMachine6 = new ComboBox();
             btnEndRace6 = new Button();
             btnManualStation6 = new Button();
             btnOptionsStation6 = new Button();
@@ -149,12 +135,10 @@
             btnSaveStation6 = new Button();
             label26 = new Label();
             txtNameStation6 = new TextBox();
-            label27 = new Label();
             lblStation6 = new Label();
             gbStation5 = new GroupBox();
             cbServer5 = new ComboBox();
             btnConnectStation5 = new Button();
-            cbMachine5 = new ComboBox();
             btnEndRace5 = new Button();
             btnManualStation5 = new Button();
             btnHardStation5 = new Button();
@@ -166,7 +150,6 @@
             btnSaveStation5 = new Button();
             label30 = new Label();
             txtNameStation5 = new TextBox();
-            label31 = new Label();
             lblStation5 = new Label();
             lblTitle = new Label();
             label32 = new Label();
@@ -191,23 +174,12 @@
             lblStation1.TabIndex = 0;
             lblStation1.Text = "Puesto 1";
             // 
-            // label2
-            // 
-            label2.Anchor = AnchorStyles.Top;
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 10F);
-            label2.Location = new Point(55, 67);
-            label2.Name = "label2";
-            label2.Size = new Size(24, 19);
-            label2.TabIndex = 11;
-            label2.Text = "IP:";
-            // 
             // label3
             // 
             label3.Anchor = AnchorStyles.Top;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 10F);
-            label3.Location = new Point(10, 97);
+            label3.Location = new Point(10, 74);
             label3.Name = "label3";
             label3.Size = new Size(69, 19);
             label3.TabIndex = 13;
@@ -216,7 +188,7 @@
             // txtNameStation1
             // 
             txtNameStation1.BorderStyle = BorderStyle.FixedSingle;
-            txtNameStation1.Location = new Point(81, 95);
+            txtNameStation1.Location = new Point(81, 72);
             txtNameStation1.Name = "txtNameStation1";
             txtNameStation1.Size = new Size(150, 23);
             txtNameStation1.TabIndex = 12;
@@ -235,7 +207,6 @@
             // gbStation1
             // 
             gbStation1.Controls.Add(cbServer1);
-            gbStation1.Controls.Add(cbMachine1);
             gbStation1.Controls.Add(btnConnectStation1);
             gbStation1.Controls.Add(btnEndRace1);
             gbStation1.Controls.Add(btnManualStation1);
@@ -248,7 +219,6 @@
             gbStation1.Controls.Add(btnSaveStation1);
             gbStation1.Controls.Add(label3);
             gbStation1.Controls.Add(txtNameStation1);
-            gbStation1.Controls.Add(label2);
             gbStation1.Controls.Add(lblStation1);
             gbStation1.Location = new Point(12, 105);
             gbStation1.Name = "gbStation1";
@@ -259,18 +229,10 @@
             // cbServer1
             // 
             cbServer1.FormattingEnabled = true;
-            cbServer1.Location = new Point(81, 124);
+            cbServer1.Location = new Point(81, 109);
             cbServer1.Name = "cbServer1";
             cbServer1.Size = new Size(150, 23);
             cbServer1.TabIndex = 25;
-            // 
-            // cbMachine1
-            // 
-            cbMachine1.FormattingEnabled = true;
-            cbMachine1.Location = new Point(81, 65);
-            cbMachine1.Name = "cbMachine1";
-            cbMachine1.Size = new Size(150, 23);
-            cbMachine1.TabIndex = 25;
             // 
             // btnConnectStation1
             // 
@@ -351,7 +313,7 @@
             label4.Anchor = AnchorStyles.Top;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 10F);
-            label4.Location = new Point(21, 126);
+            label4.Location = new Point(21, 111);
             label4.Name = "label4";
             label4.Size = new Size(58, 19);
             label4.TabIndex = 16;
@@ -371,7 +333,6 @@
             // 
             gbStation2.Controls.Add(cbServer2);
             gbStation2.Controls.Add(btnConnectStation2);
-            gbStation2.Controls.Add(cbMachine2);
             gbStation2.Controls.Add(btnEndRace2);
             gbStation2.Controls.Add(btnManualStation2);
             gbStation2.Controls.Add(btnOptionsStation2);
@@ -383,7 +344,6 @@
             gbStation2.Controls.Add(btnSaveStation2);
             gbStation2.Controls.Add(label6);
             gbStation2.Controls.Add(txtNameStation2);
-            gbStation2.Controls.Add(label7);
             gbStation2.Controls.Add(lblStation2);
             gbStation2.Location = new Point(276, 105);
             gbStation2.Name = "gbStation2";
@@ -394,7 +354,7 @@
             // cbServer2
             // 
             cbServer2.FormattingEnabled = true;
-            cbServer2.Location = new Point(81, 125);
+            cbServer2.Location = new Point(81, 110);
             cbServer2.Name = "cbServer2";
             cbServer2.Size = new Size(150, 23);
             cbServer2.TabIndex = 62;
@@ -409,14 +369,6 @@
             btnConnectStation2.Text = "UNIRSE";
             btnConnectStation2.UseVisualStyleBackColor = true;
             btnConnectStation2.Click += btnConnectStation2_Click;
-            // 
-            // cbMachine2
-            // 
-            cbMachine2.FormattingEnabled = true;
-            cbMachine2.Location = new Point(81, 66);
-            cbMachine2.Name = "cbMachine2";
-            cbMachine2.Size = new Size(150, 23);
-            cbMachine2.TabIndex = 63;
             // 
             // btnEndRace2
             // 
@@ -486,7 +438,7 @@
             label5.Anchor = AnchorStyles.Top;
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 10F);
-            label5.Location = new Point(21, 126);
+            label5.Location = new Point(21, 111);
             label5.Name = "label5";
             label5.Size = new Size(58, 19);
             label5.TabIndex = 16;
@@ -518,7 +470,7 @@
             label6.Anchor = AnchorStyles.Top;
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 10F);
-            label6.Location = new Point(10, 97);
+            label6.Location = new Point(10, 74);
             label6.Name = "label6";
             label6.Size = new Size(69, 19);
             label6.TabIndex = 13;
@@ -527,21 +479,10 @@
             // txtNameStation2
             // 
             txtNameStation2.BorderStyle = BorderStyle.FixedSingle;
-            txtNameStation2.Location = new Point(81, 95);
+            txtNameStation2.Location = new Point(81, 72);
             txtNameStation2.Name = "txtNameStation2";
             txtNameStation2.Size = new Size(150, 23);
             txtNameStation2.TabIndex = 12;
-            // 
-            // label7
-            // 
-            label7.Anchor = AnchorStyles.Top;
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 10F);
-            label7.Location = new Point(55, 67);
-            label7.Name = "label7";
-            label7.Size = new Size(24, 19);
-            label7.TabIndex = 11;
-            label7.Text = "IP:";
             // 
             // lblStation2
             // 
@@ -559,7 +500,6 @@
             // 
             gbStation3.Controls.Add(cbServer3);
             gbStation3.Controls.Add(btnConnectStation3);
-            gbStation3.Controls.Add(cbMachine3);
             gbStation3.Controls.Add(btnEndRace3);
             gbStation3.Controls.Add(btnManualStation3);
             gbStation3.Controls.Add(btnOptionsStation3);
@@ -571,7 +511,6 @@
             gbStation3.Controls.Add(btnSaveStation3);
             gbStation3.Controls.Add(label10);
             gbStation3.Controls.Add(txtNameStation3);
-            gbStation3.Controls.Add(label11);
             gbStation3.Controls.Add(lblStation3);
             gbStation3.Location = new Point(540, 105);
             gbStation3.Name = "gbStation3";
@@ -582,7 +521,7 @@
             // cbServer3
             // 
             cbServer3.FormattingEnabled = true;
-            cbServer3.Location = new Point(81, 124);
+            cbServer3.Location = new Point(81, 109);
             cbServer3.Name = "cbServer3";
             cbServer3.Size = new Size(150, 23);
             cbServer3.TabIndex = 69;
@@ -597,14 +536,6 @@
             btnConnectStation3.Text = "UNIRSE";
             btnConnectStation3.UseVisualStyleBackColor = true;
             btnConnectStation3.Click += btnConnectStation3_Click;
-            // 
-            // cbMachine3
-            // 
-            cbMachine3.FormattingEnabled = true;
-            cbMachine3.Location = new Point(81, 65);
-            cbMachine3.Name = "cbMachine3";
-            cbMachine3.Size = new Size(150, 23);
-            cbMachine3.TabIndex = 70;
             // 
             // btnEndRace3
             // 
@@ -674,7 +605,7 @@
             label9.Anchor = AnchorStyles.Top;
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 10F);
-            label9.Location = new Point(20, 126);
+            label9.Location = new Point(20, 111);
             label9.Name = "label9";
             label9.Size = new Size(58, 19);
             label9.TabIndex = 16;
@@ -706,7 +637,7 @@
             label10.Anchor = AnchorStyles.Top;
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 10F);
-            label10.Location = new Point(9, 97);
+            label10.Location = new Point(9, 74);
             label10.Name = "label10";
             label10.Size = new Size(69, 19);
             label10.TabIndex = 13;
@@ -715,21 +646,10 @@
             // txtNameStation3
             // 
             txtNameStation3.BorderStyle = BorderStyle.FixedSingle;
-            txtNameStation3.Location = new Point(81, 95);
+            txtNameStation3.Location = new Point(81, 72);
             txtNameStation3.Name = "txtNameStation3";
             txtNameStation3.Size = new Size(150, 23);
             txtNameStation3.TabIndex = 12;
-            // 
-            // label11
-            // 
-            label11.Anchor = AnchorStyles.Top;
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 10F);
-            label11.Location = new Point(54, 67);
-            label11.Name = "label11";
-            label11.Size = new Size(24, 19);
-            label11.TabIndex = 11;
-            label11.Text = "IP:";
             // 
             // lblStation3
             // 
@@ -746,7 +666,6 @@
             // 
             gbStation4.Controls.Add(cbServer4);
             gbStation4.Controls.Add(btnConnectStation4);
-            gbStation4.Controls.Add(cbMachine4);
             gbStation4.Controls.Add(btnEndRace4);
             gbStation4.Controls.Add(btnManualStation4);
             gbStation4.Controls.Add(btnOptionsStation4);
@@ -758,7 +677,6 @@
             gbStation4.Controls.Add(btnSaveStation4);
             gbStation4.Controls.Add(label14);
             gbStation4.Controls.Add(txtNameStation4);
-            gbStation4.Controls.Add(label15);
             gbStation4.Controls.Add(lblStation4);
             gbStation4.Location = new Point(804, 105);
             gbStation4.Name = "gbStation4";
@@ -769,7 +687,7 @@
             // cbServer4
             // 
             cbServer4.FormattingEnabled = true;
-            cbServer4.Location = new Point(81, 125);
+            cbServer4.Location = new Point(81, 110);
             cbServer4.Name = "cbServer4";
             cbServer4.Size = new Size(150, 23);
             cbServer4.TabIndex = 26;
@@ -784,14 +702,6 @@
             btnConnectStation4.Text = "UNIRSE";
             btnConnectStation4.UseVisualStyleBackColor = true;
             btnConnectStation4.Click += btnConnectStation4_Click;
-            // 
-            // cbMachine4
-            // 
-            cbMachine4.FormattingEnabled = true;
-            cbMachine4.Location = new Point(81, 66);
-            cbMachine4.Name = "cbMachine4";
-            cbMachine4.Size = new Size(150, 23);
-            cbMachine4.TabIndex = 27;
             // 
             // btnEndRace4
             // 
@@ -861,7 +771,7 @@
             label13.Anchor = AnchorStyles.Top;
             label13.AutoSize = true;
             label13.Font = new Font("Segoe UI", 10F);
-            label13.Location = new Point(21, 126);
+            label13.Location = new Point(21, 111);
             label13.Name = "label13";
             label13.Size = new Size(58, 19);
             label13.TabIndex = 16;
@@ -893,7 +803,7 @@
             label14.Anchor = AnchorStyles.Top;
             label14.AutoSize = true;
             label14.Font = new Font("Segoe UI", 10F);
-            label14.Location = new Point(10, 97);
+            label14.Location = new Point(10, 74);
             label14.Name = "label14";
             label14.Size = new Size(69, 19);
             label14.TabIndex = 13;
@@ -902,21 +812,10 @@
             // txtNameStation4
             // 
             txtNameStation4.BorderStyle = BorderStyle.FixedSingle;
-            txtNameStation4.Location = new Point(81, 95);
+            txtNameStation4.Location = new Point(81, 72);
             txtNameStation4.Name = "txtNameStation4";
             txtNameStation4.Size = new Size(150, 23);
             txtNameStation4.TabIndex = 12;
-            // 
-            // label15
-            // 
-            label15.Anchor = AnchorStyles.Top;
-            label15.AutoSize = true;
-            label15.Font = new Font("Segoe UI", 10F);
-            label15.Location = new Point(55, 67);
-            label15.Name = "label15";
-            label15.Size = new Size(24, 19);
-            label15.TabIndex = 11;
-            label15.Text = "IP:";
             // 
             // lblStation4
             // 
@@ -933,7 +832,6 @@
             // 
             gbStation8.Controls.Add(cbServer8);
             gbStation8.Controls.Add(btnConnectStation8);
-            gbStation8.Controls.Add(cbMachine8);
             gbStation8.Controls.Add(btnEndRace8);
             gbStation8.Controls.Add(btnManualStation8);
             gbStation8.Controls.Add(btnOptionsStation8);
@@ -945,7 +843,6 @@
             gbStation8.Controls.Add(btnSaveStation8);
             gbStation8.Controls.Add(label18);
             gbStation8.Controls.Add(txtNameStation8);
-            gbStation8.Controls.Add(label19);
             gbStation8.Controls.Add(lblStation8);
             gbStation8.Location = new Point(804, 333);
             gbStation8.Name = "gbStation8";
@@ -956,7 +853,7 @@
             // cbServer8
             // 
             cbServer8.FormattingEnabled = true;
-            cbServer8.Location = new Point(81, 125);
+            cbServer8.Location = new Point(81, 110);
             cbServer8.Name = "cbServer8";
             cbServer8.Size = new Size(150, 23);
             cbServer8.TabIndex = 64;
@@ -971,14 +868,6 @@
             btnConnectStation8.Text = "UNIRSE";
             btnConnectStation8.UseVisualStyleBackColor = true;
             btnConnectStation8.Click += btnConnectStation8_Click;
-            // 
-            // cbMachine8
-            // 
-            cbMachine8.FormattingEnabled = true;
-            cbMachine8.Location = new Point(81, 66);
-            cbMachine8.Name = "cbMachine8";
-            cbMachine8.Size = new Size(150, 23);
-            cbMachine8.TabIndex = 65;
             // 
             // btnEndRace8
             // 
@@ -1048,7 +937,7 @@
             label17.Anchor = AnchorStyles.Top;
             label17.AutoSize = true;
             label17.Font = new Font("Segoe UI", 10F);
-            label17.Location = new Point(21, 126);
+            label17.Location = new Point(21, 111);
             label17.Name = "label17";
             label17.Size = new Size(58, 19);
             label17.TabIndex = 16;
@@ -1080,7 +969,7 @@
             label18.Anchor = AnchorStyles.Top;
             label18.AutoSize = true;
             label18.Font = new Font("Segoe UI", 10F);
-            label18.Location = new Point(10, 97);
+            label18.Location = new Point(10, 74);
             label18.Name = "label18";
             label18.Size = new Size(69, 19);
             label18.TabIndex = 13;
@@ -1089,21 +978,10 @@
             // txtNameStation8
             // 
             txtNameStation8.BorderStyle = BorderStyle.FixedSingle;
-            txtNameStation8.Location = new Point(81, 95);
+            txtNameStation8.Location = new Point(81, 72);
             txtNameStation8.Name = "txtNameStation8";
             txtNameStation8.Size = new Size(150, 23);
             txtNameStation8.TabIndex = 12;
-            // 
-            // label19
-            // 
-            label19.Anchor = AnchorStyles.Top;
-            label19.AutoSize = true;
-            label19.Font = new Font("Segoe UI", 10F);
-            label19.Location = new Point(55, 67);
-            label19.Name = "label19";
-            label19.Size = new Size(24, 19);
-            label19.TabIndex = 11;
-            label19.Text = "IP:";
             // 
             // lblStation8
             // 
@@ -1120,7 +998,6 @@
             // 
             gbStation7.Controls.Add(cbServer7);
             gbStation7.Controls.Add(btnConnectStation7);
-            gbStation7.Controls.Add(cbMachine7);
             gbStation7.Controls.Add(btnEndRace7);
             gbStation7.Controls.Add(btnManualStation7);
             gbStation7.Controls.Add(btnOptionsStation7);
@@ -1134,8 +1011,6 @@
             gbStation7.Controls.Add(label34);
             gbStation7.Controls.Add(label22);
             gbStation7.Controls.Add(txtNameStation7);
-            gbStation7.Controls.Add(label33);
-            gbStation7.Controls.Add(label23);
             gbStation7.Controls.Add(lblStation7);
             gbStation7.Location = new Point(540, 333);
             gbStation7.Name = "gbStation7";
@@ -1146,7 +1021,7 @@
             // cbServer7
             // 
             cbServer7.FormattingEnabled = true;
-            cbServer7.Location = new Point(81, 124);
+            cbServer7.Location = new Point(81, 109);
             cbServer7.Name = "cbServer7";
             cbServer7.Size = new Size(150, 23);
             cbServer7.TabIndex = 71;
@@ -1161,14 +1036,6 @@
             btnConnectStation7.Text = "UNIRSE";
             btnConnectStation7.UseVisualStyleBackColor = true;
             btnConnectStation7.Click += btnConnectStation7_Click;
-            // 
-            // cbMachine7
-            // 
-            cbMachine7.FormattingEnabled = true;
-            cbMachine7.Location = new Point(81, 65);
-            cbMachine7.Name = "cbMachine7";
-            cbMachine7.Size = new Size(150, 23);
-            cbMachine7.TabIndex = 72;
             // 
             // btnEndRace7
             // 
@@ -1259,7 +1126,7 @@
             label21.Anchor = AnchorStyles.Top;
             label21.AutoSize = true;
             label21.Font = new Font("Segoe UI", 10F);
-            label21.Location = new Point(20, 126);
+            label21.Location = new Point(20, 111);
             label21.Name = "label21";
             label21.Size = new Size(58, 19);
             label21.TabIndex = 16;
@@ -1292,7 +1159,7 @@
             label22.Anchor = AnchorStyles.Top;
             label22.AutoSize = true;
             label22.Font = new Font("Segoe UI", 10F);
-            label22.Location = new Point(9, 97);
+            label22.Location = new Point(9, 74);
             label22.Name = "label22";
             label22.Size = new Size(69, 19);
             label22.TabIndex = 13;
@@ -1301,32 +1168,10 @@
             // txtNameStation7
             // 
             txtNameStation7.BorderStyle = BorderStyle.FixedSingle;
-            txtNameStation7.Location = new Point(81, 95);
+            txtNameStation7.Location = new Point(81, 72);
             txtNameStation7.Name = "txtNameStation7";
             txtNameStation7.Size = new Size(150, 23);
             txtNameStation7.TabIndex = 12;
-            // 
-            // label33
-            // 
-            label33.Anchor = AnchorStyles.Top;
-            label33.AutoSize = true;
-            label33.Font = new Font("Segoe UI", 10F);
-            label33.Location = new Point(-444, 70);
-            label33.Name = "label33";
-            label33.Size = new Size(24, 19);
-            label33.TabIndex = 11;
-            label33.Text = "IP:";
-            // 
-            // label23
-            // 
-            label23.Anchor = AnchorStyles.Top;
-            label23.AutoSize = true;
-            label23.Font = new Font("Segoe UI", 10F);
-            label23.Location = new Point(54, 67);
-            label23.Name = "label23";
-            label23.Size = new Size(24, 19);
-            label23.TabIndex = 11;
-            label23.Text = "IP:";
             // 
             // lblStation7
             // 
@@ -1343,7 +1188,6 @@
             // 
             gbStation6.Controls.Add(cbServer6);
             gbStation6.Controls.Add(btnConnectStation6);
-            gbStation6.Controls.Add(cbMachine6);
             gbStation6.Controls.Add(btnEndRace6);
             gbStation6.Controls.Add(btnManualStation6);
             gbStation6.Controls.Add(btnOptionsStation6);
@@ -1355,7 +1199,6 @@
             gbStation6.Controls.Add(btnSaveStation6);
             gbStation6.Controls.Add(label26);
             gbStation6.Controls.Add(txtNameStation6);
-            gbStation6.Controls.Add(label27);
             gbStation6.Controls.Add(lblStation6);
             gbStation6.Location = new Point(276, 333);
             gbStation6.Name = "gbStation6";
@@ -1366,7 +1209,7 @@
             // cbServer6
             // 
             cbServer6.FormattingEnabled = true;
-            cbServer6.Location = new Point(81, 124);
+            cbServer6.Location = new Point(81, 109);
             cbServer6.Name = "cbServer6";
             cbServer6.Size = new Size(150, 23);
             cbServer6.TabIndex = 73;
@@ -1381,14 +1224,6 @@
             btnConnectStation6.Text = "UNIRSE";
             btnConnectStation6.UseVisualStyleBackColor = true;
             btnConnectStation6.Click += btnConnectStation6_Click;
-            // 
-            // cbMachine6
-            // 
-            cbMachine6.FormattingEnabled = true;
-            cbMachine6.Location = new Point(81, 65);
-            cbMachine6.Name = "cbMachine6";
-            cbMachine6.Size = new Size(150, 23);
-            cbMachine6.TabIndex = 74;
             // 
             // btnEndRace6
             // 
@@ -1458,7 +1293,7 @@
             label25.Anchor = AnchorStyles.Top;
             label25.AutoSize = true;
             label25.Font = new Font("Segoe UI", 10F);
-            label25.Location = new Point(21, 126);
+            label25.Location = new Point(21, 111);
             label25.Name = "label25";
             label25.Size = new Size(58, 19);
             label25.TabIndex = 16;
@@ -1490,7 +1325,7 @@
             label26.Anchor = AnchorStyles.Top;
             label26.AutoSize = true;
             label26.Font = new Font("Segoe UI", 10F);
-            label26.Location = new Point(10, 97);
+            label26.Location = new Point(10, 74);
             label26.Name = "label26";
             label26.Size = new Size(69, 19);
             label26.TabIndex = 13;
@@ -1499,21 +1334,10 @@
             // txtNameStation6
             // 
             txtNameStation6.BorderStyle = BorderStyle.FixedSingle;
-            txtNameStation6.Location = new Point(81, 95);
+            txtNameStation6.Location = new Point(81, 72);
             txtNameStation6.Name = "txtNameStation6";
             txtNameStation6.Size = new Size(150, 23);
             txtNameStation6.TabIndex = 12;
-            // 
-            // label27
-            // 
-            label27.Anchor = AnchorStyles.Top;
-            label27.AutoSize = true;
-            label27.Font = new Font("Segoe UI", 10F);
-            label27.Location = new Point(55, 67);
-            label27.Name = "label27";
-            label27.Size = new Size(24, 19);
-            label27.TabIndex = 11;
-            label27.Text = "IP:";
             // 
             // lblStation6
             // 
@@ -1530,7 +1354,6 @@
             // 
             gbStation5.Controls.Add(cbServer5);
             gbStation5.Controls.Add(btnConnectStation5);
-            gbStation5.Controls.Add(cbMachine5);
             gbStation5.Controls.Add(btnEndRace5);
             gbStation5.Controls.Add(btnManualStation5);
             gbStation5.Controls.Add(btnHardStation5);
@@ -1542,7 +1365,6 @@
             gbStation5.Controls.Add(btnSaveStation5);
             gbStation5.Controls.Add(label30);
             gbStation5.Controls.Add(txtNameStation5);
-            gbStation5.Controls.Add(label31);
             gbStation5.Controls.Add(lblStation5);
             gbStation5.Location = new Point(12, 333);
             gbStation5.Name = "gbStation5";
@@ -1553,7 +1375,7 @@
             // cbServer5
             // 
             cbServer5.FormattingEnabled = true;
-            cbServer5.Location = new Point(81, 124);
+            cbServer5.Location = new Point(81, 109);
             cbServer5.Name = "cbServer5";
             cbServer5.Size = new Size(150, 23);
             cbServer5.TabIndex = 75;
@@ -1568,14 +1390,6 @@
             btnConnectStation5.Text = "UNIRSE";
             btnConnectStation5.UseVisualStyleBackColor = true;
             btnConnectStation5.Click += btnConnectStation5_Click;
-            // 
-            // cbMachine5
-            // 
-            cbMachine5.FormattingEnabled = true;
-            cbMachine5.Location = new Point(81, 65);
-            cbMachine5.Name = "cbMachine5";
-            cbMachine5.Size = new Size(150, 23);
-            cbMachine5.TabIndex = 76;
             // 
             // btnEndRace5
             // 
@@ -1655,7 +1469,7 @@
             label29.Anchor = AnchorStyles.Top;
             label29.AutoSize = true;
             label29.Font = new Font("Segoe UI", 10F);
-            label29.Location = new Point(21, 126);
+            label29.Location = new Point(21, 111);
             label29.Name = "label29";
             label29.Size = new Size(58, 19);
             label29.TabIndex = 16;
@@ -1677,7 +1491,7 @@
             label30.Anchor = AnchorStyles.Top;
             label30.AutoSize = true;
             label30.Font = new Font("Segoe UI", 10F);
-            label30.Location = new Point(10, 97);
+            label30.Location = new Point(10, 74);
             label30.Name = "label30";
             label30.Size = new Size(69, 19);
             label30.TabIndex = 13;
@@ -1686,21 +1500,10 @@
             // txtNameStation5
             // 
             txtNameStation5.BorderStyle = BorderStyle.FixedSingle;
-            txtNameStation5.Location = new Point(81, 95);
+            txtNameStation5.Location = new Point(81, 72);
             txtNameStation5.Name = "txtNameStation5";
             txtNameStation5.Size = new Size(150, 23);
             txtNameStation5.TabIndex = 12;
-            // 
-            // label31
-            // 
-            label31.Anchor = AnchorStyles.Top;
-            label31.AutoSize = true;
-            label31.Font = new Font("Segoe UI", 10F);
-            label31.Location = new Point(55, 67);
-            label31.Name = "label31";
-            label31.Size = new Size(24, 19);
-            label31.TabIndex = 11;
-            label31.Text = "IP:";
             // 
             // lblStation5
             // 
@@ -1778,7 +1581,6 @@
         #endregion
 
         private Label label1;
-        private Label label2;
         private Label label3;
         private TextBox txtNameStation1;
         private Button btnSaveStation1;
@@ -1789,53 +1591,45 @@
         private Button btnSaveStation2;
         private Label label6;
         private TextBox txtNameStation2;
-        private Label label7;
         private Label label8;
         private GroupBox gbStation3;
         private Label label9;
         private Button btnSaveStation3;
         private Label label10;
         private TextBox txtNameStation3;
-        private Label label11;
         private Label label12;
         private GroupBox gbStation4;
         private Label label13;
         private Button btnSaveStation4;
         private Label label14;
         private TextBox txtNameStation4;
-        private Label label15;
         private Label label16;
         private GroupBox gbStation5;
         private Label label17;
         private Button btnSaveStation8;
         private Label label18;
         private TextBox txtNameStation8;
-        private Label label19;
         private Label label20;
         private GroupBox gbStation6;
         private Label label21;
         private Button btnSaveStation7;
         private Label label22;
         private TextBox txtNameStation7;
-        private Label label23;
         private Label label24;
         private GroupBox gbStation7;
         private Label label25;
         private Button btnSaveStation6;
         private Label label26;
         private TextBox txtNameStation6;
-        private Label label27;
         private Label label28;
         private GroupBox gbStation8;
         private Label label29;
         private Button btnSaveStation5;
         private Label label30;
         private TextBox txtNameStation5;
-        private Label label31;
         private Label lblStation5;
         private Label label35;
         private Label label34;
-        private Label label33;
         private Label lblTitle;
         private Label lblStation1;
         private Label lblStation2;
@@ -1914,21 +1708,13 @@
         private Button btnConnectStation8;
         private Button btnConnectStation7;
         private Label label32;
-        private ComboBox cbMachine1;
         private ComboBox cbServer1;
         private ComboBox cbServer2;
-        private ComboBox cbMachine2;
         private ComboBox cbServer3;
-        private ComboBox cbMachine3;
         private ComboBox cbServer7;
-        private ComboBox cbMachine7;
         private ComboBox cbServer6;
-        private ComboBox cbMachine6;
         private ComboBox cbServer5;
-        private ComboBox cbMachine5;
         private ComboBox cbServer4;
-        private ComboBox cbMachine4;
         private ComboBox cbServer8;
-        private ComboBox cbMachine8;
     }
 }
